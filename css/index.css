@@ -1,25 +1,31 @@
 /***** HEADER CSS NOT REQUIRED FOR DEMO *****/
+#safe-ribbon {
+	position: relative;
+	display: block;
+	float:right;
+	margin-bottom: -2rem;
+	height: 2rem;
+	z-index: 2000;
+}
 
 #safe-ribbon a{
-  z-index: 2000;
   background:#E98300;
   color:#fff;
   text-decoration:none;
   font-family:arial, sans-serif;
   text-align:center;
   font-weight:bold;
-  padding:5px 40px;
+  padding: 0 5px;
   font-size:1rem;
   line-height:2rem;
-  position:relative;
-  transition:0.5s;
+  transition: background 0.5s;
+  display: block;
 }
 
 #safe-ribbon a:hover{
   background:#DA7B00;
   color:#fff;
 }
-
 
 #safe-ribbon a::before,#safe-ribbon a::after{
   content:"";
@@ -55,22 +61,15 @@
     transform:rotate(45deg);
     -webkit-transform:rotate(45deg);
     box-shadow:0px 1px 4px rgba(0,0,0,0.8);
+    padding: 5px 40px;
   }
 }
 
 
 body {
-  padding-top: 40px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
   font-family: verdana;
-}
-
-@media (max-width: 980px) {
-  body{
-    padding-top: 0;
-  }
+  padding-top: 40px;
 }
 
 .brand{
@@ -79,10 +78,19 @@ body {
   text-shadow: none !important;
 }
 
+.navbar {
+	margin:0;
+	position: fixed;
+}
 
 .navbar-inner {
   background-color: #7AB800;
   background-image: none;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+	padding: 0;
+
 }
 
 /**** End of Header CSS ****/
