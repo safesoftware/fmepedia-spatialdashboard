@@ -1,4 +1,6 @@
 function initialize() {
+	fmeserver = new FMEServer("jabba", "some-token");
+
 	var myLatlng = new google.maps.LatLng(37.7850,-122.4183);
 
 	var myOptions = {
@@ -110,17 +112,7 @@ function initialize() {
 		// };
 
 		//============= BUS ====================
-		wsBus = new WebSocket("ws://jabba:7078/websocket");
-
-		// open
-		wsBus.onopen = function() {
-			console.log("opened websocket");
-			var openMsg = {
-				ws_op : 'open',
-				ws_stream_id : 'bus_out'
-			}
-			wsBus.send(JSON.stringify(openMsg));
-		};
+		wsBus = fmeserver.getWebSocketConnection("bus_out");
 
 		// receive
 		wsBus.onmessage = function (evt) {

@@ -1,16 +1,13 @@
+function FMEServer(svrHost, token, svrPort, isSSL) {
 
-var FMEServer = {
+	this.svrHost = svrHost;
+	this.svrPort = svrPort || "80";
+	this.token = token;
+	this.isSSL = isSSL || false;
 
-	svrHost : '',
-	token : '',
-
-	connectToServer : function(svrHost, token){
-		FMEServer.svrHost = svrHost;
-		FMEServer.token = token;
-	},
-
-	getParams : function(repository, wrkspName){
-		var url = FMEServer.svrHost + '/fmerest/repositories/' + repository + '/' + wrkspName + '/parameters.json?token=' + FMEServer.token;
+	this.getParams = getParams;
+	function getParams(repository, wrkspName){
+		var url = this.svrHost + ":" + this.svrPort + '/fmerest/repositories/' + repository + '/' + wrkspName + '/parameters.json?token=' + this.token;
 		var params = null;
 
 		$.ajax({
@@ -22,14 +19,15 @@ var FMEServer = {
 			}
 		})
 		return params;
-	},
+	}
 
 	//gets the current session id from FME Server
 	//can use this to get the path to any files added through
 	//the file upload service	
-	getSessionID : function (wrkspPath){
+	this.getSessionID = getSessionID;
+	function getSessionID(wrkspPath){
 		//returns null if there is an error
-		var url = FMEServer.svrHost + '/fmedataupload/' + wrkspPath + '?opt_extractarchive=false&opt_pathlevel=3&opt_fullpath=true';
+		var url = this.svrHost + '/fmedataupload/' + wrkspPath + '?opt_extractarchive=false&opt_pathlevel=3&opt_fullpath=true';
 		var sessionID = null;
 		
 		$.ajax({
@@ -43,5 +41,25 @@ var FMEServer = {
 
 		return sessionID;
 	}
-
+	
+	/** Returns a WebSocket connection object to the specified server
+	  *
+	  *
+	  */
+	this.getWebSocketConnection = getWebSocketConnection;
+	function getWebSocketConnection(stream_id) {
+		wsConn = new WebSocket("ws://" + svrHost + ":7078/websocket");
+		wsConn.onopen = function() {
+			var openMsg = {
+				ws_op : 'open',
+				ws_stream_id : stream_id
+			}
+		wsConn.send(JSON.stringify(openMsg));
+		};
+		return wsConn;
+	}
 }
+
+
+
+
