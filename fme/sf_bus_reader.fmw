@@ -29,12 +29,12 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
-#! DOC_TOP_LEFT="-1279 -268"
+#! DOC_TOP_LEFT="-1607 370"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-10-01T15:29:05"
+#! LAST_SAVE_DATE="2013-10-02T11:40:00"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
@@ -44,8 +44,8 @@
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
-#! DOC_EXTENTS="2214 614"
-#! FME_DOCUMENT_GUID="45e6a69b-b2b8-4123-a8bb-e7b39399a3c3"
+#! DOC_EXTENTS="1497 74"
+#! FME_DOCUMENT_GUID="283fca0b-d08a-4b34-98dd-29eeb563cb44"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -273,9 +273,9 @@
 #! IS_EDITABLE="false"
 #! IDENTIFIER="2"
 #! FEAT_GEOMTYPE="xml_no_geom"
-#! POSITION="-1279 346"
-#! ORDER="3"
-#! COLLAPSED="false"
+#! POSITION="-1607 402"
+#! ORDER="22"
+#! COLLAPSED="true"
 #! KEYWORD="XML_1"
 #! ENABLED="true"
 #! HIDDEN_USER_ATTRS=""
@@ -314,7 +314,7 @@
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
 #! NAME="HTTP_DATASET"
-#! VALUE="XML_1"
+#! VALUE=""
 #! />
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
@@ -350,33 +350,16 @@
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
 #! <TRANSFORMER
-#! IDENTIFIER="4"
-#! TYPE="WebSocketSender"
-#! VERSION="0"
-#! POSITION="935 -268"
-#! ORDER="17"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="OUTPUT"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_PARM PARM_NAME="PREAMBLE" PARM_VALUE="&lt;opencurly&gt;&lt;space&gt;ws_op:&lt;space&gt;&lt;apos&gt;open&lt;apos&gt;&lt;comma&gt;&lt;space&gt;ws_stream_id&lt;space&gt;:&lt;space&gt;&lt;apos&gt;bus&lt;apos&gt;&lt;space&gt;&lt;closecurly&gt;"/>
-#! <XFORM_PARM PARM_NAME="DATA" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;notify_content&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://jabba:7078/dashboard"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
 #! IDENTIFIER="6"
 #! TYPE="StringConcatenator"
 #! VERSION="6"
-#! POSITION="-660 293"
+#! POSITION="-1042 370"
 #! ORDER="6"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
 #! >
 #! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="vehicle.dirTag" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="vehicle.heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="vehicle.id" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -396,26 +379,11 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringConcatenator_2"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
-#! IDENTIFIER="8"
-#! TYPE="StringConcatenator"
-#! VERSION="6"
-#! POSITION="811 84"
-#! ORDER="6"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="OUTPUT"/>
-#! <XFORM_ATTR ATTR_NAME="notify_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="PARM_LINE" PARM_VALUE="&lt;opencurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_op&lt;space&gt;:&lt;space&gt;&lt;apos&gt;send&lt;apos&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_msg&lt;space&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;&lt;opencurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;bus_id&lt;backslash&gt;&lt;quote&gt;:&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;vehicle.id&lt;closeparen&gt;&lt;backslash&gt;&lt;quote&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;latitude&lt;backslash&gt;&lt;quote&gt;:&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;vehicle.lat&lt;closeparen&gt;&lt;backslash&gt;&lt;quote&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;longitude&lt;backslash&gt;&lt;quote&gt;:&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;vehicle.lon&lt;closeparen&gt;&lt;backslash&gt;&lt;quote&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;speed&lt;backslash&gt;&lt;quote&gt;:&lt;space&gt;&lt;backslash&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;vehicle.speedKmHr&lt;closeparen&gt;&lt;backslash&gt;&lt;quote&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;closecurly&gt;&lt;quote&gt;&lt;lf&gt;&lt;closecurly&gt;"/>
-#! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="notify_content"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringConcatenator_3"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="7"
-#! TYPE="FMEServerNotifier"
-#! VERSION="1"
-#! POSITION="-67 167"
-#! ORDER="18"
+#! IDENTIFIER="4"
+#! TYPE="WebSocketSender"
+#! VERSION="0"
+#! POSITION="-110 444"
+#! ORDER="21"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
 #! >
@@ -435,41 +403,12 @@
 #! <XFORM_ATTR ATTR_NAME="xml_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="xml_matched_element" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="notify_content" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_url_contents" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <XFORM_ATTR ATTR_NAME="vehicle.dirTag" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="vehicle.heading" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="vehicle.id" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="vehicle.lat" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="vehicle.leadingVehicleId" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="vehicle.lon" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="vehicle.predictable" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="vehicle.routeTag" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="vehicle.secsSinceReport" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="vehicle.speedKmHr" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="xml_fragment" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="xml_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="xml_matched_element" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="notify_content" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_url_contents" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_PARM PARM_NAME="HTTP_AUTH_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HTTP_UPLOAD_BODY" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;notify_content&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FMEServerNotifier"/>
-#! <XFORM_PARM PARM_NAME="HTTP_AUTH_PASSWORD" PARM_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszYRZxurbg7TRnn191RcQi9LhgcDC9nVxAzl1bzsO/+8HqO/Pf6tzkGvbJLK89xmm9p9bLkWaBW1ytvO4qzNSMU1Pq8BzpptXpZK8vdRdYr8XLNUymaXVPO0+IBiqZfEjydqsNQoe5SxcSrQo/dlmfFib4WFkggtxT1LBmA5kLtnQ9frivFjhG2YuUvxEL0Hstz4kheF5RN6eq4W83NAAqmym8QZLFHVEaiQTWY83r9c9klicftbroqJc1+rqX0H09Ku77fST+w9AhfWaPoi4FUauRrjouRuwoAjAMvZ8+ibkZONeW+kdmgM2EjoFrEliUVIspevk1uDIFrar8g9Plhrb8tC6+IYJ6)"/>
-#! <XFORM_PARM PARM_NAME="HTTP_REQUEST_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="STATUS_CODE_ATTR" PARM_VALUE="_http_status_code"/>
+#! <XFORM_PARM PARM_NAME="PREAMBLE" PARM_VALUE="&lt;opencurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_op&lt;space&gt;:&lt;space&gt;&lt;apos&gt;open&lt;apos&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_stream_id&lt;space&gt;:&lt;space&gt;&lt;apos&gt;bus_in&lt;apos&gt;&lt;lf&gt;&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="DATA" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;notify_content&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender_2"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="TOPIC" PARM_VALUE="spatialdashboard_bus"/>
-#! <XFORM_PARM PARM_NAME="HTTP_AUTH_USERNAME" PARM_VALUE="admin"/>
-#! <XFORM_PARM PARM_NAME="URL" PARM_VALUE="http:&lt;solidus&gt;&lt;solidus&gt;jabba"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://jabba:7078/websocket"/>
 #! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
@@ -483,9 +422,9 @@
 #! EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#! IDENTIFIER="9"
+#! IDENTIFIER="11"
 #! SOURCE_NODE="6"
-#! TARGET_NODE="7"
+#! TARGET_NODE="4"
 #! SOURCE_PORT_DESC="fo 0"
 #! TARGET_PORT_DESC="fi 0"
 #! ENABLED="true"
@@ -651,16 +590,13 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME "Source -> Generic"    INPUT FEATURE_TY
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
 
-Tcl2 proc StringConcatenator_2_21f83c17_545c_4785_8066_fda7786ca86b18_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_2    INPUT  FEATURE_TYPE vehicle    OUTPUT FEATURE_TYPE StringConcatenator_2_OUTPUT        @Tcl2("StringConcatenator_2_21f83c17_545c_4785_8066_fda7786ca86b18_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><apos>send<apos><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>bus_id<apos>:<space><apos><at>Value<openparen>vehicle.id<closeparen><apos><comma><space><apos>latitude<apos>:<space><apos><at>Value<openparen>vehicle.lat<closeparen><apos><comma><space><apos>longitude<apos>:<space><apos><at>Value<openparen>vehicle.lon<closeparen><apos><comma><space><apos>speed<apos>:<space><apos><at>Value<openparen>vehicle.speedKmHr<closeparen><apos><closecurly><quote><lf><closecurly>,StringConcatenator_2)} ")
+Tcl2 proc StringConcatenator_2_d4f2cdda_bda9_4562_932c_1c0141c525b920_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_2    INPUT  FEATURE_TYPE vehicle    OUTPUT FEATURE_TYPE StringConcatenator_2_OUTPUT        @Tcl2("StringConcatenator_2_d4f2cdda_bda9_4562_932c_1c0141c525b920_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><apos>send<apos><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>bus_id<apos>:<space><apos><at>Value<openparen>vehicle.id<closeparen><apos><comma><space><apos>latitude<apos>:<space><apos><at>Value<openparen>vehicle.lat<closeparen><apos><comma><space><apos>longitude<apos>:<space><apos><at>Value<openparen>vehicle.lon<closeparen><apos><comma><space><apos>speed<apos>:<space><apos><at>Value<openparen>vehicle.speedKmHr<closeparen><apos><closecurly><quote><lf><closecurly>,StringConcatenator_2)} ")
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * HTTPFactory    FACTORY_NAME FMEServerNotifier       INPUT  FEATURE_TYPE StringConcatenator_2_OUTPUT    TARGET_URL @Concatenate(http:<solidus><solidus>jabba,"/fmerest/notifier/topics/",@Value(notify_content),"/publish.json")    TARGET_ATTR _url_contents    HTTP_METHOD POST    UPLOAD_BODY "@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,FMEServerNotifier)"    UPLOAD_CONTENT_TYPE text/plain    REQUEST_HEADER ""    AUTH_USERNAME "admin"    AUTH_PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszYRZxurbg7TRnn191RcQi9LhgcDC9nVxAzl1bzsO/+8HqO/Pf6tzkGvbJLK89xmm9p9bLkWaBW1ytvO4qzNSMU1Pq8BzpptXpZK8vdRdYr8XLNUymaXVPO0+IBiqZfEjydqsNQoe5SxcSrQo/dlmfFib4WFkggtxT1LBmA5kLtnQ9frivFjhG2YuUvxEL0Hstz4kheF5RN6eq4W83NAAqmym8QZLFHVEaiQTWY83r9c9klicftbroqJc1+rqX0H09Ku77fST+w9AhfWaPoi4FUauRrjouRuwoAjAMvZ8+ibkZONeW+kdmgM2EjoFrEliUVIspevk1uDIFrar8g9Plhrb8tC6+IYJ6)"    AUTH_METHOD Basic    SINGLE_SIGN_ON No    USE_RESPONSE_ENCODING Yes    RESPONSE_HEADER_LIST_ATTR _headers    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR _error    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE FMEServerNotifier_OUTPUT    OUTPUT REJECTED FEATURE_TYPE FMEServerNotifier_<REJECTED>
+FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender_2       INPUT  FEATURE_TYPE StringConcatenator_2_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,ws://jabba:7078/websocket,WebSocketSender_2)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space>ws_op<space>:<space><apos>open<apos><comma><lf><space><space><space><space>ws_stream_id<space>:<space><apos>bus_in<apos><lf><closecurly>,WebSocketSender_2)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender_2),WebSocketSender_2)"
 
-
-FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerNotifier OUTPUT Output Nuker"   INPUT FEATURE_TYPE FMEServerNotifier_OUTPUT
-FACTORY_DEF * TeeFactory   FACTORY_NAME "FMEServerNotifier <REJECTED> Output Nuker"   INPUT FEATURE_TYPE FMEServerNotifier_<REJECTED>
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
