@@ -1,3 +1,13 @@
+/** FME Server connection object, with support for WebSockets
+ * @this FMEServer
+ * @constructor
+ * @version 2.0
+ * @param svrHost Host name only, not URL
+ * @param token Obtained from http://yourfmeserver/fmetoken
+ * @param svrPort Port, default is 80 - string
+ * @param isSSL Connect to the server via HTTPS?
+ * @return FME Server connection object
+ */
 function FMEServer(svrHost, token, svrPort, isSSL) {
 
 	this.svrHost = svrHost;
@@ -48,7 +58,7 @@ function FMEServer(svrHost, token, svrPort, isSSL) {
 	  */
 	this.getWebSocketConnection = getWebSocketConnection;
 	function getWebSocketConnection(stream_id) {
-		wsConn = new WebSocket("ws://" + svrHost + ":7078/websocket");
+		var wsConn = new WebSocket("ws://" + svrHost + ":7078/websocket");
 		wsConn.onopen = function() {
 			var openMsg = {
 				ws_op : 'open',

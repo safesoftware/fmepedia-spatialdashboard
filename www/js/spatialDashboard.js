@@ -1,4 +1,5 @@
 function initialize() {
+	// see FMEServer.js for parameter values
 	fmeserver = new FMEServer("jabba", "some-token");
 
 	var myLatlng = new google.maps.LatLng(37.7850,-122.4183);
@@ -33,91 +34,84 @@ function initialize() {
 	if ("WebSocket" in window) {
 
 	
-		// // ============= AIS ====================
-		// ws = new WebSocket("ws://fmeserver.com:9998/ais", "None");
+		// ============= AIS ====================
+		ws = fmeserver.getWebSocketConnection("ship_out");
 
-		// // open
-		// ws.onopen = function() {
-			// ws.send("consumer");
-		// };
+		// receive
+		ws.onmessage = function (evt) {
+			/*
+			{
+			"mmsi_number": "366919770",
+			"heading": "511",
+			"latitude": "37.9054756164551",
+			"longitude": "-122.371559143066",
+			"call_sign": "WDB6192",
+			"class_general": "MM",
+			"class_special": "TUG",
+			"ship_length": "",
+			"tonnage": "196",
+			"vessel_name": "Lynn Marie",
+			"class_general_desc": "Merchant ship ",
+			"class_special_desc": "Pusher/Tug "
+			}
+			*/
 
-		// // receive
-		// ws.onmessage = function (evt) {
-			// /*
-			// {
-			// "mmsi_number": "366919770",
-			// "heading": "511",
-			// "latitude": "37.9054756164551",
-			// "longitude": "-122.371559143066",
-			// "call_sign": "WDB6192",
-			// "class_general": "MM",
-			// "class_special": "TUG",
-			// "ship_length": "",
-			// "tonnage": "196",
-			// "vessel_name": "Lynn Marie",
-			// "class_general_desc": "Merchant ship ",
-			// "class_special_desc": "Pusher/Tug "
-			// }
-			// */
+			var data = evt.data;
+			dataObj = eval('(' + eval('(' + data + ')').ws_msg + ')');
+			// document.getElementById('container').innerHTML = dataObj['latitude'];
+			mmsi = dataObj['mmsi_number'];
+			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
+			// alert(markers[mmsi]);
 
-			// var data = evt.data;
-			// dataObj = eval('(' + data + ')');
-			// // document.getElementById('container').innerHTML = dataObj['latitude'];
-			// mmsi = dataObj['mmsi_number'];
-			// var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
-			// // alert(markers[mmsi]);
+			var image = "http://maps.google.com/mapfiles/kml/shapes/ferry.png";
+			var ton = dataObj['tonnage'];
+			if (ton < 100) {
+				var imgScaledSize = new google.maps.Size(30,30);
+			}
+			else if (ton > 100 && ton < 10000) {
+				var imgScaledSize = new google.maps.Size(35,35);
+			}
+			else if (ton > 10000) {
+				var imgScaledSize = new google.maps.Size(50,50);
+			}
+			else {
+				var imgScaledSize = new google.maps.Size(30,30);
+			}
 
-			// var image = "http://maps.google.com/mapfiles/kml/shapes/ferry.png";
-			// var ton = dataObj['tonnage'];
-			// if (ton < 100) {
-				// var imgScaledSize = new google.maps.Size(30,30);
-			// }
-			// else if (ton > 100 && ton < 10000) {
-				// var imgScaledSize = new google.maps.Size(35,35);
-			// }
-			// else if (ton > 10000) {
-				// var imgScaledSize = new google.maps.Size(50,50);
-			// }
-			// else {
-				// var imgScaledSize = new google.maps.Size(30,30);
-			// }
+			// var imgScaledSize = new google.maps.Size(20,20);
+			var markerImg = new google.maps.MarkerImage(image, null, null, null, imgScaledSize);
+			// var markerImg = new google.maps.MarkerImage(image, imgScaledSize , imgScaledOrigin, imgScaledAnchor, imgSize);
 
-			// // var imgScaledSize = new google.maps.Size(20,20);
-			// var markerImg = new google.maps.MarkerImage(image, null, null, null, imgScaledSize);
-			// // var markerImg = new google.maps.MarkerImage(image, imgScaledSize , imgScaledOrigin, imgScaledAnchor, imgSize);
+			// var markerImg = new google.maps.MarkerImage("http://maps.google.com/mapfiles/kml/shapes/ferry.png",new google.maps.Size(50, 50))
+			if(markers[mmsi] == undefined) {
 
-			// // var markerImg = new google.maps.MarkerImage("http://maps.google.com/mapfiles/kml/shapes/ferry.png",new google.maps.Size(50, 50))
-			// if(markers[mmsi] == undefined) {
+				var title = "Vessel: " + dataObj['vessel_name'] + "\n Class: " + dataObj['class_special_desc'] + "\n Tonnage: " + dataObj['tonnage'];
+				// alert('a');
+				var marker = new google.maps.Marker({
+					position: point,
+					map: map,
+					title: title,
+					icon: markerImg
+				});
+				markers[mmsi] = marker;
+			}
+			else {
+				// alert('b');
+				markers[mmsi].setPosition(point);
+			}
 
-				// var title = "Vessel: " + dataObj['vessel_name'] + "\n Class: " + dataObj['class_special_desc'] + "\n Tonnage: " + dataObj['tonnage'];
-				// // alert('a');
-				// var marker = new google.maps.Marker({
-					// position: point,
-					// map: map,
-					// title: title,
-					// icon: markerImg
-				// });
-				// markers[mmsi] = marker;
-			// }
-			// else {
-				// // alert('b');
-				// markers[mmsi].setPosition(point);
-			// }
+			// alert(data);
+		};
 
-			// // alert(data);
-		// };
-
-		// // close
-		// ws.onclose = function() {
-		// };
+		// close
+		ws.onclose = function() {
+		};
 
 		//============= BUS ====================
 		wsBus = fmeserver.getWebSocketConnection("bus_out");
 
 		// receive
 		wsBus.onmessage = function (evt) {
-			console.log("message received: ");
-			console.log(evt.data);
 			/*
 			{
 			"bus_id": "1514",
@@ -158,60 +152,55 @@ function initialize() {
 		wsBus.onclose = function() {
 		};
 
-		// //================= PLANE =======================
-		// wsPlane = new WebSocket("ws://fmeserver.com:9998/plane", "None");
+		//================= PLANE =======================
+		wsPlane = fmeserver.getWebSocketConnection("plane_out");
 
-		// // open
-		// wsPlane.onopen = function() {
-			// wsPlane.send("consumer");
-		// };
+		// receive
+		wsPlane.onmessage = function (evt) {
+			/*
+			{
+			"flight_id": "VRD740",
+			"latitude": "39.5647",
+			"longitude": "-122.235",
+			"altitude": "33300",
+			"heading": "358",
+			"aircraft_model": "A320",
+			"speed": "484.4"
+			}
+			*/
 
-		// // receive
-		// wsPlane.onmessage = function (evt) {
-			// /*
-			// {
-			// "flight_id": "VRD740",
-			// "latitude": "39.5647",
-			// "longitude": "-122.235",
-			// "altitude": "33300",
-			// "heading": "358",
-			// "aircraft_model": "A320",
-			// "speed": "484.4"
-			// }
-			// */
+			var data = evt.data;
+			dataObj = eval('(' + eval('(' + data + ')').ws_msg + ')');
 
-			// var data = evt.data;
-			// dataObj = eval('(' + data + ')')
+			the_id = dataObj['flight_id'];
+			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
 
-			// the_id = dataObj['flight_id'];
-			// var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
+			var image = "http://maps.google.com/mapfiles/kml/shapes/airports.png";
+			var imgScaledSize = new google.maps.Size(30,30);
 
-			// var image = "http://maps.google.com/mapfiles/kml/shapes/airports.png";
-			// var imgScaledSize = new google.maps.Size(30,30);
+			var markerImg = new google.maps.MarkerImage(image, null, null, null, imgScaledSize);
 
-			// var markerImg = new google.maps.MarkerImage(image, null, null, null, imgScaledSize);
+			if(markersPlane[the_id] == undefined) {
+				//alert('a');
+				var marker = new google.maps.Marker({
+					position: point,
+					map: map,
+					title: "Flight: " + the_id + "\n Aircraft: " + dataObj['aircraft_model'] + "\n Altitude: " + dataObj['altitude'] + " m\n Speed: " + dataObj['speed'] + " km/h",
+					icon: markerImg
+				});
+				markersPlane[the_id] = marker;
+			}
+			else {
+				//alert('b');
+				markersPlane[the_id].setPosition(point);
+			}
 
-			// if(markersPlane[the_id] == undefined) {
-				// //alert('a');
-				// var marker = new google.maps.Marker({
-					// position: point,
-					// map: map,
-					// title: "Flight: " + the_id + "\n Aircraft:" + dataObj['aircraft_model'] + "\n Altitude: " + dataObj['altitude'] + "\n Speed: " + dataObj['speed'] + " km/h",
-					// icon: markerImg
-				// });
-				// markersPlane[the_id] = marker;
-			// }
-			// else {
-				// //alert('b');
-				// markersPlane[the_id].setPosition(point);
-			// }
+			//alert(data);
+		};
 
-			// //alert(data);
-		// };
-
-		// // close
-		// wsPlane.onclose = function() {
-		// };
+		// close
+		wsPlane.onclose = function() {
+		};
 
 		// //================= CUSTOM =======================
 		// wsCustom = new WebSocket("ws://fmeserver.com:9998/custom", "None");
