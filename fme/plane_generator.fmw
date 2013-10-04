@@ -10,7 +10,7 @@
 #          --max_y 660000
 #          --min_x 1790000
 #          --max_x 1900000
-#          --num_planes 30
+#          --num_planes 10
 #    
 #    
 #! PASSWORD=""
@@ -39,7 +39,7 @@
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-10-03T12:02:13"
+#! LAST_SAVE_DATE="2013-10-03T15:54:32"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
@@ -49,8 +49,8 @@
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
-#! DOC_EXTENTS="3537 1152"
-#! FME_DOCUMENT_GUID="a6312105-bb68-45cc-a8b6-3dd0f6a10ed2"
+#! DOC_EXTENTS="3852 1152"
+#! FME_DOCUMENT_GUID="2e2927cc-6d39-49be-971d-fa884aaaaac7"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -64,6 +64,39 @@
 #! <FEATURE_TYPES>
 #! </FEATURE_TYPES>
 #! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#! NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="FAILURE_TOPICS"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="HTTP_DATASET"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="NOTIFICATION_WRITER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="PUBLISHER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="SUCCESS_TOPICS"
+#! VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
@@ -88,7 +121,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL INTEGER num_planes Number of planes:"
-#! DEFAULT_VALUE="30"
+#! DEFAULT_VALUE="10"
 #! IS_STAND_ALONE="true"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -275,7 +308,7 @@
 #! IDENTIFIER="20"
 #! TYPE="WebSocketSender"
 #! VERSION="0"
-#! POSITION="3411 -627"
+#! POSITION="3726 -623"
 #! ORDER="17"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -303,7 +336,7 @@
 #! IDENTIFIER="25"
 #! TYPE="StringConcatenator"
 #! VERSION="6"
-#! POSITION="2844 -639"
+#! POSITION="3159 -635"
 #! ORDER="18"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -325,41 +358,10 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONConcatenator"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
-#! IDENTIFIER="31"
-#! TYPE="VehicleMover"
-#! VERSION="1"
-#! POSITION="1173 -582"
-#! ORDER="0"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="Output"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="flight_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="aircraft_model" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x_coord" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y_coord" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="speed" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="altitude" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="INCOMPLETE"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <XFORM_PARM PARM_NAME="ITERATION_COUNT_ATTR" PARM_VALUE="_iter_count"/>
-#! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="Y_COORD" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;y_coord&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="VehicleMover"/>
-#! <XFORM_PARM PARM_NAME="HEADING" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;heading&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="SPEED" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;speed&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MAX_LOOP_ITERATIONS" PARM_VALUE="0"/>
-#! <XFORM_PARM PARM_NAME="X_COORD" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;x_coord&lt;closeparen&gt;"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
 #! IDENTIFIER="32"
 #! TYPE="Reprojector"
 #! VERSION="3"
-#! POSITION="1665 -621"
+#! POSITION="1980 -617"
 #! ORDER="22"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -387,7 +389,7 @@
 #! IDENTIFIER="30"
 #! TYPE="CoordinateExtractor"
 #! VERSION="1"
-#! POSITION="2254 -630"
+#! POSITION="2569 -626"
 #! ORDER="34"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -487,6 +489,63 @@
 #! <XFORM_PARM PARM_NAME="PLACES" PARM_VALUE="0"/>
 #! <XFORM_PARM PARM_NAME="MIN" PARM_VALUE="7000"/>
 #! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="43"
+#! TYPE="Decelerator"
+#! VERSION="0"
+#! POSITION="1620 -996"
+#! ORDER="40"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="flight_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="aircraft_model" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x_coord" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y_coord" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="speed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="altitude" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Decelerator"/>
+#! <XFORM_PARM PARM_NAME="FEATURES_PER_SECOND" PARM_VALUE="30"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DECEL_TYPE" PARM_VALUE="Limit Features Per Second"/>
+#! <XFORM_PARM PARM_NAME="DELAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="33"
+#! TYPE="VehicleDisplacer"
+#! VERSION="1"
+#! POSITION="1299 -663"
+#! ORDER="0"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="Output"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="flight_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="aircraft_model" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x_coord" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y_coord" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="speed" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="altitude" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="INCOMPLETE"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_PARM PARM_NAME="ITERATION_COUNT_ATTR" PARM_VALUE="_iter_count"/>
+#! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="Y_COORD" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;y_coord&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="VehicleDisplacer"/>
+#! <XFORM_PARM PARM_NAME="HEADING" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;heading&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="SPEED" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;speed&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MAX_LOOP_ITERATIONS" PARM_VALUE="0"/>
+#! <XFORM_PARM PARM_NAME="X_COORD" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;x_coord&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
 #! <FEAT_LINK
@@ -520,24 +579,6 @@
 #! IDENTIFIER="27"
 #! SOURCE_NODE="25"
 #! TARGET_NODE="20"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="26"
-#! SOURCE_NODE="12"
-#! TARGET_NODE="31"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="33"
-#! SOURCE_NODE="31"
-#! TARGET_NODE="32"
 #! SOURCE_PORT_DESC="fo 0"
 #! TARGET_PORT_DESC="fi 0"
 #! ENABLED="true"
@@ -615,56 +656,39 @@
 #! ENABLED="true"
 #! EXTRA_POINTS=""
 #! />
+#! <FEAT_LINK
+#! IDENTIFIER="45"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="32"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="31"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="33"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="44"
+#! SOURCE_NODE="33"
+#! TARGET_NODE="43"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
 #! </FEAT_LINKS>
 #! <BREAKPOINTS>
 #! </BREAKPOINTS>
 #! <ATTR_LINKS>
 #! </ATTR_LINKS>
 #! <SUBDOCUMENTS>
-#! <SUBDOCUMENT
-#! NAME="VehicleDisplacer"
-#! IS_VISIBLE="false"
-#! DOC_TOP_LEFT="2147483647 2147483647"
-#! VIEW_POSITION="0 0"
-#! DOC_EXTENTS="-2147483648 -2147483648"
-#! SUPPRESS_UPGRADE="false"
-#! XFORM_DEPRECATED="No"
-#! REQUIREMENTS_KEYWORD="none"
-#! ZOOM_SCALE="100"
-#! FME_PROCESS_COUNT="NO_PARALLELISM"
-#! CATEGORY=""
-#! FME_PROCESS_GROUPS_ORDERED="No"
-#! LEGAL_TERMS_CONDITIONS=""
-#! FME_PROCESS_GROUP_BY=""
-#! DESCRIPTION=""
-#! TITLE="VehicleDisplacer"
-#! USAGE=""
-#! DOC_DYNAMIC_INPUT_ATTRS="0"
-#! HISTORY=""
-#! REQUIREMENTS=""
-#! >
-#! <GLOBAL_PARAMETERS>
-#! <GLOBAL_PARAMETER
-#! GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR num_planes Number of planes:"
-#! DEFAULT_VALUE="@Value(num_planes)"
-#! IS_STAND_ALONE="true"
-#! />
-#! </GLOBAL_PARAMETERS>
-#! <COMMENTS>
-#! </COMMENTS>
-#! <CONSTANTS>
-#! </CONSTANTS>
-#! <BOOKMARKS>
-#! </BOOKMARKS>
-#! <TRANSFORMERS>
-#! </TRANSFORMERS>
-#! <FEAT_LINKS>
-#! </FEAT_LINKS>
-#! <BREAKPOINTS>
-#! </BREAKPOINTS>
-#! <ATTR_LINKS>
-#! </ATTR_LINKS>
-#! </SUBDOCUMENT>
 #! </SUBDOCUMENTS>
 #! <LOOKUP_TABLES>
 #! </LOOKUP_TABLES>
@@ -678,7 +702,7 @@ DEFAULT_MACRO min_x 1790000
 GUI OPTIONAL TEXT min_x Minimum x value:
 DEFAULT_MACRO max_x 1900000
 GUI OPTIONAL TEXT max_x Maximum x value:
-DEFAULT_MACRO num_planes 30
+DEFAULT_MACRO num_planes 10
 GUI OPTIONAL INTEGER num_planes Number of planes:
 #! START_HEADER
 #! START_WB_HEADER
@@ -739,8 +763,8 @@ FACTORY_DEF * PythonFactory    FACTORY_NAME FlightAndAircraftGenerator    INPUT 
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc DuplicatePlaneRemover_d0bca6af_d4b4_495e_a2f1_b902ff65c4c819_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___DuplicatePlaneRemover_d0bca6af_d4b4_495e_a2f1_b902ff65c4c819___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__DuplicatePlaneRemover_d0bca6af_d4b4_495e_a2f1_b902ff65c4c819__KeySeenCount($attrVal)] - 1]; };
-FACTORY_DEF * TestFactory    FACTORY_NAME DuplicatePlaneRemover    INPUT  FEATURE_TYPE FlightAndAircraftGenerator_OUTPUT    TEST @Tcl2("DuplicatePlaneRemover_d0bca6af_d4b4_495e_a2f1_b902ff65c4c819_dupKeyCount {(flight_id)}") > 0    OUTPUT FAILED FEATURE_TYPE DuplicatePlaneRemover_UNIQUE
+Tcl2 proc DuplicatePlaneRemover_80314787_2c87_497c_8d47_1d91954f929d14_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___DuplicatePlaneRemover_80314787_2c87_497c_8d47_1d91954f929d14___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__DuplicatePlaneRemover_80314787_2c87_497c_8d47_1d91954f929d14__KeySeenCount($attrVal)] - 1]; };
+FACTORY_DEF * TestFactory    FACTORY_NAME DuplicatePlaneRemover    INPUT  FEATURE_TYPE FlightAndAircraftGenerator_OUTPUT    TEST @Tcl2("DuplicatePlaneRemover_80314787_2c87_497c_8d47_1d91954f929d14_dupKeyCount {(flight_id)}") > 0    OUTPUT FAILED FEATURE_TYPE DuplicatePlaneRemover_UNIQUE
 
 # -------------------------------------------------------------------------
 
@@ -774,17 +798,34 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME AltitudeGenerator    INPUT  FEATURE_TYP
 FACTORY_DEF * TestFactory    FACTORY_NAME 2DPointReplacer    INPUT  FEATURE_TYPE AltitudeGenerator_OUTPUT    TEST &fme_type = fme_text    OUTPUT PASSED FEATURE_TYPE 2DPointReplacer_POINT         @XValue("@Value(x_coord)",RESET)         @YValue("@Value(y_coord)")         @Dimension(2)    OUTPUT FAILED FEATURE_TYPE 2DPointReplacer_POINT         @XValue("@Value(x_coord)",RESET)         @YValue("@Value(y_coord)")         @Dimension(2)         @GeometryType(fme_point)
 
 # -------------------------------------------------------------------------
-FACTORY_DEF * TeeFactory   FACTORY_NAME "VehicleMover Input Input Collector"   INPUT FEATURE_TYPE 2DPointReplacer_POINT   OUTPUT FEATURE_TYPE VehicleMover_Input
-FACTORY_DEF * TransformFact:VehicleMover    FACTORY_NAME VehicleMover    FACTORY_META_PARAMS    TRANSFORMER_NAME:VehicleMover    TRANSFORMER_PARAMS:X_COORD,<lt>at<gt>Value<lt>openparen<gt>x_coord<lt>closeparen<gt>,Y_COORD,<lt>at<gt>Value<lt>openparen<gt>y_coord<lt>closeparen<gt>,HEADING,<lt>at<gt>Value<lt>openparen<gt>heading<lt>closeparen<gt>,SPEED,<lt>at<gt>Value<lt>openparen<gt>speed<lt>closeparen<gt>,MAX_LOOP_ITERATIONS,0,ITERATION_COUNT_ATTR,_iter_count    LOOPBACK_INPUT_TAG:Input    LOOPBACK_OUTPUT_TAG:INCOMPLETE    RECURRING_INPUT_TAG:    MAX_LOOP_ITERATIONS:0    ITERATION_COUNT_ATTR:_iter_count    INPUT Input FEATURE_TYPE VehicleMover_Input    OUTPUT Output FEATURE_TYPE VehicleMover_Output    OUTPUT INCOMPLETE FEATURE_TYPE VehicleMover_INCOMPLETE
-FACTORY_DEF * TeeFactory   FACTORY_NAME "VehicleMover Output Output Renamer/Nuker"   INPUT FEATURE_TYPE VehicleMover_Output   OUTPUT FEATURE_TYPE VehicleMover_Output
-FACTORY_DEF * TeeFactory   FACTORY_NAME "VehicleMover INCOMPLETE Output Renamer/Nuker"   INPUT FEATURE_TYPE VehicleMover_INCOMPLETE
+FACTORY_DEF * TeeFactory   FACTORY_NAME "VehicleDisplacer Input Input Collector"   INPUT FEATURE_TYPE 2DPointReplacer_POINT   OUTPUT FEATURE_TYPE VehicleDisplacer_Input
+FACTORY_DEF * TransformFact:VehicleDisplacer    FACTORY_NAME VehicleDisplacer    FACTORY_META_PARAMS    TRANSFORMER_NAME:VehicleDisplacer    TRANSFORMER_PARAMS:X_COORD,<lt>at<gt>Value<lt>openparen<gt>x_coord<lt>closeparen<gt>,Y_COORD,<lt>at<gt>Value<lt>openparen<gt>y_coord<lt>closeparen<gt>,HEADING,<lt>at<gt>Value<lt>openparen<gt>heading<lt>closeparen<gt>,SPEED,<lt>at<gt>Value<lt>openparen<gt>speed<lt>closeparen<gt>,MAX_LOOP_ITERATIONS,0,ITERATION_COUNT_ATTR,_iter_count    LOOPBACK_INPUT_TAG:Input    LOOPBACK_OUTPUT_TAG:INCOMPLETE    RECURRING_INPUT_TAG:    MAX_LOOP_ITERATIONS:0    ITERATION_COUNT_ATTR:_iter_count    INPUT Input FEATURE_TYPE VehicleDisplacer_Input    OUTPUT Output FEATURE_TYPE VehicleDisplacer_Output    OUTPUT INCOMPLETE FEATURE_TYPE VehicleDisplacer_INCOMPLETE
+FACTORY_DEF * TeeFactory   FACTORY_NAME "VehicleDisplacer Output Output Renamer/Nuker"   INPUT FEATURE_TYPE VehicleDisplacer_Output   OUTPUT FEATURE_TYPE VehicleDisplacer_Output
+FACTORY_DEF * TeeFactory   FACTORY_NAME "VehicleDisplacer INCOMPLETE Output Renamer/Nuker"   INPUT FEATURE_TYPE VehicleDisplacer_INCOMPLETE
+# -------------------------------------------------------------------------
+
+# This is just a simple delay, which is given a # of seconds to stall
+
+Tcl2 proc Decelerator_delay {seconds unused} {     after [expr round($seconds * 1000)]; }
+Tcl2 set Decelerator_clockMillisecondsWhenLastFeatureWentBy [clock clicks -milliseconds];
+
+# This proc ensures that no more than some maximum number of features get through each second
+
+Tcl2 proc Decelerator_maxpersecond {unused maxFeaturesPerSecond} {     global Decelerator_clockMillisecondsWhenLastFeatureWentBy;     set minimumDelayInMilliseconds [expr 1000.0 / $maxFeaturesPerSecond];     set clockMillisecondsNow [clock clicks -milliseconds];     set milliSecondsSinceLastFeature [expr $clockMillisecondsNow -                    [set Decelerator_clockMillisecondsWhenLastFeatureWentBy]];     if {$milliSecondsSinceLastFeature < $minimumDelayInMilliseconds} {         after [expr round($minimumDelayInMilliseconds - $milliSecondsSinceLastFeature)];     };     set Decelerator_clockMillisecondsWhenLastFeatureWentBy [clock clicks -milliseconds]; }
+# Now set up which of the above two delay procedures we'll actually
+# use by renaming the one we want to "Decelerator_Waiter"
+# Then that is what we'll actually call when a feature goes by.
+
+Tcl2 if { {Limit Features Per Second} == {Per Feature Delay} } {         rename Decelerator_delay Decelerator_Waiter;      } else {         rename Decelerator_maxpersecond Decelerator_Waiter;      };
+FACTORY_DEF * TeeFactory    FACTORY_NAME Decelerator    INPUT  FEATURE_TYPE VehicleDisplacer_Output    OUTPUT FEATURE_TYPE Decelerator_OUTPUT         @Tcl2("Decelerator_Waiter {<Unused>} {30}")
+
 # -------------------------------------------------------------------------
 
 # Wipe out the source setting if it was untouched from the default setting
 
 DEFAULT_MACRO Reprojector_SOURCE CA83-III
 INCLUDE [if { {CA83-III} == {Read from feature} } {             puts {MACRO Reprojector_SOURCE}          }         ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME Reprojector    INPUT  FEATURE_TYPE VehicleMover_Output    OUTPUT FEATURE_TYPE Reprojector_REPROJECTED         @Reproject($(Reprojector_SOURCE),LL83,NearestNeighbor,PreserveCells)
+FACTORY_DEF * TeeFactory    FACTORY_NAME Reprojector    INPUT  FEATURE_TYPE Decelerator_OUTPUT    OUTPUT FEATURE_TYPE Reprojector_REPROJECTED         @Reproject($(Reprojector_SOURCE),LL83,NearestNeighbor,PreserveCells)
 
 # -------------------------------------------------------------------------
 
@@ -792,8 +833,8 @@ FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor    INPUT  FEATURE_
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc JSONConcatenator_65aad76a_e52a_4f26_ac5b_3b18ea2b5c0c65_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME JSONConcatenator    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    OUTPUT FEATURE_TYPE JSONConcatenator_OUTPUT        @Tcl2("JSONConcatenator_65aad76a_e52a_4f26_ac5b_3b18ea2b5c0c65_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>flight_id<apos><space>:<space><apos><at>Value<openparen>flight_id<closeparen><apos><comma><space><apos>latitude<apos><space>:<space><apos><at>Value<openparen>y_coord<closeparen><apos><comma><space><apos>longitude<apos><space>:<space><apos><at>Value<openparen>x_coord<closeparen><apos><comma><space><apos>heading<apos><space>:<space><apos><at>Value<openparen>heading<closeparen><apos><comma><apos>speed<apos>:<apos><at>Value<openparen>speed<closeparen><apos><comma><apos>altitude<apos>:<apos><at>Value<openparen>altitude<closeparen><apos><comma><space><apos>aircraft_model<apos><space>:<space><apos><at>Value<openparen>aircraft_model<closeparen><apos><space><closecurly><quote><lf><closecurly>,JSONConcatenator)} ")
+Tcl2 proc JSONConcatenator_8c1653c0_f739_4ded_91b5_70adcca4254e14_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME JSONConcatenator    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    OUTPUT FEATURE_TYPE JSONConcatenator_OUTPUT        @Tcl2("JSONConcatenator_8c1653c0_f739_4ded_91b5_70adcca4254e14_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>flight_id<apos><space>:<space><apos><at>Value<openparen>flight_id<closeparen><apos><comma><space><apos>latitude<apos><space>:<space><apos><at>Value<openparen>y_coord<closeparen><apos><comma><space><apos>longitude<apos><space>:<space><apos><at>Value<openparen>x_coord<closeparen><apos><comma><space><apos>heading<apos><space>:<space><apos><at>Value<openparen>heading<closeparen><apos><comma><apos>speed<apos>:<apos><at>Value<openparen>speed<closeparen><apos><comma><apos>altitude<apos>:<apos><at>Value<openparen>altitude<closeparen><apos><comma><space><apos>aircraft_model<apos><space>:<space><apos><at>Value<openparen>aircraft_model<closeparen><apos><space><closecurly><quote><lf><closecurly>,JSONConcatenator)} ")
 
 # -------------------------------------------------------------------------
 
