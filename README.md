@@ -38,6 +38,6 @@ Installation Instructions
 
 - Run recorded_ais_reader. Note that it is quite resource intensive.
 
-- Place contents of /www in <FMEServerDir>\Utilities\tomcat\webapps\ROOT\spatialdashboard
+- Place contents of /www in **FMEServerDir**\Utilities\tomcat\webapps\ROOT\spatialdashboard
 
 - Visit http://myfmeserver/spatialdashboard to view.
