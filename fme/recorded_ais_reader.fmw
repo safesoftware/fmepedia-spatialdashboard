@@ -5,23 +5,23 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME_14165\fme.exe C:\safegit\spatialdashboard\fme\recorded_ais_reader.fmw
+#    C:\apps\FME_14205\fme.exe C:\safegit\spatialdashboard\fme\recorded_ais_reader.fmw
+#          --prev_path ""
 #    
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="0 0"
+#! VIEW_POSITION="2514 -1302"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
 #! FME_GEOMETRY_HANDLING="Enhanced"
 #! DESCRIPTION=""
 #! TITLE=""
-#! SHOW_BOOKMARKS="true"
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14165"
-#! ZOOM_SCALE="58"
+#! FME_BUILD_NUM="14205"
+#! ZOOM_SCALE="100"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
 #! LEGAL_TERMS_CONDITIONS=""
@@ -29,23 +29,24 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID="27f08b1f-f4c6-4b20-8d44-3a381e5e9cb1"
 #! DOC_TOP_LEFT="72 -2748"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-10-07T16:15:45"
+#! LAST_SAVE_DATE="2013-11-29T10:03:13"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20130929 - Build 14165 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 (20131125 - Build 14205 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="5551 2666"
-#! FME_DOCUMENT_GUID="27f08b1f-f4c6-4b20-8d44-3a381e5e9cb1"
+#! FME_DOCUMENT_GUID="6dc9acd0-5abd-457b-b912-7826fc6b2c28"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -298,6 +299,11 @@
 #! <PROPERTIES>
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
 #! NAME="FAILURE_TOPICS"
 #! VALUE=""
 #! />
@@ -313,33 +319,48 @@
 #! />
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
-#! NAME="PUBLISHER"
-#! VALUE=""
-#! />
-#! <PROPERTY
-#! CATEGORY="FMEUSERPROPDATA"
 #! NAME="SUCCESS_TOPICS"
 #! VALUE=""
 #! />
 #! </PROPERTIES>
 #! </SERVICE>
 #! </SERVICES>
+#! <REPOSITORY
+#! NAME="Samples"
+#! />
+#! <ITEM
+#! NAME="recorded_ais_reader.fmw"
+#! />
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR prev_path Previous file path for deletion:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="true"
+#! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI IGNORE MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*.*)|*.* Source Text File(s):"
 #! DEFAULT_VALUE="./data/2012-07-02_SanFran_AIS_recording.txt"
 #! IS_STAND_ALONE="false"
 #! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI IGNORE TEXT_OR_ATTR token FME Server REST token:"
+#! DEFAULT_VALUE="123abc"
+#! IS_STAND_ALONE="true"
+#! />
 #! </GLOBAL_PARAMETERS>
 #! <COMMENTS>
 #! <COMMENT
 #! IDENTIFIER="125"
-#! COMMENT_VALUE="Get ship details"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;Get ship details&lt;/body&gt;&lt;/html&gt;"
 #! POSITION="2751 -635"
 #! ORDER="105"
 #! FOLLOW_ANCHOR="true"
 #! INFO_NODE="false"
+#! TOP_LEFT="2751 -635"
+#! BOTTOM_RIGHT="2751 -635"
+#! COLOUR="1,1,0.784314,0.196078"
+#! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="110"
 #! />
@@ -350,42 +371,42 @@
 #! <BOOKMARK
 #! IDENTIFIER="127"
 #! NAME="Create location message with ship details"
-#! DESCRIPTION=""
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
 #! TOP_LEFT="2164 -187"
 #! BOTTOM_RIGHT="3701 -763"
 #! STICKY="true"
-#! COLOUR="0.356863,0.368627,0.34902"
-#! CONTENTS="116 154 110 109 125 152 "
+#! COLOUR="0.356863,0.364706,0.34902"
+#! CONTENTS="125 110 152 154 109 116 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="133"
 #! NAME="Delete the previous file"
-#! DESCRIPTION=""
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
 #! TOP_LEFT="2081 -2418"
 #! BOTTOM_RIGHT="4325 -3043"
 #! STICKY="true"
 #! COLOUR="0.529412,0.329412,0.803922"
-#! CONTENTS="132 114 126 115 117 120 104 131 "
+#! CONTENTS="156 132 126 153 115 114 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="146"
 #! NAME="Submit the next AIS job"
-#! DESCRIPTION=""
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
 #! TOP_LEFT="4500 -269"
 #! BOTTOM_RIGHT="5623 -1136"
 #! STICKY="true"
 #! COLOUR="0.411765,0.819608,0.854902"
-#! CONTENTS="144 64 140 137 142 139 143 141 145 "
+#! CONTENTS="137 140 145 144 139 143 64 142 131 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="129"
 #! NAME="Write out each AIS message"
-#! DESCRIPTION=""
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
 #! TOP_LEFT="74 -1761"
 #! BOTTOM_RIGHT="749 -2628"
 #! STICKY="true"
 #! COLOUR="0.203922,0.203922,0.27451"
-#! CONTENTS="11 12 5 8 13 "
+#! CONTENTS="11 12 5 148 8 "
 #! />
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
@@ -420,9 +441,10 @@
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
-#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="file_path,C:&lt;backslash&gt;temp&lt;backslash&gt;ais_&lt;at&gt;Value&lt;openparen&gt;_uuid&lt;closeparen&gt;.txt"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="filename,ais_&lt;at&gt;Value&lt;openparen&gt;_uuid&lt;closeparen&gt;.txt,shared_resource,$(FME_SHAREDRESOURCE_TEMP)"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="74"
@@ -1057,7 +1079,7 @@
 #! IDENTIFIER="5"
 #! TYPE="AttributeFileWriter"
 #! VERSION="1"
-#! POSITION="199 -2333"
+#! POSITION="178 -2446"
 #! ORDER="104"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -1066,6 +1088,8 @@
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeFileWriter"/>
 #! <XFORM_PARM PARM_NAME="CHAR_ENCODING" PARM_VALUE="fme-system"/>
@@ -1923,6 +1947,8 @@
 #! <FEAT_COLLAPSED COLLAPSED="40"/>
 #! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="40" />
 #! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="40" />
+#! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="40" />
+#! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="40" />
 #! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="40" />
 #! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="40" />
 #! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE="&lt;Unused&gt;"/>
@@ -2092,7 +2118,7 @@
 #! IDENTIFIER="114"
 #! TYPE="Tester"
 #! VERSION="1"
-#! POSITION="2708 -2632"
+#! POSITION="2299 -2626"
 #! ORDER="116"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -2101,92 +2127,25 @@
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="file_path_del" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="FAILED"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
 #! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="file_path_del" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
 #! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
 #! <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
 #! <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
 #! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
-#! <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &quot;file_path_del&quot; NOT_ATTRIBUTE_IS_EMPTY &quot;&lt;Unused&gt;&quot;"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="104"
-#! TYPE="PythonCaller"
-#! VERSION="3"
-#! POSITION="3261 -2583"
-#! ORDER="117"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="OUTPUT"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="file_path_del" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fmeobjects&lt;comma&gt;&lt;space&gt;os&lt;comma&gt;&lt;space&gt;time&lt;lf&gt;#&lt;space&gt;Template&lt;space&gt;Function&lt;space&gt;interface:&lt;lf&gt;def&lt;space&gt;processFeature&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pass&lt;lf&gt;&lt;lf&gt;#&lt;space&gt;Template&lt;space&gt;Class&lt;space&gt;Interface:&lt;lf&gt;class&lt;space&gt;FeatureProcessor&lt;openparen&gt;object&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;def&lt;space&gt;__init__&lt;openparen&gt;self&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pass&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;def&lt;space&gt;input&lt;openparen&gt;self&lt;comma&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;file_path&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;file_path_del&lt;apos&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;os.remove&lt;openparen&gt;file_path&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;self.pyoutput&lt;openparen&gt;feature&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;def&lt;space&gt;close&lt;openparen&gt;self&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pass"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PythonCaller_2"/>
-#! <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="FeatureProcessor"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="120"
-#! TYPE="VariableRetriever"
-#! VERSION="2"
-#! POSITION="2161 -2498"
-#! ORDER="118"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="OUTPUT"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="file_path_del" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="SCOPE" PARM_VALUE="Global"/>
-#! <XFORM_PARM PARM_NAME="PARAMETER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="VariableRetriever"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="VARNAME" PARM_VALUE="file_path"/>
-#! <XFORM_PARM PARM_NAME="VALUE_ATTR" PARM_VALUE="file_path_del"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="115"
-#! TYPE="VariableSetter"
-#! VERSION="2"
-#! POSITION="3775 -2748"
-#! ORDER="119"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="OUTPUT"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="file_path_del" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="SCOPE" PARM_VALUE="Global"/>
-#! <XFORM_PARM PARM_NAME="PARAMETER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="VariableSetter"/>
-#! <XFORM_PARM PARM_NAME="VALUE" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;file_path&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="VARNAME" PARM_VALUE="file_path"/>
+#! <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &quot;$(prev_path)&quot; NOT_ATTRIBUTE_IS_EMPTY &quot;&quot;"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="139"
@@ -2206,7 +2165,7 @@
 #! IDENTIFIER="142"
 #! TYPE="Aggregator"
 #! VERSION="8"
-#! POSITION="5069 -390"
+#! POSITION="4582 -845"
 #! ORDER="121"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -2253,13 +2212,14 @@
 #! IDENTIFIER="140"
 #! TYPE="FMEServerJobSubmitter"
 #! VERSION="0"
-#! POSITION="5062 -630"
+#! POSITION="5108 -567"
 #! ORDER="123"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
 #! >
 #! <OUTPUT_FEAT NAME="SUCCEEDED"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="filename_del" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_job_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_NumFeaturesOutput" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_timeFinished" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2267,6 +2227,7 @@
 #! <XFORM_ATTR ATTR_NAME="_timeStarted" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="FAILED"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="filename_del" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_job_id" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_job_failure_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_StatusMessage" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2278,20 +2239,20 @@
 #! <XFORM_PARM PARM_NAME="USERNAME" PARM_VALUE="admin"/>
 #! <XFORM_PARM PARM_NAME="SERVER_NAME" PARM_VALUE="http://localhost"/>
 #! <XFORM_PARM PARM_NAME="WORKSPACE_NAME" PARM_VALUE="recorded_ais_reader.fmw"/>
-#! <XFORM_PARM PARM_NAME="PARAMETER_TYPES" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETER_TYPES" PARM_VALUE="STRING"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FMEServerJobSubmitter"/>
 #! <XFORM_PARM PARM_NAME="BLOCKING" PARM_VALUE="No"/>
 #! <XFORM_PARM PARM_NAME="REPOSITORY" PARM_VALUE="spatialdashboard"/>
 #! <XFORM_PARM PARM_NAME="SERVER_PORT" PARM_VALUE="0"/>
-#! <XFORM_PARM PARM_NAME="WORKSPACE_PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="WORKSPACE_PARAMETERS" PARM_VALUE="prev_path,&lt;at&gt;Value&lt;openparen&gt;filename_del&lt;closeparen&gt;"/>
 #! <XFORM_PARM PARM_NAME="SUBSECTION" PARM_VALUE="SERVER_JOB_SUBMITTER"/>
-#! <XFORM_PARM PARM_NAME="PRIORITY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PRIORITY" PARM_VALUE="1"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="64"
 #! TYPE="Logger"
 #! VERSION="2"
-#! POSITION="5072 -917"
+#! POSITION="5113 -875"
 #! ORDER="124"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -2407,7 +2368,7 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://jabba:7078/websocket"/>
+#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://localhost:7078/websocket"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="152"
@@ -2454,21 +2415,144 @@
 #! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="notify_content"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringConcatenator_3"/>
 #! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="132"
+#! TYPE="HTTPDeleter"
+#! VERSION="3"
+#! POSITION="3120 -2542"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_url_contents" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_url_contents" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="HTTP_AUTH_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TARGET_URL" PARM_VALUE="http:&lt;solidus&gt;&lt;solidus&gt;localhost&lt;solidus&gt;fmerest&lt;solidus&gt;v2&lt;solidus&gt;resources&lt;solidus&gt;&lt;at&gt;Value&lt;openparen&gt;shared_resource&lt;closeparen&gt;&lt;solidus&gt;&lt;at&gt;$(prev_path)?detail=low&lt;amp&gt;token=$(token)"/>
+#! <XFORM_PARM PARM_NAME="REQUEST_HEADER" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROXY_PASSWORD" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROXY_PORT" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="STATUS_CODE_ATTR" PARM_VALUE="_http_status_code"/>
+#! <XFORM_PARM PARM_NAME="HTTP_REQUEST_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TARGET_ATTR_ENCODING" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="AUTH_USERNAME" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="AUTH_PASSWORD" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROXY_USERNAME" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROXY_AUTH_METHOD" PARM_VALUE="Basic"/>
+#! <XFORM_PARM PARM_NAME="PROXY_URL" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="HTTPDeleter"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FOLLOW_REDIRECTS" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="RESPONSE_HEADER_LIST_ATTR" PARM_VALUE="_headers"/>
+#! <XFORM_PARM PARM_NAME="ERROR_ATTR" PARM_VALUE="_error"/>
+#! <XFORM_PARM PARM_NAME="HTTP_RESPONSE_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="USE_COOKIES" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="VERIFY_SSL_CERTIFICATES" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="AUTH_METHOD" PARM_VALUE="Basic"/>
+#! <XFORM_PARM PARM_NAME="TARGET_ATTR" PARM_VALUE="_url_contents"/>
+#! <XFORM_PARM PARM_NAME="PROXY_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="148"
+#! TYPE="AttributeCreator"
+#! VERSION="4"
+#! POSITION="179 -2270"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="file_path,&lt;at&gt;Value&lt;openparen&gt;shared_resource&lt;closeparen&gt;&lt;solidus&gt;&lt;at&gt;Value&lt;openparen&gt;filename&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="115"
+#! TYPE="VariableSetter"
+#! VERSION="2"
+#! POSITION="3775 -2748"
+#! ORDER="119"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_url_contents" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="SCOPE" PARM_VALUE="Global"/>
+#! <XFORM_PARM PARM_NAME="PARAMETER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="VariableSetter"/>
+#! <XFORM_PARM PARM_NAME="VALUE" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;filename&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="VARNAME" PARM_VALUE="filename_del"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="131"
+#! TYPE="VariableRetriever"
+#! VERSION="2"
+#! POSITION="5098 -390"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="filename_del" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="SCOPE" PARM_VALUE="Global"/>
+#! <XFORM_PARM PARM_NAME="PARAMETER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="VariableRetriever"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="VARNAME" PARM_VALUE="filename_del"/>
+#! <XFORM_PARM PARM_NAME="VALUE_ATTR" PARM_VALUE="filename_del"/>
+#! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
 #! <FEAT_LINK
 #! IDENTIFIER="12"
 #! SOURCE_NODE="8"
 #! TARGET_NODE="11"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="13"
-#! SOURCE_NODE="11"
-#! TARGET_NODE="5"
 #! SOURCE_PORT_DESC="fo 0"
 #! TARGET_PORT_DESC="fi 0"
 #! ENABLED="true"
@@ -2853,42 +2937,6 @@
 #! EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#! IDENTIFIER="117"
-#! SOURCE_NODE="104"
-#! TARGET_NODE="115"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="131"
-#! SOURCE_NODE="120"
-#! TARGET_NODE="114"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="132"
-#! SOURCE_NODE="114"
-#! TARGET_NODE="104"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="126"
-#! SOURCE_NODE="114"
-#! TARGET_NODE="115"
-#! SOURCE_PORT_DESC="fo 1"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
 #! IDENTIFIER="136"
 #! SOURCE_NODE="118"
 #! TARGET_NODE="8"
@@ -2910,15 +2958,6 @@
 #! IDENTIFIER="144"
 #! SOURCE_NODE="137"
 #! TARGET_NODE="139"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="141"
-#! SOURCE_NODE="142"
-#! TARGET_NODE="140"
 #! SOURCE_PORT_DESC="fo 0"
 #! TARGET_PORT_DESC="fi 0"
 #! ENABLED="true"
@@ -2961,15 +3000,6 @@
 #! EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#! IDENTIFIER="122"
-#! SOURCE_NODE="7"
-#! TARGET_NODE="120"
-#! SOURCE_PORT_DESC="fo 40"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
 #! IDENTIFIER="154"
 #! SOURCE_NODE="110"
 #! TARGET_NODE="152"
@@ -2996,6 +3026,78 @@
 #! ENABLED="true"
 #! EXTRA_POINTS=""
 #! />
+#! <FEAT_LINK
+#! IDENTIFIER="153"
+#! SOURCE_NODE="114"
+#! TARGET_NODE="132"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="157"
+#! SOURCE_NODE="11"
+#! TARGET_NODE="148"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="158"
+#! SOURCE_NODE="148"
+#! TARGET_NODE="5"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="159"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="114"
+#! SOURCE_PORT_DESC="fo 40"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="126"
+#! SOURCE_NODE="114"
+#! TARGET_NODE="115"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="156"
+#! SOURCE_NODE="132"
+#! TARGET_NODE="115"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="160"
+#! SOURCE_NODE="142"
+#! TARGET_NODE="131"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="161"
+#! SOURCE_NODE="131"
+#! TARGET_NODE="140"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
 #! </FEAT_LINKS>
 #! <BREAKPOINTS>
 #! </BREAKPOINTS>
@@ -3008,9 +3110,14 @@
 #! </WORKSPACE>
 #! 
 GUI IGNORE SourceDataset_TEXTLINE_1,TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1,TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1,TEXTLINE_IN_SKIP_LINES_TEXTLINE_1,TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1,TEXTLINE_IN_ENCODING_TEXTLINE_1
+DEFAULT_MACRO prev_path 
+GUI OPTIONAL TEXT prev_path Previous file path for deletion:
 DEFAULT_MACRO SourceDataset_TEXTLINE ./data/2012-07-02_SanFran_AIS_recording.txt
 GUI IGNORE MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*.*)|*.* Source Text File(s):
+DEFAULT_MACRO token 123abc
+GUI IGNORE TEXT token FME Server REST token:
 INCLUDE [ if {{$(SourceDataset_TEXTLINE)} == {}} { puts_real {Parameter 'SourceDataset_TEXTLINE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(token)} == {}} { puts_real {Parameter 'token' must be given a value.}; exit 1; }; ]
 #! START_HEADER
 #! START_WB_HEADER
 READER_TYPE TEXTLINE
@@ -3130,13 +3237,15 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME UUIDGenerator    INPUT  FEATURE_TYPE De
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc AttributeCreator_e557ffa2_7e99_4433_bf26_d31ee2e826001_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+Tcl2 proc AttributeCreator_ad406b5d_f6d0_47db_850e_d81a50c855f12_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT         "@Tcl2( AttributeCreator_e557ffa2_7e99_4433_bf26_d31ee2e826001_attrSetter {(file_path,C:<backslash>temp<backslash>ais_<at>Value<openparen>_uuid<closeparen>.txt)} )"
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT         "@Tcl2( AttributeCreator_ad406b5d_f6d0_47db_850e_d81a50c855f12_attrSetter {(filename,ais_<at>Value<openparen>_uuid<closeparen>.txt,shared_resource,$(FME_SHAREDRESOURCE_TEMP))} )"
 
 # -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_2 INPUT  FEATURE_TYPE AttributeCreator_OUTPUT ATTR file_path <at>Value<openparen>shared_resource<closeparen><solidus><at>Value<openparen>filename<closeparen>    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_2_OUTPUT 
+# -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeFileWriter    INPUT  FEATURE_TYPE AttributeCreator_OUTPUT    OUTPUT FEATURE_TYPE AttributeFileWriter_OUTPUT         @File(DestWriteSrcRead,message,"@Value(file_path)",fme-system)
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeFileWriter    INPUT  FEATURE_TYPE AttributeCreator_2_OUTPUT    OUTPUT FEATURE_TYPE AttributeFileWriter_OUTPUT         @File(DestWriteSrcRead,message,"@Value(file_path)",fme-system)
 
 # -------------------------------------------------------------------------
 MACRO FeatureReader_DIRECTIVES 
@@ -3153,32 +3262,24 @@ INCLUDE [    set featTypes {ais_addressed_safety_related_message ais_aid_to_navi
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureReader_GeometryRemover    INPUT  FEATURE_TYPE AttributeFileWriter_OUTPUT    OUTPUT FEATURE_TYPE QueryFactoryInputFeatureType      $(REMOVE_GEOM_FUNC)
 
-FACTORY_DEF * QueryFactory    FACTORY_NAME FeatureReader    INPUT  FEATURE_TYPE QueryFactoryInputFeatureType    $(QUERY_INTERACTION_LINE)    COMBINE_ATTRIBUTES  RESULT_ONLY    COMBINE_GEOMETRY    RESULT_ONLY    READER_TYPE         AIS    READER_DATASET      "@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>file_path<closeparen>,FeatureReader)"    READER_IDS          ais_addressed_safety_related_message ais_aid_to_navigation_report ais_area_notice ais_assignment_mode_command ais_base_station_report ais_berthing_data ais_binary_acknowledge ais_binary_message_unknown ais_channel_management ais_clearance_time_to_enter_port ais_dangerous_cargo_indication ais_data_link_management_message ais_dgnss_broadcast_binary_message ais_environmental_report ais_extended_class_b_cs_position_report ais_extended_ship_static_voyage_imo236 ais_extended_ship_static_voyage_imo289 ais_fairway_closed ais_group_channel_command ais_interrogation ais_long_range_Broadcast_message ais_marine_traffic_signal ais_meteorological_hydrological_data ais_multiple_slot_binary_message ais_number_persons_on_board ais_position_report ais_route_information ais_safety_related_broadcast_message ais_sar_aircraft_position_report ais_ship_static_and_voyage_related_data ais_single_slot_binary_message ais_standard_class_b_cs_position_report ais_static_data_report ais_synthetic_target ais_text_description ais_tidal_window ais_utc_date_inquiry ais_weather_observation_from_ship_non_wmo ais_weather_observation_from_ship_wmo    READER_PARAMS     $(FeatureReader_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE *      @SupplyAttributes(fme_feature_type,@FeatureType())      @FeatureType(@Tcl2("FeatureReader_findInListElseDefault {$(FORMATTEDFEATURETYPES)} {@FeatureType()} {<OTHER>}"))      @FeatureType(@Concatenate(FeatureReader,"_",@FeatureType()))      @Transform(AIS,FME_GENERIC)    OUTPUT QUERY FEATURE_TYPE FeatureReader_INITIATOR
+FACTORY_DEF * QueryFactory    FACTORY_NAME FeatureReader    INPUT  FEATURE_TYPE QueryFactoryInputFeatureType    $(QUERY_INTERACTION_LINE)    COMBINE_ATTRIBUTES  RESULT_ONLY    COMBINE_GEOMETRY    RESULT_ONLY    READER_TYPE         AIS    READER_DATASET      "@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>file_path<closeparen>,FeatureReader)"    READER_IDS          ais_addressed_safety_related_message ais_aid_to_navigation_report ais_area_notice ais_assignment_mode_command ais_base_station_report ais_berthing_data ais_binary_acknowledge ais_binary_message_unknown ais_channel_management ais_clearance_time_to_enter_port ais_dangerous_cargo_indication ais_data_link_management_message ais_dgnss_broadcast_binary_message ais_environmental_report ais_extended_class_b_cs_position_report ais_extended_ship_static_voyage_imo236 ais_extended_ship_static_voyage_imo289 ais_fairway_closed ais_group_channel_command ais_interrogation ais_long_range_Broadcast_message ais_marine_traffic_signal ais_meteorological_hydrological_data ais_multiple_slot_binary_message ais_number_persons_on_board ais_position_report ais_route_information ais_safety_related_broadcast_message ais_sar_aircraft_position_report ais_ship_static_and_voyage_related_data ais_single_slot_binary_message ais_standard_class_b_cs_position_report ais_static_data_report ais_synthetic_target ais_text_description ais_tidal_window ais_utc_date_inquiry ais_weather_observation_from_ship_non_wmo ais_weather_observation_from_ship_wmo    READER_PARAMS     $(FeatureReader_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE *      @SupplyAttributes(fme_feature_type,@FeatureType())      @Tcl2("set FME_FeatureType [FeatureReader_findInListElseDefault {$(FORMATTEDFEATURETYPES)} $FME_FeatureType {<OTHER>}]")      @FeatureType(@Concatenate(FeatureReader,"_",@FeatureType()))      @Transform(AIS,FME_GENERIC)    OUTPUT QUERY FEATURE_TYPE FeatureReader_INITIATOR
 
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE FeatureReader_INITIATOR    TEST "@EvaluateExpression(STRING,$(prev_path$encode),Tester)" NOT_ATTRIBUTE_IS_EMPTY ""    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_PASSED    OUTPUT FAILED FEATURE_TYPE Tester_FAILED
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * HTTPFactory    FACTORY_NAME HTTPDeleter       INPUT  FEATURE_TYPE Tester_PASSED    TARGET_URL @EvaluateExpression(STRING_ENCODED,http:<solidus><solidus>localhost<solidus>fmerest<solidus>v2<solidus>resources<solidus><at>Value<openparen>shared_resource<closeparen><solidus><at>$(prev_path$encode)?detail=low<amp>token=$(token$encode),HTTPDeleter)    TARGET_ATTR "_url_contents"    HTTP_METHOD DELETE    AUTH_METHOD Basic    SINGLE_SIGN_ON No    PROXY_AUTH_METHOD Basic    TARGET_ATTRIBUTE_ENCODING    RESPONSE_HEADER_LIST_ATTR "_headers"    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR "_error"    FOLLOW_REDIRECTS Yes    VERIFY_SSL_CERTIFICATES Yes    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE HTTPDeleter_OUTPUT    OUTPUT REJECTED FEATURE_TYPE HTTPDeleter_<REJECTED>
+
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "HTTPDeleter <REJECTED> Output Nuker"   INPUT FEATURE_TYPE HTTPDeleter_<REJECTED>
 # -------------------------------------------------------------------------
 
 DEFAULT_MACRO WB_CURRENT_CONTEXT
-MACRO VariableRetriever_VAR file_path
-INCLUDE [if {{Global} == {Local}} {   puts {MACRO VariableRetriever_VAR $(WB_CURRENT_CONTEXT)_file_path}; };
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever    INPUT  FEATURE_TYPE FeatureReader_INITIATOR    OUTPUT FEATURE_TYPE VariableRetriever_OUTPUT        @GlobalVariable("$(VariableRetriever_VAR)",fme_result_attribute,file_path_del)
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    TEST "file_path_del" NOT_ATTRIBUTE_IS_EMPTY "<Unused>"    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_PASSED    OUTPUT FAILED FEATURE_TYPE Tester_FAILED
-# -------------------------------------------------------------------------
-
-
-FME_PYTHON_PATH "$(FME_MF_DIR)"
-
-FACTORY_DEF * PythonFactory    FACTORY_NAME PythonCaller_2    INPUT  FEATURE_TYPE Tester_PASSED    SYMBOL_NAME FeatureProcessor    PYTHON_NAMESPACE FMEOBJECTS    SOURCE_CODE import<space>fmeobjects<comma><space>os<comma><space>time<lf>#<space>Template<space>Function<space>interface:<lf>def<space>processFeature<openparen>feature<closeparen>:<lf><space><space><space>pass<lf><lf>#<space>Template<space>Class<space>Interface:<lf>class<space>FeatureProcessor<openparen>object<closeparen>:<lf><space><space><space><space><lf><space><space><space>def<space>__init__<openparen>self<closeparen>:<lf><space><space><space><space><space><space><space>pass<lf><space><space><space><space><space><space><space><lf><space><space><space>def<space>input<openparen>self<comma>feature<closeparen>:<lf><lf><space><space><space><space><space><space><space>file_path<space>=<space>feature.getAttribute<openparen><apos>file_path_del<apos><closeparen><lf><space><space><space><space><space><space><space><lf><space><space><space><space><space><space><space>os.remove<openparen>file_path<closeparen><lf><space><space><space><space><space><space><space><lf><space><space><space><space><space><space><space>self.pyoutput<openparen>feature<closeparen><lf><space><space><space><space><space><space><space><lf><space><space><space>def<space>close<openparen>self<closeparen>:<lf><space><space><space><space><space><space><space>pass    OUTPUT PYOUTPUT FEATURE_TYPE PythonCaller_2_OUTPUT
-
-# -------------------------------------------------------------------------
-
-DEFAULT_MACRO WB_CURRENT_CONTEXT
-MACRO VariableSetter_VAR file_path
-INCLUDE [ if {{Global} == {Local}} {   puts {MACRO VariableSetter_VAR $(WB_CURRENT_CONTEXT)_file_path}; } ]
-Tcl2 proc VariableSetter_1215c819_19f9_471c_bfba_b9065bd8d6831_setGlobalVar {varName varValue} {   set attrName VariableSetter_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_tempAttr; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter    INPUT  FEATURE_TYPE Tester_FAILED    INPUT  FEATURE_TYPE PythonCaller_2_OUTPUT    OUTPUT FEATURE_TYPE VariableSetter_OUTPUT        @Tcl2("VariableSetter_1215c819_19f9_471c_bfba_b9065bd8d6831_setGlobalVar {$(VariableSetter_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>file_path<closeparen>,VariableSetter)} ")
+MACRO VariableSetter_VAR filename_del
+INCLUDE [ if {{Global} == {Local}} {   puts {MACRO VariableSetter_VAR $(WB_CURRENT_CONTEXT)_filename_del}; } ]
+Tcl2 proc VariableSetter_530406dd_ac97_4442_b9d4_fb9c476c83181_setGlobalVar {varName varValue} {   set attrName VariableSetter_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_tempAttr; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter    INPUT  FEATURE_TYPE HTTPDeleter_OUTPUT    INPUT  FEATURE_TYPE Tester_FAILED    OUTPUT FEATURE_TYPE VariableSetter_OUTPUT        @Tcl2("VariableSetter_530406dd_ac97_4442_b9d4_fb9c476c83181_setGlobalVar {$(VariableSetter_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename<closeparen>,VariableSetter)} ")
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "VariableSetter OUTPUT Output Nuker"   INPUT FEATURE_TYPE VariableSetter_OUTPUT
 # -------------------------------------------------------------------------
@@ -3221,12 +3322,12 @@ FACTORY_DEF * QueryFactory    FACTORY_NAME SQLExecutor    INPUT  FEATURE_TYPE Co
 FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor INITIATOR Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_INITIATOR
 # -------------------------------------------------------------------------
 
-Tcl2 proc StringConcatenator_3_7f2b1d57_b015_4cb9_85f5_3362d3e4af381_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_7f2b1d57_b015_4cb9_85f5_3362d3e4af381_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
+Tcl2 proc StringConcatenator_3_6cdb1fd7_2ad0_4886_b8f5_ae7687c39d842_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_6cdb1fd7_2ad0_4886_b8f5_ae7687c39d842_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE StringConcatenator_3_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,ws://jabba:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space><quote>ws_op<quote><space>:<space><quote>open<quote><comma><lf><space><space><space><space><quote>ws_stream_id<quote><space>:<space><quote>ship_in<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender),WebSocketSender)"    OUTPUT OUTPUT FEATURE_TYPE WebSocketSender_OUTPUT
+FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE StringConcatenator_3_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,ws://localhost:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space><quote>ws_op<quote><space>:<space><quote>open<quote><comma><lf><space><space><space><space><quote>ws_stream_id<quote><space>:<space><quote>ship_in<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender),WebSocketSender)"    OUTPUT OUTPUT FEATURE_TYPE WebSocketSender_OUTPUT
 
 # -------------------------------------------------------------------------
 
@@ -3245,6 +3346,13 @@ FACTORY_DEF * AggregateFactory    FACTORY_NAME Aggregator    INPUT  FEATURE_TYPE
 
 # -------------------------------------------------------------------------
 
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+MACRO VariableRetriever_VAR filename_del
+INCLUDE [if {{Global} == {Local}} {   puts {MACRO VariableRetriever_VAR $(WB_CURRENT_CONTEXT)_filename_del}; };
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever    INPUT  FEATURE_TYPE Aggregator_AGGREGATE    OUTPUT FEATURE_TYPE VariableRetriever_OUTPUT        @GlobalVariable("$(VariableRetriever_VAR)",fme_result_attribute,filename_del)
+
+# -------------------------------------------------------------------------
+
 # The server gives back date & time in VAX/VMS format, and we need to
 # present these to FME in the standard ISO YYYYMMDDhhmmss format, so
 # lets convert:
@@ -3252,8 +3360,8 @@ FACTORY_DEF * AggregateFactory    FACTORY_NAME Aggregator    INPUT  FEATURE_TYPE
 # to:
 #     20080221163216
 
-Tcl2 proc FMEServerJobSubmitter_2b04dc52_3552_4a02_ad5f_c541bbbf2e7c1_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
-FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE Aggregator_AGGREGATE    BLOCKING No    SERVER_NAME http://localhost    SERVER_PORT 0    USERNAME "admin"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszr8DZ4Ywdm5xGPPiubKdtNsAO/ASk2PDePSq8OP6Hh6asI8gzI0GWDHAf7MbmVtppk079BoPb8XDOskpo8hR2ao/+iKzZqoljX23jxWKZu8Da7iCeoyO8ApMNsc9JCask7+fwBwJwY6gmcw2c4/PKFaPzPHuJ2/nZjVy5J3AvfwBeQt/zT5kyfK9wyUnsA2KviMIA+uwV7BolGm5fusQ+CN86D9W9DZ1ttWKrOvNe5lTl/3FEIMmc9XO/YkXFI8vENsOIl73Tj7MdoWkckbfGvHcMtv+/GdfppJf6tKYcfdlGkzMCugieVM4SVUlPY8RhPeqAMBqTH7uBV5WYZwAmzoAtWaXaFPRd)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "recorded_ais_reader.fmw"    WORKSPACE_PARAMETERS ""    PRIORITY ""    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_2b04dc52_3552_4a02_ad5f_c541bbbf2e7c1_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_2b04dc52_3552_4a02_ad5f_c541bbbf2e7c1_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_2b04dc52_3552_4a02_ad5f_c541bbbf2e7c1_reformatter _timeStarted")
+Tcl2 proc FMEServerJobSubmitter_517ae996_f293_48d8_b1ec_90021add85fb2_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
+FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    BLOCKING No    SERVER_NAME http://localhost    SERVER_PORT 0    USERNAME "admin"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszr8DZ4Ywdm5xGPPiubKdtNsAO/ASk2PDePSq8OP6Hh6asI8gzI0GWDHAf7MbmVtppk079BoPb8XDOskpo8hR2ao/+iKzZqoljX23jxWKZu8Da7iCeoyO8ApMNsc9JCask7+fwBwJwY6gmcw2c4/PKFaPzPHuJ2/nZjVy5J3AvfwBeQt/zT5kyfK9wyUnsA2KviMIA+uwV7BolGm5fusQ+CN86D9W9DZ1ttWKrOvNe5lTl/3FEIMmc9XO/YkXFI8vENsOIl73Tj7MdoWkckbfGvHcMtv+/GdfppJf6tKYcfdlGkzMCugieVM4SVUlPY8RhPeqAMBqTH7uBV5WYZwAmzoAtWaXaFPRd)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "recorded_ais_reader.fmw"    WORKSPACE_PARAMETERS "prev_path,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename_del<closeparen>,FMEServerJobSubmitter)"    PRIORITY "1"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_517ae996_f293_48d8_b1ec_90021add85fb2_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_517ae996_f293_48d8_b1ec_90021add85fb2_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_517ae996_f293_48d8_b1ec_90021add85fb2_reformatter _timeStarted")
 
 # -------------------------------------------------------------------------
 
