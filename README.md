@@ -46,4 +46,4 @@ will need to modify some settings, such as those in the FMEServerJobSubmitter, i
 
 - Place contents of /www in **FMEServerDir**\Utilities\tomcat\webapps\ROOT\spatialdashboard
 
-- Visit http://fmeserver/spatialdashboard to view.
+- Visit http://fmeserver/spatialdashboard to view
