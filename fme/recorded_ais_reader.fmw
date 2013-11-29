@@ -5,7 +5,7 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME_14205\fme.exe C:\safegit\spatialdashboard\fme\recorded_ais_reader.fmw
+#    C:\apps\FME_14174\fme.exe "Z:\vmware share\fme\recorded_ais_reader.fmw"
 #          --prev_path ""
 #    
 #    
@@ -20,7 +20,7 @@
 #! TITLE=""
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14205"
+#! FME_BUILD_NUM="14197"
 #! ZOOM_SCALE="100"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
@@ -29,24 +29,24 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID="27f08b1f-f4c6-4b20-8d44-3a381e5e9cb1"
+#! FME_DOCUMENT_PRIORGUID="27f08b1f-f4c6-4b20-8d44-3a381e5e9cb1,6dc9acd0-5abd-457b-b912-7826fc6b2c28"
 #! DOC_TOP_LEFT="72 -2748"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-11-29T10:03:13"
+#! LAST_SAVE_DATE="2013-11-29T10:59:39"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20131125 - Build 14205 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 (20131113 - Build 14197 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="5551 2666"
-#! FME_DOCUMENT_GUID="6dc9acd0-5abd-457b-b912-7826fc6b2c28"
+#! FME_DOCUMENT_GUID="d24c94c2-a0f9-45b0-a17f-fbe5c3b4badc"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -345,7 +345,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI IGNORE TEXT_OR_ATTR token FME Server REST token:"
-#! DEFAULT_VALUE="123abc"
+#! DEFAULT_VALUE="e21c4f31773c1a7e170d85daa5d4ad14f35ca485"
 #! IS_STAND_ALONE="true"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -359,7 +359,7 @@
 #! INFO_NODE="false"
 #! TOP_LEFT="2751 -635"
 #! BOTTOM_RIGHT="2751 -635"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="110"
@@ -376,7 +376,7 @@
 #! BOTTOM_RIGHT="3701 -763"
 #! STICKY="true"
 #! COLOUR="0.356863,0.364706,0.34902"
-#! CONTENTS="125 110 152 154 109 116 "
+#! CONTENTS="152 154 125 109 110 116 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="133"
@@ -386,7 +386,7 @@
 #! BOTTOM_RIGHT="4325 -3043"
 #! STICKY="true"
 #! COLOUR="0.529412,0.329412,0.803922"
-#! CONTENTS="156 132 126 153 115 114 "
+#! CONTENTS="132 153 115 126 156 114 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="146"
@@ -396,7 +396,7 @@
 #! BOTTOM_RIGHT="5623 -1136"
 #! STICKY="true"
 #! COLOUR="0.411765,0.819608,0.854902"
-#! CONTENTS="137 140 145 144 139 143 64 142 131 "
+#! CONTENTS="144 143 140 137 64 139 131 142 160 161 145 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="129"
@@ -406,7 +406,7 @@
 #! BOTTOM_RIGHT="749 -2628"
 #! STICKY="true"
 #! COLOUR="0.203922,0.203922,0.27451"
-#! CONTENTS="11 12 5 148 8 "
+#! CONTENTS="148 12 11 157 8 158 5 "
 #! />
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
@@ -3114,7 +3114,7 @@ DEFAULT_MACRO prev_path
 GUI OPTIONAL TEXT prev_path Previous file path for deletion:
 DEFAULT_MACRO SourceDataset_TEXTLINE ./data/2012-07-02_SanFran_AIS_recording.txt
 GUI IGNORE MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*.*)|*.* Source Text File(s):
-DEFAULT_MACRO token 123abc
+DEFAULT_MACRO token e21c4f31773c1a7e170d85daa5d4ad14f35ca485
 GUI IGNORE TEXT token FME Server REST token:
 INCLUDE [ if {{$(SourceDataset_TEXTLINE)} == {}} { puts_real {Parameter 'SourceDataset_TEXTLINE' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(token)} == {}} { puts_real {Parameter 'token' must be given a value.}; exit 1; }; ]
@@ -3237,9 +3237,9 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME UUIDGenerator    INPUT  FEATURE_TYPE De
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc AttributeCreator_ad406b5d_f6d0_47db_850e_d81a50c855f12_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+Tcl2 proc AttributeCreator_7c6a2cbc_96ca_4d20_a33a_3bef1a6f269b0_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT         "@Tcl2( AttributeCreator_ad406b5d_f6d0_47db_850e_d81a50c855f12_attrSetter {(filename,ais_<at>Value<openparen>_uuid<closeparen>.txt,shared_resource,$(FME_SHAREDRESOURCE_TEMP))} )"
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT         "@Tcl2( AttributeCreator_7c6a2cbc_96ca_4d20_a33a_3bef1a6f269b0_attrSetter {(filename,ais_<at>Value<openparen>_uuid<closeparen>.txt,shared_resource,$(FME_SHAREDRESOURCE_TEMP))} )"
 
 # -------------------------------------------------------------------------
 FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_2 INPUT  FEATURE_TYPE AttributeCreator_OUTPUT ATTR file_path <at>Value<openparen>shared_resource<closeparen><solidus><at>Value<openparen>filename<closeparen>    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_2_OUTPUT 
@@ -3278,8 +3278,8 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "HTTPDeleter <REJECTED> Output Nuker"   
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 MACRO VariableSetter_VAR filename_del
 INCLUDE [ if {{Global} == {Local}} {   puts {MACRO VariableSetter_VAR $(WB_CURRENT_CONTEXT)_filename_del}; } ]
-Tcl2 proc VariableSetter_530406dd_ac97_4442_b9d4_fb9c476c83181_setGlobalVar {varName varValue} {   set attrName VariableSetter_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_tempAttr; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter    INPUT  FEATURE_TYPE HTTPDeleter_OUTPUT    INPUT  FEATURE_TYPE Tester_FAILED    OUTPUT FEATURE_TYPE VariableSetter_OUTPUT        @Tcl2("VariableSetter_530406dd_ac97_4442_b9d4_fb9c476c83181_setGlobalVar {$(VariableSetter_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename<closeparen>,VariableSetter)} ")
+Tcl2 proc VariableSetter_1d03c98b_3025_443b_b484_d87caa5a65fd0_setGlobalVar {varName varValue} {   set attrName VariableSetter_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_tempAttr; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter    INPUT  FEATURE_TYPE Tester_FAILED    INPUT  FEATURE_TYPE HTTPDeleter_OUTPUT    OUTPUT FEATURE_TYPE VariableSetter_OUTPUT        @Tcl2("VariableSetter_1d03c98b_3025_443b_b484_d87caa5a65fd0_setGlobalVar {$(VariableSetter_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename<closeparen>,VariableSetter)} ")
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "VariableSetter OUTPUT Output Nuker"   INPUT FEATURE_TYPE VariableSetter_OUTPUT
 # -------------------------------------------------------------------------
@@ -3322,8 +3322,8 @@ FACTORY_DEF * QueryFactory    FACTORY_NAME SQLExecutor    INPUT  FEATURE_TYPE Co
 FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor INITIATOR Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_INITIATOR
 # -------------------------------------------------------------------------
 
-Tcl2 proc StringConcatenator_3_6cdb1fd7_2ad0_4886_b8f5_ae7687c39d842_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_6cdb1fd7_2ad0_4886_b8f5_ae7687c39d842_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
+Tcl2 proc StringConcatenator_3_f6ad2aaa_f39f_470d_9220_90bb7720e7f30_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_f6ad2aaa_f39f_470d_9220_90bb7720e7f30_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
 
 # -------------------------------------------------------------------------
 
@@ -3360,8 +3360,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever    INPUT  FEATURE_TYP
 # to:
 #     20080221163216
 
-Tcl2 proc FMEServerJobSubmitter_517ae996_f293_48d8_b1ec_90021add85fb2_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
-FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    BLOCKING No    SERVER_NAME http://localhost    SERVER_PORT 0    USERNAME "admin"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszr8DZ4Ywdm5xGPPiubKdtNsAO/ASk2PDePSq8OP6Hh6asI8gzI0GWDHAf7MbmVtppk079BoPb8XDOskpo8hR2ao/+iKzZqoljX23jxWKZu8Da7iCeoyO8ApMNsc9JCask7+fwBwJwY6gmcw2c4/PKFaPzPHuJ2/nZjVy5J3AvfwBeQt/zT5kyfK9wyUnsA2KviMIA+uwV7BolGm5fusQ+CN86D9W9DZ1ttWKrOvNe5lTl/3FEIMmc9XO/YkXFI8vENsOIl73Tj7MdoWkckbfGvHcMtv+/GdfppJf6tKYcfdlGkzMCugieVM4SVUlPY8RhPeqAMBqTH7uBV5WYZwAmzoAtWaXaFPRd)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "recorded_ais_reader.fmw"    WORKSPACE_PARAMETERS "prev_path,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename_del<closeparen>,FMEServerJobSubmitter)"    PRIORITY "1"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_517ae996_f293_48d8_b1ec_90021add85fb2_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_517ae996_f293_48d8_b1ec_90021add85fb2_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_517ae996_f293_48d8_b1ec_90021add85fb2_reformatter _timeStarted")
+Tcl2 proc FMEServerJobSubmitter_8bf6532b_d380_4de2_af99_df7ff4754dcc0_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
+FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    BLOCKING No    SERVER_NAME http://localhost    SERVER_PORT 0    USERNAME "admin"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszr8DZ4Ywdm5xGPPiubKdtNsAO/ASk2PDePSq8OP6Hh6asI8gzI0GWDHAf7MbmVtppk079BoPb8XDOskpo8hR2ao/+iKzZqoljX23jxWKZu8Da7iCeoyO8ApMNsc9JCask7+fwBwJwY6gmcw2c4/PKFaPzPHuJ2/nZjVy5J3AvfwBeQt/zT5kyfK9wyUnsA2KviMIA+uwV7BolGm5fusQ+CN86D9W9DZ1ttWKrOvNe5lTl/3FEIMmc9XO/YkXFI8vENsOIl73Tj7MdoWkckbfGvHcMtv+/GdfppJf6tKYcfdlGkzMCugieVM4SVUlPY8RhPeqAMBqTH7uBV5WYZwAmzoAtWaXaFPRd)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "recorded_ais_reader.fmw"    WORKSPACE_PARAMETERS "prev_path,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename_del<closeparen>,FMEServerJobSubmitter)"    PRIORITY "1"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_8bf6532b_d380_4de2_af99_df7ff4754dcc0_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_8bf6532b_d380_4de2_af99_df7ff4754dcc0_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_8bf6532b_d380_4de2_af99_df7ff4754dcc0_reformatter _timeStarted")
 
 # -------------------------------------------------------------------------
 

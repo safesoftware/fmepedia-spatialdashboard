@@ -1,6 +1,6 @@
 function initialize() {
 	// see FMEServer.js for parameter values
-	fmeserver = new FMEServer("jabba", "some-token");
+	fmeserver = new FMEServer("fmepedia2014.safe-software.fmecloud.com", "e21c4f31773c1a7e170d85daa5d4ad14f35ca485");
 
 	var myLatlng = new google.maps.LatLng(37.7850,-122.4183);
 
@@ -57,7 +57,7 @@ function initialize() {
 			*/
 
 			var data = evt.data;
-			dataObj = eval('(' + eval('(' + data + ')').ws_msg + ')');
+			dataObj = eval('(' + eval('(' + data + ')').ws_publisher_content + ')');
 			// document.getElementById('container').innerHTML = dataObj['latitude'];
 			mmsi = dataObj['mmsi_number'];
 			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
@@ -122,7 +122,7 @@ function initialize() {
 			*/
 
 			var data = evt.data;
-			dataObj = eval('(' + eval('(' + data + ')').ws_msg + ')');
+			dataObj = eval('(' + eval('(' + data + ')').ws_publisher_content + ')');
 
 			bus_id = dataObj['bus_id'];
 			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
@@ -170,7 +170,7 @@ function initialize() {
 			*/
 
 			var data = evt.data;
-			dataObj = eval('(' + eval('(' + data + ')').ws_msg + ')');
+			dataObj = eval('(' + eval('(' + data + ')').ws_publisher_content + ')');
 
 			the_id = dataObj['flight_id'];
 			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);

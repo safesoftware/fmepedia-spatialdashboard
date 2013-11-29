@@ -5,9 +5,9 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME_14187\fme.exe C:\safegit\spatialdashboard\fme\displace_planes.fmw
-#          --SourceDataset_FFS ($FME_SHAREDRESOURCE_TEMP)\planez.ffs
-#          --DestDataset_FFS ($FME_SHAREDRESOURCE_TEMP)\planez_temp.ffs
+#    C:\apps\FME_14174\fme.exe "Z:\vmware share\fme\displace_planes.fmw"
+#          --SourceDataset_FFS ./planez.ffs
+#          --DestDataset_FFS ./planez_temp.ffs
 #    
 #    
 #! PASSWORD=""
@@ -21,7 +21,7 @@
 #! TITLE=""
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14187"
+#! FME_BUILD_NUM="14197"
 #! ZOOM_SCALE="100"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
@@ -30,24 +30,24 @@
 #! USAGE=""
 #! END_PYTHON="import&lt;space&gt;os&lt;comma&gt;&lt;space&gt;shutil&lt;comma&gt;&lt;space&gt;fmeobjects&lt;lf&gt;&lt;lf&gt;source&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;SourceDataset_FFS&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;dest&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;DestDataset_FFS&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;&lt;lf&gt;os.remove&lt;openparen&gt;source&lt;closeparen&gt;&lt;lf&gt;shutil.move&lt;openparen&gt;dest&lt;comma&gt;&lt;space&gt;source&lt;closeparen&gt;"
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID="e7cfc832-9acf-4828-8e35-7566f1d341ff"
+#! FME_DOCUMENT_PRIORGUID="e7cfc832-9acf-4828-8e35-7566f1d341ff,d6b207db-72c7-4e27-a7a8-1f15d54d4a97,83eb32f6-4437-476e-b790-22015e4ef752"
 #! DOC_TOP_LEFT="-1895 199"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-11-29T10:16:59"
+#! LAST_SAVE_DATE="2013-11-29T10:56:17"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20131030 - Build 14187 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 (20131113 - Build 14197 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="3109 366"
-#! FME_DOCUMENT_GUID="d6b207db-72c7-4e27-a7a8-1f15d54d4a97"
+#! FME_DOCUMENT_GUID="dbc4a4f3-dd4f-4d7d-ad97-de156ae59d40"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -589,6 +589,11 @@
 #! <PROPERTIES>
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
 #! NAME="FAILURE_TOPICS"
 #! VALUE=""
 #! />
@@ -604,27 +609,28 @@
 #! />
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
-#! NAME="PUBLISHER"
-#! VALUE=""
-#! />
-#! <PROPERTY
-#! CATEGORY="FMEUSERPROPDATA"
 #! NAME="SUCCESS_TOPICS"
 #! VALUE=""
 #! />
 #! </PROPERTIES>
 #! </SERVICE>
 #! </SERVICES>
+#! <REPOSITORY
+#! NAME="spatialdashboard"
+#! />
+#! <ITEM
+#! NAME="displace_planes.fmw"
+#! />
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI MULTIFILE SourceDataset_FFS FME_Feature_Store_Files(*.ffs)|*.ffs|All_Files|*.* Source FME Feature Store (FFS) File(s):"
-#! DEFAULT_VALUE="($FME_SHAREDRESOURCE_TEMP)\planez.ffs"
+#! DEFAULT_VALUE="./planez.ffs"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI FILENAME DestDataset_FFS FME_Feature_Store_Files(*.ffs)|*.ffs|All_Files|*.* Destination FME Feature Store (FFS) File:"
-#! DEFAULT_VALUE="($FME_SHAREDRESOURCE_TEMP)\planez_temp.ffs"
+#! DEFAULT_VALUE="./planez_temp.ffs"
 #! IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -660,7 +666,7 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://jabba:7078/websocket"/>
+#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://localhost:7078/websocket"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="2"
@@ -896,9 +902,9 @@
 #! </WORKSPACE>
 #! 
 GUI IGNORE SourceDataset_FFS_1,FFS_IN_PASSPHRASE_FFS_1,FFS_IN_EXPOSE_ATTRS_GROUP_FFS_1,FFS_IN_SEARCH_ENVELOPE_MINX_FFS_1,FFS_IN_SEARCH_ENVELOPE_MINY_FFS_1,FFS_IN_SEARCH_ENVELOPE_MAXX_FFS_1,FFS_IN_SEARCH_ENVELOPE_MAXY_FFS_1,FFS_IN_CLIP_TO_ENVELOPE_FFS_1,FFS_IN_NETWORK_AUTHENTICATION_FFS_1,FFS_IN_NETWORK_PROXY_FFS_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_FFS_1,_SEARCH_CLOSEST_POINT_FFS_1,DestDataset_FFS_2,FFS_OUT_INDEXED_FFS_2,FFS_OUT_COMPRESSION_LEVEL_FFS_2,FFS_OUT_BYTE_ORDER_FFS_2,FFS_OUT_PASSPHRASE_FFS_2,_MAX_FILE_SIZE_FFS_2,_STRICT_SCHEMA_FFS_2
-DEFAULT_MACRO SourceDataset_FFS ($FME_SHAREDRESOURCE_TEMP)\planez.ffs
+DEFAULT_MACRO SourceDataset_FFS ./planez.ffs
 GUI MULTIFILE SourceDataset_FFS FME_Feature_Store_Files(*.ffs)|*.ffs|All_Files|*.* Source FME Feature Store (FFS) File(s):
-DEFAULT_MACRO DestDataset_FFS ($FME_SHAREDRESOURCE_TEMP)\planez_temp.ffs
+DEFAULT_MACRO DestDataset_FFS ./planez_temp.ffs
 GUI FILENAME DestDataset_FFS FME_Feature_Store_Files(*.ffs)|*.ffs|All_Files|*.* Destination FME Feature Store (FFS) File:
 INCLUDE [ if {{$(SourceDataset_FFS)} == {}} { puts_real {Parameter 'SourceDataset_FFS' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(DestDataset_FFS)} == {}} { puts_real {Parameter 'DestDataset_FFS' must be given a value.}; exit 1; }; ]
@@ -1128,8 +1134,8 @@ FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor    INPUT  FEATURE_
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc JSONConcatenator_de0e19c5_92fd_4360_ba75_b39ce38541f30_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME JSONConcatenator    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    OUTPUT FEATURE_TYPE JSONConcatenator_OUTPUT        @Tcl2("JSONConcatenator_de0e19c5_92fd_4360_ba75_b39ce38541f30_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>flight_id<apos><space>:<space><apos><at>Value<openparen>flight_id<closeparen><apos><comma><space><apos>latitude<apos><space>:<space><apos><at>Value<openparen>y_coord<closeparen><apos><comma><space><apos>longitude<apos><space>:<space><apos><at>Value<openparen>x_coord<closeparen><apos><comma><space><apos>heading<apos><space>:<space><apos><at>Value<openparen>heading<closeparen><apos><comma><apos>speed<apos>:<apos><at>Value<openparen>speed<closeparen><apos><comma><apos>altitude<apos>:<apos><at>Value<openparen>altitude<closeparen><apos><comma><space><apos>aircraft_model<apos><space>:<space><apos><at>Value<openparen>aircraft_model<closeparen><apos><space><closecurly><quote><lf><closecurly>,JSONConcatenator)} ")
+Tcl2 proc JSONConcatenator_6f05b39a_bf32_4298_b7e6_35941b5362450_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME JSONConcatenator    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    OUTPUT FEATURE_TYPE JSONConcatenator_OUTPUT        @Tcl2("JSONConcatenator_6f05b39a_bf32_4298_b7e6_35941b5362450_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>flight_id<apos><space>:<space><apos><at>Value<openparen>flight_id<closeparen><apos><comma><space><apos>latitude<apos><space>:<space><apos><at>Value<openparen>y_coord<closeparen><apos><comma><space><apos>longitude<apos><space>:<space><apos><at>Value<openparen>x_coord<closeparen><apos><comma><space><apos>heading<apos><space>:<space><apos><at>Value<openparen>heading<closeparen><apos><comma><apos>speed<apos>:<apos><at>Value<openparen>speed<closeparen><apos><comma><apos>altitude<apos>:<apos><at>Value<openparen>altitude<closeparen><apos><comma><space><apos>aircraft_model<apos><space>:<space><apos><at>Value<openparen>aircraft_model<closeparen><apos><space><closecurly><quote><lf><closecurly>,JSONConcatenator)} ")
 
 # -------------------------------------------------------------------------
 
@@ -1150,7 +1156,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME Decelerator    INPUT  FEATURE_TYPE JSON
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE Decelerator_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,ws://jabba:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>open<quote><comma><lf><space><space><space><space>ws_stream_id<space>:<space><quote>plane_in<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender),WebSocketSender)"
+FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE Decelerator_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,ws://localhost:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>open<quote><comma><lf><space><space><space><space>ws_stream_id<space>:<space><quote>plane_in<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender),WebSocketSender)"
 
 # -------------------------------------------------------------------------
 
