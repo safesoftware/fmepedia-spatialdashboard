@@ -8,11 +8,11 @@ function initialize() {
 		zoom: 11,
 		center: myLatlng,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
-    mapTypeControl: true,
-    mapTypeControlOptions: {
-        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-        position: google.maps.ControlPosition.LEFT_BOTTOM
-    },
+		mapTypeControl: true,
+		mapTypeControlOptions: {
+			style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+			position: google.maps.ControlPosition.LEFT_BOTTOM
+		},
 
 	}
 

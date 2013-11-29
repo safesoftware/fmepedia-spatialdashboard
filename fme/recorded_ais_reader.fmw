@@ -34,7 +34,7 @@
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-10-02T14:52:08"
+#! LAST_SAVE_DATE="2013-10-07T16:15:45"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
@@ -45,7 +45,7 @@
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="5551 2666"
-#! FME_DOCUMENT_GUID="3067cef8-588b-4981-8c50-ffa9d7f0c40b"
+#! FME_DOCUMENT_GUID="27f08b1f-f4c6-4b20-8d44-3a381e5e9cb1"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -354,8 +354,8 @@
 #! TOP_LEFT="2164 -187"
 #! BOTTOM_RIGHT="3701 -763"
 #! STICKY="true"
-#! COLOUR="0.360784,0.372549,0.352941"
-#! CONTENTS="154 152 110 109 125 116 "
+#! COLOUR="0.356863,0.368627,0.34902"
+#! CONTENTS="116 154 110 109 125 152 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="133"
@@ -364,8 +364,8 @@
 #! TOP_LEFT="2081 -2418"
 #! BOTTOM_RIGHT="4325 -3043"
 #! STICKY="true"
-#! COLOUR="0.533333,0.329412,0.803922"
-#! CONTENTS="131 132 115 126 120 104 114 117 "
+#! COLOUR="0.529412,0.329412,0.803922"
+#! CONTENTS="132 114 126 115 117 120 104 131 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="146"
@@ -374,8 +374,8 @@
 #! TOP_LEFT="4500 -269"
 #! BOTTOM_RIGHT="5623 -1136"
 #! STICKY="true"
-#! COLOUR="0.415686,0.823529,0.854902"
-#! CONTENTS="141 140 137 143 142 139 145 144 64 "
+#! COLOUR="0.411765,0.819608,0.854902"
+#! CONTENTS="144 64 140 137 142 139 143 141 145 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="129"
@@ -384,8 +384,8 @@
 #! TOP_LEFT="74 -1761"
 #! BOTTOM_RIGHT="749 -2628"
 #! STICKY="true"
-#! COLOUR="0.203922,0.207843,0.278431"
-#! CONTENTS="5 11 12 8 13 "
+#! COLOUR="0.203922,0.203922,0.27451"
+#! CONTENTS="11 12 5 8 13 "
 #! />
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
@@ -2407,7 +2407,7 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://jabba:7078"/>
+#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://jabba:7078/websocket"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="152"
@@ -3130,9 +3130,9 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME UUIDGenerator    INPUT  FEATURE_TYPE De
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc AttributeCreator_51e67c29_a385_416a_8459_df09e105da8816_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+Tcl2 proc AttributeCreator_e557ffa2_7e99_4433_bf26_d31ee2e826001_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT         "@Tcl2( AttributeCreator_51e67c29_a385_416a_8459_df09e105da8816_attrSetter {(file_path,C:<backslash>temp<backslash>ais_<at>Value<openparen>_uuid<closeparen>.txt)} )"
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT         "@Tcl2( AttributeCreator_e557ffa2_7e99_4433_bf26_d31ee2e826001_attrSetter {(file_path,C:<backslash>temp<backslash>ais_<at>Value<openparen>_uuid<closeparen>.txt)} )"
 
 # -------------------------------------------------------------------------
 
@@ -3177,8 +3177,8 @@ FACTORY_DEF * PythonFactory    FACTORY_NAME PythonCaller_2    INPUT  FEATURE_TYP
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 MACRO VariableSetter_VAR file_path
 INCLUDE [ if {{Global} == {Local}} {   puts {MACRO VariableSetter_VAR $(WB_CURRENT_CONTEXT)_file_path}; } ]
-Tcl2 proc VariableSetter_10e53bbe_27ab_48ea_9b2b_6a865006c2f16_setGlobalVar {varName varValue} {   set attrName VariableSetter_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_tempAttr; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter    INPUT  FEATURE_TYPE Tester_FAILED    INPUT  FEATURE_TYPE PythonCaller_2_OUTPUT    OUTPUT FEATURE_TYPE VariableSetter_OUTPUT        @Tcl2("VariableSetter_10e53bbe_27ab_48ea_9b2b_6a865006c2f16_setGlobalVar {$(VariableSetter_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>file_path<closeparen>,VariableSetter)} ")
+Tcl2 proc VariableSetter_1215c819_19f9_471c_bfba_b9065bd8d6831_setGlobalVar {varName varValue} {   set attrName VariableSetter_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_tempAttr; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter    INPUT  FEATURE_TYPE Tester_FAILED    INPUT  FEATURE_TYPE PythonCaller_2_OUTPUT    OUTPUT FEATURE_TYPE VariableSetter_OUTPUT        @Tcl2("VariableSetter_1215c819_19f9_471c_bfba_b9065bd8d6831_setGlobalVar {$(VariableSetter_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>file_path<closeparen>,VariableSetter)} ")
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "VariableSetter OUTPUT Output Nuker"   INPUT FEATURE_TYPE VariableSetter_OUTPUT
 # -------------------------------------------------------------------------
@@ -3221,12 +3221,12 @@ FACTORY_DEF * QueryFactory    FACTORY_NAME SQLExecutor    INPUT  FEATURE_TYPE Co
 FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor INITIATOR Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_INITIATOR
 # -------------------------------------------------------------------------
 
-Tcl2 proc StringConcatenator_3_7a07233d_b74d_429c_b60f_8b9fe9e2a12c6_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_7a07233d_b74d_429c_b60f_8b9fe9e2a12c6_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
+Tcl2 proc StringConcatenator_3_7f2b1d57_b015_4cb9_85f5_3362d3e4af381_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_7f2b1d57_b015_4cb9_85f5_3362d3e4af381_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE StringConcatenator_3_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,ws://jabba:7078,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space><quote>ws_op<quote><space>:<space><quote>open<quote><comma><lf><space><space><space><space><quote>ws_stream_id<quote><space>:<space><quote>ship_in<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender),WebSocketSender)"    OUTPUT OUTPUT FEATURE_TYPE WebSocketSender_OUTPUT
+FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE StringConcatenator_3_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,ws://jabba:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space><quote>ws_op<quote><space>:<space><quote>open<quote><comma><lf><space><space><space><space><quote>ws_stream_id<quote><space>:<space><quote>ship_in<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender),WebSocketSender)"    OUTPUT OUTPUT FEATURE_TYPE WebSocketSender_OUTPUT
 
 # -------------------------------------------------------------------------
 
@@ -3252,8 +3252,8 @@ FACTORY_DEF * AggregateFactory    FACTORY_NAME Aggregator    INPUT  FEATURE_TYPE
 # to:
 #     20080221163216
 
-Tcl2 proc FMEServerJobSubmitter_824394cb_2356_439a_b28a_91925d9a1bed4_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
-FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE Aggregator_AGGREGATE    BLOCKING No    SERVER_NAME http://localhost    SERVER_PORT 0    USERNAME "admin"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszr8DZ4Ywdm5xGPPiubKdtNsAO/ASk2PDePSq8OP6Hh6asI8gzI0GWDHAf7MbmVtppk079BoPb8XDOskpo8hR2ao/+iKzZqoljX23jxWKZu8Da7iCeoyO8ApMNsc9JCask7+fwBwJwY6gmcw2c4/PKFaPzPHuJ2/nZjVy5J3AvfwBeQt/zT5kyfK9wyUnsA2KviMIA+uwV7BolGm5fusQ+CN86D9W9DZ1ttWKrOvNe5lTl/3FEIMmc9XO/YkXFI8vENsOIl73Tj7MdoWkckbfGvHcMtv+/GdfppJf6tKYcfdlGkzMCugieVM4SVUlPY8RhPeqAMBqTH7uBV5WYZwAmzoAtWaXaFPRd)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "recorded_ais_reader.fmw"    WORKSPACE_PARAMETERS ""    PRIORITY ""    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_824394cb_2356_439a_b28a_91925d9a1bed4_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_824394cb_2356_439a_b28a_91925d9a1bed4_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_824394cb_2356_439a_b28a_91925d9a1bed4_reformatter _timeStarted")
+Tcl2 proc FMEServerJobSubmitter_2b04dc52_3552_4a02_ad5f_c541bbbf2e7c1_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
+FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE Aggregator_AGGREGATE    BLOCKING No    SERVER_NAME http://localhost    SERVER_PORT 0    USERNAME "admin"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszr8DZ4Ywdm5xGPPiubKdtNsAO/ASk2PDePSq8OP6Hh6asI8gzI0GWDHAf7MbmVtppk079BoPb8XDOskpo8hR2ao/+iKzZqoljX23jxWKZu8Da7iCeoyO8ApMNsc9JCask7+fwBwJwY6gmcw2c4/PKFaPzPHuJ2/nZjVy5J3AvfwBeQt/zT5kyfK9wyUnsA2KviMIA+uwV7BolGm5fusQ+CN86D9W9DZ1ttWKrOvNe5lTl/3FEIMmc9XO/YkXFI8vENsOIl73Tj7MdoWkckbfGvHcMtv+/GdfppJf6tKYcfdlGkzMCugieVM4SVUlPY8RhPeqAMBqTH7uBV5WYZwAmzoAtWaXaFPRd)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "recorded_ais_reader.fmw"    WORKSPACE_PARAMETERS ""    PRIORITY ""    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_2b04dc52_3552_4a02_ad5f_c541bbbf2e7c1_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_2b04dc52_3552_4a02_ad5f_c541bbbf2e7c1_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_2b04dc52_3552_4a02_ad5f_c541bbbf2e7c1_reformatter _timeStarted")
 
 # -------------------------------------------------------------------------
 
