@@ -8,7 +8,11 @@ Example demo on FME Cloud will be listed here.
 Installation Instructions
 -------------------------
 
-- Publish all workspaces (*.fmw files) to FME Server.
+- Configure recorded_ais_reader.fmw with token for REST API. (http://fmeserver/fmetoken) - it needs this
+to clean up temporary files
+
+- Publish all workspaces (*.fmw files) to FME Server. Default repository is *spatialdashboard*, and you
+will need to modify some settings, such as those in the FMEServerJobSubmitter, if you change this.
 
 - Set up topics: sd_plane, sd_bus, sd_ship
 
@@ -38,6 +42,8 @@ Installation Instructions
 
 - Run recorded_ais_reader. Note that it is quite resource intensive.
 
+- Configure spatialdashboard.js to connect to your server. You will need a token here.
+
 - Place contents of /www in **FMEServerDir**\Utilities\tomcat\webapps\ROOT\spatialdashboard
 
-- Visit http://myfmeserver/spatialdashboard to view.
+- Visit http://fmeserver/spatialdashboard to view.
