@@ -5,13 +5,13 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME_14174\fme.exe "Z:\vmware share\fme\plane_generator.fmw"
+#    C:\apps\FME_14187\fme.exe C:\safegit\spatialdashboard\fme\plane_generator.fmw
 #          --min_y 615000
 #          --max_y 660000
 #          --min_x 1790000
 #          --max_x 1900000
 #          --num_planes 30
-#          --DestDataset_FFS ./planez.ffs
+#          --DestDataset_FFS $(FME_MOUNTPOINT_TEMP)/planez.ffs
 #    
 #    
 #! PASSWORD=""
@@ -25,7 +25,7 @@
 #! TITLE=""
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14197"
+#! FME_BUILD_NUM="14187"
 #! ZOOM_SCALE="100"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
@@ -34,24 +34,24 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID="1b12d1a3-3c52-4677-95f5-be820eac0a95,431550cb-6ba3-440f-bf18-10b60f02ca95"
+#! FME_DOCUMENT_PRIORGUID="1b12d1a3-3c52-4677-95f5-be820eac0a95,431550cb-6ba3-440f-bf18-10b60f02ca95,447c660d-a102-438f-a9b0-28407c489657,6989c476-7382-4a0b-bd86-3408dd6880a0"
 #! DOC_TOP_LEFT="-126 -1155"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-11-29T11:03:56"
+#! LAST_SAVE_DATE="2013-11-29T12:02:29"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20131113 - Build 14197 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 (20131030 - Build 14187 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="1990 1152"
-#! FME_DOCUMENT_GUID="447c660d-a102-438f-a9b0-28407c489657"
+#! FME_DOCUMENT_GUID="83e2ba8c-9357-4c85-9ede-528d6d85a946"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -331,6 +331,11 @@
 #! <PROPERTIES>
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
 #! NAME="FAILURE_TOPICS"
 #! VALUE=""
 #! />
@@ -342,11 +347,6 @@
 #! <PROPERTY
 #! CATEGORY="FMEUSERPROPDATA"
 #! NAME="NOTIFICATION_WRITER"
-#! VALUE=""
-#! />
-#! <PROPERTY
-#! CATEGORY="FMEUSERPROPDATA"
-#! NAME="PUBLISHER"
 #! VALUE=""
 #! />
 #! <PROPERTY
@@ -386,7 +386,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI FILENAME DestDataset_FFS FME_Feature_Store_Files(*.ffs)|*.ffs|All_Files|*.* Destination FME Feature Store (FFS) File:"
-#! DEFAULT_VALUE="./planez.ffs"
+#! DEFAULT_VALUE="$(FME_MOUNTPOINT_TEMP)/planez.ffs"
 #! IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -758,7 +758,7 @@ DEFAULT_MACRO max_x 1900000
 GUI OPTIONAL TEXT max_x Maximum x value:
 DEFAULT_MACRO num_planes 30
 GUI OPTIONAL INTEGER num_planes Number of planes:
-DEFAULT_MACRO DestDataset_FFS ./planez.ffs
+DEFAULT_MACRO DestDataset_FFS $(FME_MOUNTPOINT_TEMP)/planez.ffs
 GUI FILENAME DestDataset_FFS FME_Feature_Store_Files(*.ffs)|*.ffs|All_Files|*.* Destination FME Feature Store (FFS) File:
 INCLUDE [ if {{$(DestDataset_FFS)} == {}} { puts_real {Parameter 'DestDataset_FFS' must be given a value.}; exit 1; }; ]
 #! START_HEADER
@@ -888,8 +888,8 @@ FACTORY_DEF * PythonFactory    FACTORY_NAME FlightAndAircraftGenerator    INPUT 
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc DuplicatePlaneRemover_1b8f87aa_e9e9_4609_b52f_3482ec1a1c2f0_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___DuplicatePlaneRemover_1b8f87aa_e9e9_4609_b52f_3482ec1a1c2f0___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__DuplicatePlaneRemover_1b8f87aa_e9e9_4609_b52f_3482ec1a1c2f0__KeySeenCount($attrVal)] - 1]; };
-FACTORY_DEF * TestFactory    FACTORY_NAME DuplicatePlaneRemover    INPUT  FEATURE_TYPE FlightAndAircraftGenerator_OUTPUT    TEST @Tcl2("DuplicatePlaneRemover_1b8f87aa_e9e9_4609_b52f_3482ec1a1c2f0_dupKeyCount {(flight_id)}") > 0    OUTPUT FAILED FEATURE_TYPE DuplicatePlaneRemover_UNIQUE
+Tcl2 proc DuplicatePlaneRemover_15a34b05_7d67_4be9_b1ad_fd21eee6e12a1_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___DuplicatePlaneRemover_15a34b05_7d67_4be9_b1ad_fd21eee6e12a1___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__DuplicatePlaneRemover_15a34b05_7d67_4be9_b1ad_fd21eee6e12a1__KeySeenCount($attrVal)] - 1]; };
+FACTORY_DEF * TestFactory    FACTORY_NAME DuplicatePlaneRemover    INPUT  FEATURE_TYPE FlightAndAircraftGenerator_OUTPUT    TEST @Tcl2("DuplicatePlaneRemover_15a34b05_7d67_4be9_b1ad_fd21eee6e12a1_dupKeyCount {(flight_id)}") > 0    OUTPUT FAILED FEATURE_TYPE DuplicatePlaneRemover_UNIQUE
 
 # -------------------------------------------------------------------------
 
