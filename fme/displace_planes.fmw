@@ -5,14 +5,14 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME_14187\fme.exe C:\safegit\spatialdashboard\fme\displace_planes.fmw
+#    C:\apps\FME_14199\fme.exe C:\safegit\spatialdashboard\fme\displace_planes.fmw
 #          --SourceDataset_FFS $(FME_MOUNTPOINT_TEMP)/planez.ffs
 #          --DestDataset_FFS $(FME_MOUNTPOINT_TEMP)/planez_temp.ffs
 #    
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="0 0"
+#! VIEW_POSITION="-1848 609"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
@@ -21,33 +21,33 @@
 #! TITLE=""
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14187"
+#! FME_BUILD_NUM="14199"
 #! ZOOM_SCALE="100"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
 #! LEGAL_TERMS_CONDITIONS=""
 #! FME_REPROJECTION_ENGINE="FME"
 #! USAGE=""
-#! END_PYTHON="import&lt;space&gt;os&lt;comma&gt;&lt;space&gt;shutil&lt;comma&gt;&lt;space&gt;fmeobjects&lt;lf&gt;&lt;lf&gt;source&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;SourceDataset_FFS&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;dest&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;DestDataset_FFS&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;&lt;lf&gt;print&lt;space&gt;&lt;quote&gt;Source&lt;space&gt;&lt;quote&gt;&lt;space&gt;+&lt;space&gt;source&lt;lf&gt;print&lt;space&gt;&lt;quote&gt;Destination&lt;quote&gt;&lt;space&gt;+&lt;space&gt;dest&lt;lf&gt;&lt;lf&gt;os.remove&lt;openparen&gt;source&lt;closeparen&gt;&lt;lf&gt;shutil.move&lt;openparen&gt;dest&lt;comma&gt;&lt;space&gt;source&lt;closeparen&gt;"
+#! END_PYTHON="import&lt;space&gt;os&lt;comma&gt;&lt;space&gt;shutil&lt;comma&gt;&lt;space&gt;fmeobjects&lt;lf&gt;&lt;lf&gt;source&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;SourceDataset_FFS&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;dest&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;DestDataset_FFS&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;&lt;lf&gt;source&lt;space&gt;=&lt;space&gt;source.replace&lt;openparen&gt;&lt;quote&gt;&lt;backslash&gt;&lt;backslash&gt;&lt;quote&gt;&lt;comma&gt;&lt;quote&gt;&lt;solidus&gt;&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;dest&lt;space&gt;=&lt;space&gt;dest.replace&lt;openparen&gt;&lt;quote&gt;&lt;backslash&gt;&lt;backslash&gt;&lt;quote&gt;&lt;comma&gt;&lt;quote&gt;&lt;solidus&gt;&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;os.remove&lt;openparen&gt;source&lt;closeparen&gt;&lt;lf&gt;shutil.move&lt;openparen&gt;dest&lt;comma&gt;&lt;space&gt;source&lt;closeparen&gt;"
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID="e7cfc832-9acf-4828-8e35-7566f1d341ff,d6b207db-72c7-4e27-a7a8-1f15d54d4a97,83eb32f6-4437-476e-b790-22015e4ef752,dbc4a4f3-dd4f-4d7d-ad97-de156ae59d40,5ba064f5-75f3-466c-8b85-23bcf6d61351"
+#! FME_DOCUMENT_PRIORGUID="e7cfc832-9acf-4828-8e35-7566f1d341ff,d6b207db-72c7-4e27-a7a8-1f15d54d4a97,83eb32f6-4437-476e-b790-22015e4ef752,dbc4a4f3-dd4f-4d7d-ad97-de156ae59d40,5ba064f5-75f3-466c-8b85-23bcf6d61351,89ea6630-ed93-4f48-8f9c-bb1a62bfae73"
 #! DOC_TOP_LEFT="-1849 303"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-11-29T12:25:11"
+#! LAST_SAVE_DATE="2013-12-02T11:40:45"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20131030 - Build 14187 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 (20131117 - Build 14199 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="3063 258"
-#! FME_DOCUMENT_GUID="89ea6630-ed93-4f48-8f9c-bb1a62bfae73"
+#! FME_DOCUMENT_GUID="0436e909-8d98-4224-a7a5-f98aca44c572"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -615,6 +615,12 @@
 #! </PROPERTIES>
 #! </SERVICE>
 #! </SERVICES>
+#! <REPOSITORY
+#! NAME="spatialdashboard"
+#! />
+#! <ITEM
+#! NAME="displace_planes.fmw"
+#! />
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
@@ -1076,7 +1082,7 @@ FFS_1_READER_META_ATTRIBUTES fme_feature_type
 # -------------------------------------------------------------------------
 
 MULTI_READER_CONTINUE_ON_READER_FAILURE No
-FME_END_PYTHON_ENC import<space>os<comma><space>shutil<comma><space>fmeobjects<lf><lf>source<space>=<space>FME_MacroValues<openbracket><apos>SourceDataset_FFS<apos><closebracket><lf>dest<space>=<space>FME_MacroValues<openbracket><apos>DestDataset_FFS<apos><closebracket><lf><lf>print<space><quote>Source<space><quote><space>+<space>source<lf>print<space><quote>Destination<quote><space>+<space>dest<lf><lf>os.remove<openparen>source<closeparen><lf>shutil.move<openparen>dest<comma><space>source<closeparen>
+FME_END_PYTHON_ENC import<space>os<comma><space>shutil<comma><space>fmeobjects<lf><lf>source<space>=<space>FME_MacroValues<openbracket><apos>SourceDataset_FFS<apos><closebracket><lf>dest<space>=<space>FME_MacroValues<openbracket><apos>DestDataset_FFS<apos><closebracket><lf><lf>source<space>=<space>source.replace<openparen><quote><backslash><backslash><quote><comma><quote><solidus><quote><closeparen><lf>dest<space>=<space>dest.replace<openparen><quote><backslash><backslash><quote><comma><quote><solidus><quote><closeparen><lf><lf>os.remove<openparen>source<closeparen><lf>shutil.move<openparen>dest<comma><space>source<closeparen>
 
 # -------------------------------------------------------------------------
 
@@ -1128,8 +1134,8 @@ FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor    INPUT  FEATURE_
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc JSONConcatenator_7b5e4d45_d642_4f0d_96f8_eb64dffc20623_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME JSONConcatenator    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    OUTPUT FEATURE_TYPE JSONConcatenator_OUTPUT        @Tcl2("JSONConcatenator_7b5e4d45_d642_4f0d_96f8_eb64dffc20623_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>flight_id<apos><space>:<space><apos><at>Value<openparen>flight_id<closeparen><apos><comma><space><apos>latitude<apos><space>:<space><apos><at>Value<openparen>y_coord<closeparen><apos><comma><space><apos>longitude<apos><space>:<space><apos><at>Value<openparen>x_coord<closeparen><apos><comma><space><apos>heading<apos><space>:<space><apos><at>Value<openparen>heading<closeparen><apos><comma><apos>speed<apos>:<apos><at>Value<openparen>speed<closeparen><apos><comma><apos>altitude<apos>:<apos><at>Value<openparen>altitude<closeparen><apos><comma><space><apos>aircraft_model<apos><space>:<space><apos><at>Value<openparen>aircraft_model<closeparen><apos><space><closecurly><quote><lf><closecurly>,JSONConcatenator)} ")
+Tcl2 proc JSONConcatenator_a7eed92d_70fa_46bb_90be_3704ef53fcb54_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME JSONConcatenator    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    OUTPUT FEATURE_TYPE JSONConcatenator_OUTPUT        @Tcl2("JSONConcatenator_a7eed92d_70fa_46bb_90be_3704ef53fcb54_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>flight_id<apos><space>:<space><apos><at>Value<openparen>flight_id<closeparen><apos><comma><space><apos>latitude<apos><space>:<space><apos><at>Value<openparen>y_coord<closeparen><apos><comma><space><apos>longitude<apos><space>:<space><apos><at>Value<openparen>x_coord<closeparen><apos><comma><space><apos>heading<apos><space>:<space><apos><at>Value<openparen>heading<closeparen><apos><comma><apos>speed<apos>:<apos><at>Value<openparen>speed<closeparen><apos><comma><apos>altitude<apos>:<apos><at>Value<openparen>altitude<closeparen><apos><comma><space><apos>aircraft_model<apos><space>:<space><apos><at>Value<openparen>aircraft_model<closeparen><apos><space><closecurly><quote><lf><closecurly>,JSONConcatenator)} ")
 
 # -------------------------------------------------------------------------
 
