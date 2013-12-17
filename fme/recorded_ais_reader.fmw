@@ -5,13 +5,13 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME_14174\fme.exe "Z:\vmware share\fme\recorded_ais_reader.fmw"
+#    C:\apps\FME_14199\fme.exe C:\safegit\spatialdashboard\fme\recorded_ais_reader.fmw
 #          --prev_path ""
 #    
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="2514 -1302"
+#! VIEW_POSITION="-23 -900"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
@@ -20,8 +20,8 @@
 #! TITLE=""
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14197"
-#! ZOOM_SCALE="100"
+#! FME_BUILD_NUM="14199"
+#! ZOOM_SCALE="90"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
 #! LEGAL_TERMS_CONDITIONS=""
@@ -29,24 +29,24 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID="27f08b1f-f4c6-4b20-8d44-3a381e5e9cb1,6dc9acd0-5abd-457b-b912-7826fc6b2c28"
-#! DOC_TOP_LEFT="72 -2748"
+#! FME_DOCUMENT_PRIORGUID="27f08b1f-f4c6-4b20-8d44-3a381e5e9cb1,6dc9acd0-5abd-457b-b912-7826fc6b2c28,d24c94c2-a0f9-45b0-a17f-fbe5c3b4badc"
+#! DOC_TOP_LEFT="72 -2660"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-11-29T10:59:39"
+#! LAST_SAVE_DATE="2013-12-02T13:21:47"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20131113 - Build 14197 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 (20131117 - Build 14199 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
-#! DOC_EXTENTS="5551 2666"
-#! FME_DOCUMENT_GUID="d24c94c2-a0f9-45b0-a17f-fbe5c3b4badc"
+#! DOC_EXTENTS="5551 2579"
+#! FME_DOCUMENT_GUID="cf0df9cb-f16b-4bbb-bd49-bf9ce7b6efa8"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -326,7 +326,7 @@
 #! </SERVICE>
 #! </SERVICES>
 #! <REPOSITORY
-#! NAME="Samples"
+#! NAME="spatialdashboard"
 #! />
 #! <ITEM
 #! NAME="recorded_ais_reader.fmw"
@@ -340,7 +340,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI IGNORE MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*.*)|*.* Source Text File(s):"
-#! DEFAULT_VALUE="./data/2012-07-02_SanFran_AIS_recording.txt"
+#! DEFAULT_VALUE="C:\Users\dvanniekerk\Documents\My FME Server Workspaces\2012-07-02_SanFran_AIS_recording.txt"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -376,17 +376,17 @@
 #! BOTTOM_RIGHT="3701 -763"
 #! STICKY="true"
 #! COLOUR="0.356863,0.364706,0.34902"
-#! CONTENTS="152 154 125 109 110 116 "
+#! CONTENTS="110 125 154 109 152 116 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="133"
 #! NAME="Delete the previous file"
 #! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
-#! TOP_LEFT="2081 -2418"
-#! BOTTOM_RIGHT="4325 -3043"
+#! TOP_LEFT="2041 -2207"
+#! BOTTOM_RIGHT="4666 -2832"
 #! STICKY="true"
 #! COLOUR="0.529412,0.329412,0.803922"
-#! CONTENTS="132 153 115 126 156 114 "
+#! CONTENTS="132 115 153 114 126 162 156 130 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="146"
@@ -396,7 +396,7 @@
 #! BOTTOM_RIGHT="5623 -1136"
 #! STICKY="true"
 #! COLOUR="0.411765,0.819608,0.854902"
-#! CONTENTS="144 143 140 137 64 139 131 142 160 161 145 "
+#! CONTENTS="161 145 144 143 131 139 64 142 137 140 160 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="129"
@@ -406,7 +406,7 @@
 #! BOTTOM_RIGHT="749 -2628"
 #! STICKY="true"
 #! COLOUR="0.203922,0.203922,0.27451"
-#! CONTENTS="148 12 11 157 8 158 5 "
+#! CONTENTS="11 148 157 12 8 158 5 "
 #! />
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
@@ -432,7 +432,7 @@
 #! IDENTIFIER="11"
 #! TYPE="AttributeCreator"
 #! VERSION="2"
-#! POSITION="164 -2108"
+#! POSITION="160 -2108"
 #! ORDER="66"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -444,7 +444,7 @@
 #! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
-#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="filename,ais_&lt;at&gt;Value&lt;openparen&gt;_uuid&lt;closeparen&gt;.txt,shared_resource,$(FME_SHAREDRESOURCE_TEMP)"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="filename,ais_&lt;at&gt;Value&lt;openparen&gt;_uuid&lt;closeparen&gt;.txt,shared_resource,$(FME_MOUNTPOINT_TEMP)"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="74"
@@ -1102,7 +1102,7 @@
 #! IDENTIFIER="7"
 #! TYPE="FeatureReader"
 #! VERSION="3"
-#! POSITION="900 -82"
+#! POSITION="896 -81"
 #! ORDER="109"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -2107,7 +2107,7 @@
 #! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="SELECT&lt;space&gt;*&lt;space&gt;FROM&lt;space&gt;ship_details&lt;space&gt;WHERE&lt;space&gt;&lt;space&gt;mmsi_number&lt;space&gt;=&lt;space&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;ais_data_mmsi&lt;closeparen&gt;&lt;quote&gt;&lt;space&gt;"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLExecutor"/>
 #! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="call_sign,class_general,class_special,mmsi_number,ship_length,tonnage,vessel_name,class_general_desc,class_individual_desc"/>
-#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE=".&lt;solidus&gt;data&lt;solidus&gt;ships.db"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="C:&lt;backslash&gt;Users&lt;backslash&gt;dvanniekerk&lt;backslash&gt;Documents&lt;backslash&gt;My&lt;space&gt;FME&lt;space&gt;Server&lt;space&gt;Workspaces&lt;backslash&gt;ships.db"/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Initiator Geometry Only"/>
@@ -2118,7 +2118,7 @@
 #! IDENTIFIER="114"
 #! TYPE="Tester"
 #! VERSION="1"
-#! POSITION="2299 -2626"
+#! POSITION="2874 -2547"
 #! ORDER="116"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -2131,6 +2131,7 @@
 #! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename_del" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="FAILED"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
 #! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2139,13 +2140,14 @@
 #! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="filename_del" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
 #! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
 #! <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
 #! <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
 #! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
-#! <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &quot;$(prev_path)&quot; NOT_ATTRIBUTE_IS_EMPTY &quot;&quot;"/>
+#! <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &quot;filename_del&quot; NOT_ATTRIBUTE_IS_EMPTY &quot;&quot;"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="139"
@@ -2212,7 +2214,7 @@
 #! IDENTIFIER="140"
 #! TYPE="FMEServerJobSubmitter"
 #! VERSION="0"
-#! POSITION="5108 -567"
+#! POSITION="5104 -567"
 #! ORDER="123"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -2235,8 +2237,8 @@
 #! <XFORM_ATTR ATTR_NAME="_timeFinished" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_timeRequested" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_timeStarted" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszr8DZ4Ywdm5xGPPiubKdtNsAO/ASk2PDePSq8OP6Hh6asI8gzI0GWDHAf7MbmVtppk079BoPb8XDOskpo8hR2ao/+iKzZqoljX23jxWKZu8Da7iCeoyO8ApMNsc9JCask7+fwBwJwY6gmcw2c4/PKFaPzPHuJ2/nZjVy5J3AvfwBeQt/zT5kyfK9wyUnsA2KviMIA+uwV7BolGm5fusQ+CN86D9W9DZ1ttWKrOvNe5lTl/3FEIMmc9XO/YkXFI8vENsOIl73Tj7MdoWkckbfGvHcMtv+/GdfppJf6tKYcfdlGkzMCugieVM4SVUlPY8RhPeqAMBqTH7uBV5WYZwAmzoAtWaXaFPRd)"/>
-#! <XFORM_PARM PARM_NAME="USERNAME" PARM_VALUE="admin"/>
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszlK0JO59BA+M0ktUZ7HxLKZtzjAaWiH02sLnccWonHyldDjaci64GmzKqgL6GzmpewdGJ4NaXt+pCagsH6YK8chXLYWoKYpNMRx9AyHT1qXybVdBv1Qfa0ra5sbM4x59UCW52VUsgRjwM25LnlVVBLQfCk3dGs49/+wHSg59rFtFlTkQGMjaVSVJRq+zuih/ALKL9OspnL9bi4WiDTcExTW1FuEoFDmEI+wrYvQAkBq0ZKe4Kt3KjVD2GytYrGWV2OOgM1WdpVlmNGWo82q06Vz3lZQiDFsWCXKjlJeSZPaKfTPUBullNJqG0JyI73BgwlnQCt9bn4xJ81aZG2LjycON0+s56EIpA)"/>
+#! <XFORM_PARM PARM_NAME="USERNAME" PARM_VALUE="fmepediademos"/>
 #! <XFORM_PARM PARM_NAME="SERVER_NAME" PARM_VALUE="http://localhost"/>
 #! <XFORM_PARM PARM_NAME="WORKSPACE_NAME" PARM_VALUE="recorded_ais_reader.fmw"/>
 #! <XFORM_PARM PARM_NAME="PARAMETER_TYPES" PARM_VALUE="STRING"/>
@@ -2326,7 +2328,7 @@
 #! IDENTIFIER="138"
 #! TYPE="WebSocketSender"
 #! VERSION="0"
-#! POSITION="3915 -346"
+#! POSITION="3915 -349"
 #! ORDER="129"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -2419,7 +2421,7 @@
 #! IDENTIFIER="132"
 #! TYPE="HTTPDeleter"
 #! VERSION="3"
-#! POSITION="3120 -2542"
+#! POSITION="3524 -2451"
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -2432,6 +2434,7 @@
 #! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename_del" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2445,13 +2448,14 @@
 #! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="filename_del" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_url_contents" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_PARM PARM_NAME="HTTP_AUTH_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="TARGET_URL" PARM_VALUE="http:&lt;solidus&gt;&lt;solidus&gt;localhost&lt;solidus&gt;fmerest&lt;solidus&gt;v2&lt;solidus&gt;resources&lt;solidus&gt;&lt;at&gt;Value&lt;openparen&gt;shared_resource&lt;closeparen&gt;&lt;solidus&gt;&lt;at&gt;$(prev_path)?detail=low&lt;amp&gt;token=$(token)"/>
+#! <XFORM_PARM PARM_NAME="TARGET_URL" PARM_VALUE="http:&lt;solidus&gt;&lt;solidus&gt;localhost&lt;solidus&gt;fmerest&lt;solidus&gt;v2&lt;solidus&gt;resources&lt;solidus&gt;FME_MOUNTPOINT_TEMP&lt;solidus&gt;filesys&lt;solidus&gt;&lt;at&gt;Value&lt;openparen&gt;filename_del&lt;closeparen&gt;?detail=low&lt;amp&gt;token=$(token)"/>
 #! <XFORM_PARM PARM_NAME="REQUEST_HEADER" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PROXY_PASSWORD" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PROXY_PORT" PARM_VALUE=""/>
@@ -2503,7 +2507,7 @@
 #! IDENTIFIER="115"
 #! TYPE="VariableSetter"
 #! VERSION="2"
-#! POSITION="3775 -2748"
+#! POSITION="4179 -2660"
 #! ORDER="119"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -2516,6 +2520,7 @@
 #! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename_del" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2543,6 +2548,31 @@
 #! <XFORM_PARM PARM_NAME="SCOPE" PARM_VALUE="Global"/>
 #! <XFORM_PARM PARM_NAME="PARAMETER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="VariableRetriever"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="VARNAME" PARM_VALUE="filename_del"/>
+#! <XFORM_PARM PARM_NAME="VALUE_ATTR" PARM_VALUE="filename_del"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="130"
+#! TYPE="VariableRetriever"
+#! VERSION="2"
+#! POSITION="2280 -2535"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="shared_resource" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="filename_del" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="SCOPE" PARM_VALUE="Global"/>
+#! <XFORM_PARM PARM_NAME="PARAMETER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="VariableRetriever_2"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="VARNAME" PARM_VALUE="filename_del"/>
 #! <XFORM_PARM PARM_NAME="VALUE_ATTR" PARM_VALUE="filename_del"/>
@@ -3054,15 +3084,6 @@
 #! EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#! IDENTIFIER="159"
-#! SOURCE_NODE="7"
-#! TARGET_NODE="114"
-#! SOURCE_PORT_DESC="fo 40"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
 #! IDENTIFIER="126"
 #! SOURCE_NODE="114"
 #! TARGET_NODE="115"
@@ -3098,6 +3119,24 @@
 #! ENABLED="true"
 #! EXTRA_POINTS=""
 #! />
+#! <FEAT_LINK
+#! IDENTIFIER="141"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="130"
+#! SOURCE_PORT_DESC="fo 40"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="162"
+#! SOURCE_NODE="130"
+#! TARGET_NODE="114"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
 #! </FEAT_LINKS>
 #! <BREAKPOINTS>
 #! </BREAKPOINTS>
@@ -3112,7 +3151,7 @@
 GUI IGNORE SourceDataset_TEXTLINE_1,TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1,TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1,TEXTLINE_IN_SKIP_LINES_TEXTLINE_1,TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1,TEXTLINE_IN_ENCODING_TEXTLINE_1
 DEFAULT_MACRO prev_path 
 GUI OPTIONAL TEXT prev_path Previous file path for deletion:
-DEFAULT_MACRO SourceDataset_TEXTLINE ./data/2012-07-02_SanFran_AIS_recording.txt
+DEFAULT_MACRO SourceDataset_TEXTLINE C:\Users\dvanniekerk\Documents\My FME Server Workspaces\2012-07-02_SanFran_AIS_recording.txt
 GUI IGNORE MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*.*)|*.* Source Text File(s):
 DEFAULT_MACRO token e21c4f31773c1a7e170d85daa5d4ad14f35ca485
 GUI IGNORE TEXT token FME Server REST token:
@@ -3237,9 +3276,9 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME UUIDGenerator    INPUT  FEATURE_TYPE De
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc AttributeCreator_7c6a2cbc_96ca_4d20_a33a_3bef1a6f269b0_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+Tcl2 proc AttributeCreator_a53d352a_6ae2_454b_8b98_f8d2944f939d5_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT         "@Tcl2( AttributeCreator_7c6a2cbc_96ca_4d20_a33a_3bef1a6f269b0_attrSetter {(filename,ais_<at>Value<openparen>_uuid<closeparen>.txt,shared_resource,$(FME_SHAREDRESOURCE_TEMP))} )"
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT    OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT         "@Tcl2( AttributeCreator_a53d352a_6ae2_454b_8b98_f8d2944f939d5_attrSetter {(filename,ais_<at>Value<openparen>_uuid<closeparen>.txt,shared_resource,$(FME_MOUNTPOINT_TEMP_ENCODED))} )"
 
 # -------------------------------------------------------------------------
 FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_2 INPUT  FEATURE_TYPE AttributeCreator_OUTPUT ATTR file_path <at>Value<openparen>shared_resource<closeparen><solidus><at>Value<openparen>filename<closeparen>    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_2_OUTPUT 
@@ -3266,10 +3305,17 @@ FACTORY_DEF * QueryFactory    FACTORY_NAME FeatureReader    INPUT  FEATURE_TYPE 
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE FeatureReader_INITIATOR    TEST "@EvaluateExpression(STRING,$(prev_path$encode),Tester)" NOT_ATTRIBUTE_IS_EMPTY ""    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_PASSED    OUTPUT FAILED FEATURE_TYPE Tester_FAILED
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+MACRO VariableRetriever_2_VAR filename_del
+INCLUDE [if {{Global} == {Local}} {   puts {MACRO VariableRetriever_2_VAR $(WB_CURRENT_CONTEXT)_filename_del}; };
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever_2    INPUT  FEATURE_TYPE FeatureReader_INITIATOR    OUTPUT FEATURE_TYPE VariableRetriever_2_OUTPUT        @GlobalVariable("$(VariableRetriever_2_VAR)",fme_result_attribute,filename_del)
+
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * HTTPFactory    FACTORY_NAME HTTPDeleter       INPUT  FEATURE_TYPE Tester_PASSED    TARGET_URL @EvaluateExpression(STRING_ENCODED,http:<solidus><solidus>localhost<solidus>fmerest<solidus>v2<solidus>resources<solidus><at>Value<openparen>shared_resource<closeparen><solidus><at>$(prev_path$encode)?detail=low<amp>token=$(token$encode),HTTPDeleter)    TARGET_ATTR "_url_contents"    HTTP_METHOD DELETE    AUTH_METHOD Basic    SINGLE_SIGN_ON No    PROXY_AUTH_METHOD Basic    TARGET_ATTRIBUTE_ENCODING    RESPONSE_HEADER_LIST_ATTR "_headers"    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR "_error"    FOLLOW_REDIRECTS Yes    VERIFY_SSL_CERTIFICATES Yes    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE HTTPDeleter_OUTPUT    OUTPUT REJECTED FEATURE_TYPE HTTPDeleter_<REJECTED>
+FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE VariableRetriever_2_OUTPUT    TEST "filename_del" NOT_ATTRIBUTE_IS_EMPTY ""    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_PASSED    OUTPUT FAILED FEATURE_TYPE Tester_FAILED
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * HTTPFactory    FACTORY_NAME HTTPDeleter       INPUT  FEATURE_TYPE Tester_PASSED    TARGET_URL @EvaluateExpression(STRING_ENCODED,http:<solidus><solidus>localhost<solidus>fmerest<solidus>v2<solidus>resources<solidus>FME_MOUNTPOINT_TEMP<solidus>filesys<solidus><at>Value<openparen>filename_del<closeparen>?detail=low<amp>token=$(token$encode),HTTPDeleter)    TARGET_ATTR "_url_contents"    HTTP_METHOD DELETE    AUTH_METHOD Basic    SINGLE_SIGN_ON No    PROXY_AUTH_METHOD Basic    TARGET_ATTRIBUTE_ENCODING    RESPONSE_HEADER_LIST_ATTR "_headers"    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR "_error"    FOLLOW_REDIRECTS Yes    VERIFY_SSL_CERTIFICATES Yes    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE HTTPDeleter_OUTPUT    OUTPUT REJECTED FEATURE_TYPE HTTPDeleter_<REJECTED>
 
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "HTTPDeleter <REJECTED> Output Nuker"   INPUT FEATURE_TYPE HTTPDeleter_<REJECTED>
@@ -3278,8 +3324,8 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "HTTPDeleter <REJECTED> Output Nuker"   
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 MACRO VariableSetter_VAR filename_del
 INCLUDE [ if {{Global} == {Local}} {   puts {MACRO VariableSetter_VAR $(WB_CURRENT_CONTEXT)_filename_del}; } ]
-Tcl2 proc VariableSetter_1d03c98b_3025_443b_b484_d87caa5a65fd0_setGlobalVar {varName varValue} {   set attrName VariableSetter_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_tempAttr; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter    INPUT  FEATURE_TYPE Tester_FAILED    INPUT  FEATURE_TYPE HTTPDeleter_OUTPUT    OUTPUT FEATURE_TYPE VariableSetter_OUTPUT        @Tcl2("VariableSetter_1d03c98b_3025_443b_b484_d87caa5a65fd0_setGlobalVar {$(VariableSetter_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename<closeparen>,VariableSetter)} ")
+Tcl2 proc VariableSetter_b0a77611_8b1b_430a_ba33_95a870c561f05_setGlobalVar {varName varValue} {   set attrName VariableSetter_tempAttr;   FME_SetAttribute $attrName [FME_DecodeText $varValue];   FME_Execute GlobalVariable $varName fme_attribute_name $attrName;   FME_UnsetAttributes VariableSetter_tempAttr; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME VariableSetter    INPUT  FEATURE_TYPE Tester_FAILED    INPUT  FEATURE_TYPE HTTPDeleter_OUTPUT    OUTPUT FEATURE_TYPE VariableSetter_OUTPUT        @Tcl2("VariableSetter_b0a77611_8b1b_430a_ba33_95a870c561f05_setGlobalVar {$(VariableSetter_VAR)} {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename<closeparen>,VariableSetter)} ")
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "VariableSetter OUTPUT Output Nuker"   INPUT FEATURE_TYPE VariableSetter_OUTPUT
 # -------------------------------------------------------------------------
@@ -3317,13 +3363,13 @@ FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor    INPUT  FEATURE_
 # -------------------------------------------------------------------------
 MACRO SQLExecutor_DIRECTIVES 
 
-FACTORY_DEF * QueryFactory    FACTORY_NAME SQLExecutor    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    QUERY_SQL            @EvaluateExpression(STRING_ENCODED,SELECT<space>*<space>FROM<space>ship_details<space>WHERE<space><space>mmsi_number<space>=<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><space>,SQLExecutor)    READER_TYPE          SQLITE3    READER_DATASET       ".<solidus>data<solidus>ships.db"    COMBINE_ATTRIBUTES   PREFER_RESULT    COMBINE_GEOMETRY     QUERY_ONLY    READER_PARAMS        $(SQLExecutor_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE SQLExecutor_RESULT    OUTPUT QUERY FEATURE_TYPE SQLExecutor_INITIATOR
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLExecutor    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    QUERY_SQL            @EvaluateExpression(STRING_ENCODED,SELECT<space>*<space>FROM<space>ship_details<space>WHERE<space><space>mmsi_number<space>=<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><space>,SQLExecutor)    READER_TYPE          SQLITE3    READER_DATASET       "C:<backslash>Users<backslash>dvanniekerk<backslash>Documents<backslash>My<space>FME<space>Server<space>Workspaces<backslash>ships.db"    COMBINE_ATTRIBUTES   PREFER_RESULT    COMBINE_GEOMETRY     QUERY_ONLY    READER_PARAMS        $(SQLExecutor_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE SQLExecutor_RESULT    OUTPUT QUERY FEATURE_TYPE SQLExecutor_INITIATOR
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor INITIATOR Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_INITIATOR
 # -------------------------------------------------------------------------
 
-Tcl2 proc StringConcatenator_3_f6ad2aaa_f39f_470d_9220_90bb7720e7f30_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_f6ad2aaa_f39f_470d_9220_90bb7720e7f30_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
+Tcl2 proc StringConcatenator_3_824f1408_99ac_4483_8530_ddf33eb843825_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_824f1408_99ac_4483_8530_ddf33eb843825_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
 
 # -------------------------------------------------------------------------
 
@@ -3360,8 +3406,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever    INPUT  FEATURE_TYP
 # to:
 #     20080221163216
 
-Tcl2 proc FMEServerJobSubmitter_8bf6532b_d380_4de2_af99_df7ff4754dcc0_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
-FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    BLOCKING No    SERVER_NAME http://localhost    SERVER_PORT 0    USERNAME "admin"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszr8DZ4Ywdm5xGPPiubKdtNsAO/ASk2PDePSq8OP6Hh6asI8gzI0GWDHAf7MbmVtppk079BoPb8XDOskpo8hR2ao/+iKzZqoljX23jxWKZu8Da7iCeoyO8ApMNsc9JCask7+fwBwJwY6gmcw2c4/PKFaPzPHuJ2/nZjVy5J3AvfwBeQt/zT5kyfK9wyUnsA2KviMIA+uwV7BolGm5fusQ+CN86D9W9DZ1ttWKrOvNe5lTl/3FEIMmc9XO/YkXFI8vENsOIl73Tj7MdoWkckbfGvHcMtv+/GdfppJf6tKYcfdlGkzMCugieVM4SVUlPY8RhPeqAMBqTH7uBV5WYZwAmzoAtWaXaFPRd)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "recorded_ais_reader.fmw"    WORKSPACE_PARAMETERS "prev_path,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename_del<closeparen>,FMEServerJobSubmitter)"    PRIORITY "1"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_8bf6532b_d380_4de2_af99_df7ff4754dcc0_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_8bf6532b_d380_4de2_af99_df7ff4754dcc0_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_8bf6532b_d380_4de2_af99_df7ff4754dcc0_reformatter _timeStarted")
+Tcl2 proc FMEServerJobSubmitter_177c0cf7_8993_4318_a09f_55d326b913055_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
+FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    BLOCKING No    SERVER_NAME http://localhost    SERVER_PORT 0    USERNAME "fmepediademos"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszlK0JO59BA+M0ktUZ7HxLKZtzjAaWiH02sLnccWonHyldDjaci64GmzKqgL6GzmpewdGJ4NaXt+pCagsH6YK8chXLYWoKYpNMRx9AyHT1qXybVdBv1Qfa0ra5sbM4x59UCW52VUsgRjwM25LnlVVBLQfCk3dGs49/+wHSg59rFtFlTkQGMjaVSVJRq+zuih/ALKL9OspnL9bi4WiDTcExTW1FuEoFDmEI+wrYvQAkBq0ZKe4Kt3KjVD2GytYrGWV2OOgM1WdpVlmNGWo82q06Vz3lZQiDFsWCXKjlJeSZPaKfTPUBullNJqG0JyI73BgwlnQCt9bn4xJ81aZG2LjycON0+s56EIpA)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "recorded_ais_reader.fmw"    WORKSPACE_PARAMETERS "prev_path,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename_del<closeparen>,FMEServerJobSubmitter)"    PRIORITY "1"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_177c0cf7_8993_4318_a09f_55d326b913055_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_177c0cf7_8993_4318_a09f_55d326b913055_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_177c0cf7_8993_4318_a09f_55d326b913055_reformatter _timeStarted")
 
 # -------------------------------------------------------------------------
 
