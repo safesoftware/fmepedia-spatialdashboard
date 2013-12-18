@@ -1,6 +1,6 @@
 function initialize() {
 	// see FMEServer.js for parameter values
-	fmeserver = new FMEServer("fmepedia2014.safe-software.fmecloud.com", "e21c4f31773c1a7e170d85daa5d4ad14f35ca485");
+	fmeserver = new FMEServer("fmepedia2014-safe-software.fmecloud.com", "b442e0b8ea9f85c1860ee85d8c6709d36ab40bb4");
 
 	var myLatlng = new google.maps.LatLng(37.7850,-122.4183);
 
