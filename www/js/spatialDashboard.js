@@ -17,6 +17,7 @@ function initialize() {
 	}
 
 	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+	var iconroot = "http://demos.fmeserver.com/spatialdashboard/libs/";
 
 	// Storage for Markers
 	var markers = new Array();
@@ -127,7 +128,7 @@ function initialize() {
 			bus_id = dataObj['bus_id'];
 			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
 
-			var image = "http://maps.google.com/mapfiles/kml/shapes/bus.png";
+			var image = iconroot + "bus.png";
 			var imgScaledSize = new google.maps.Size(30,30);
 
 			var markerImg = new google.maps.MarkerImage(image, null, null, null, imgScaledSize);
@@ -175,7 +176,7 @@ function initialize() {
 			the_id = dataObj['flight_id'];
 			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
 
-			var image = "http://maps.google.com/mapfiles/kml/shapes/airports.png";
+			var image = iconroot + "plane.png";
 			var imgScaledSize = new google.maps.Size(30,30);
 
 			var markerImg = new google.maps.MarkerImage(image, null, null, null, imgScaledSize);
