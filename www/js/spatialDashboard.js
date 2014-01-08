@@ -64,7 +64,7 @@ function initialize() {
 			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
 			// alert(markers[mmsi]);
 
-			var image = "http://maps.google.com/mapfiles/kml/shapes/ferry.png";
+			var image = iconroot + "ship.png";
 			var ton = dataObj['tonnage'];
 			if (ton < 100) {
 				var imgScaledSize = new google.maps.Size(30,30);
