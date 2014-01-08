@@ -8,11 +8,12 @@
 #    C:\apps\FME_14224\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\ais_reader_workaround.fmw
 #          --prev_path ""
 #          --SourceDataset_AIS C:\safegit\fmepedia-spatialdashboard\fme\data\2012-07-02_SanFran_AIS_recording.txt
+#          --sqlite_file "C:\Users\dvanniekerk\Documents\My FME Server Workspaces\ships.db"
 #    
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="1426 20"
+#! VIEW_POSITION="1420 20"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
@@ -31,12 +32,12 @@
 #! END_PYTHON=""
 #! HISTORY=""
 #! FME_DOCUMENT_PRIORGUID="27f08b1f-f4c6-4b20-8d44-3a381e5e9cb1,6dc9acd0-5abd-457b-b912-7826fc6b2c28,d24c94c2-a0f9-45b0-a17f-fbe5c3b4badc,cf0df9cb-f16b-4bbb-bd49-bf9ce7b6efa8,cc187225-e0de-4222-ad6b-edef8595fa38"
-#! DOC_TOP_LEFT="1526 -875"
+#! DOC_TOP_LEFT="1514 -875"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2014-01-08T10:46:17"
+#! LAST_SAVE_DATE="2014-01-08T11:16:28"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
@@ -46,7 +47,7 @@
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
-#! DOC_EXTENTS="4097 585"
+#! DOC_EXTENTS="4109 583"
 #! FME_DOCUMENT_GUID="2d7533ae-f63e-4c76-bc54-00a56222d68c"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
@@ -355,6 +356,11 @@
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL MULTIFILE_OR_ATTR sqlite_file SQLite Database Files(*.sl3;*.db;*.sqlite)|*.sl3;*.db;*.sqlite|SQLite Database Files(*.sl3)|*.sl3|SQLite Database Files(*.db)|*.db|SQLite Database Files(*.sqlite)|*.sqlite|Zip Files(*.zip)|*.zip|All Files|*.* SQLite DB:"
+#! DEFAULT_VALUE="C:\Users\dvanniekerk\Documents\My FME Server Workspaces\ships.db"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI IGNORE TEXT_OR_ATTR token FME Server REST token:"
 #! DEFAULT_VALUE="e21c4f31773c1a7e170d85daa5d4ad14f35ca485"
 #! IS_STAND_ALONE="true"
@@ -364,12 +370,12 @@
 #! <COMMENT
 #! IDENTIFIER="125"
 #! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;Get ship details&lt;/body&gt;&lt;/html&gt;"
-#! POSITION="2751 -635"
+#! POSITION="2761 -685"
 #! ORDER="105"
 #! FOLLOW_ANCHOR="true"
 #! INFO_NODE="false"
-#! TOP_LEFT="2751 -635"
-#! BOTTOM_RIGHT="2751 -635"
+#! TOP_LEFT="2761 -685"
+#! BOTTOM_RIGHT="2761 -685"
 #! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="8"
 #! COMMENT_TYPE="REGULAR"
@@ -451,7 +457,7 @@
 #! IDENTIFIER="110"
 #! TYPE="SQLExecutor"
 #! VERSION="6"
-#! POSITION="2705 -290"
+#! POSITION="2715 -340"
 #! ORDER="113"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -526,7 +532,7 @@
 #! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="SELECT&lt;space&gt;*&lt;space&gt;FROM&lt;space&gt;ship_details&lt;space&gt;WHERE&lt;space&gt;&lt;space&gt;mmsi_number&lt;space&gt;=&lt;space&gt;&lt;quote&gt;&lt;at&gt;Value&lt;openparen&gt;ais_data_mmsi&lt;closeparen&gt;&lt;quote&gt;&lt;space&gt;"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLExecutor"/>
 #! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="call_sign,class_general,class_special,mmsi_number,ship_length,tonnage,vessel_name,class_general_desc,class_individual_desc"/>
-#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="C:&lt;backslash&gt;Users&lt;backslash&gt;dvanniekerk&lt;backslash&gt;Documents&lt;backslash&gt;My&lt;space&gt;FME&lt;space&gt;Server&lt;space&gt;Workspaces&lt;backslash&gt;ships.db"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(sqlite_file)"/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Initiator Geometry Only"/>
@@ -787,6 +793,47 @@
 #! <XFORM_PARM PARM_NAME="VARNAME" PARM_VALUE="filename_del"/>
 #! <XFORM_PARM PARM_NAME="VALUE_ATTR" PARM_VALUE="filename_del"/>
 #! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="25"
+#! TYPE="Decelerator"
+#! VERSION="0"
+#! POSITION="1514 -596"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="ais_header_prefix" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_channel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_destination_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_source_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_comment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_counter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_group_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_repeat_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_mmsi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_navigation_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_rate_of_turn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_speed_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_position_accuracy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_course_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_true_heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_maneuver_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_raim_flag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_radio_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Decelerator"/>
+#! <XFORM_PARM PARM_NAME="FEATURES_PER_SECOND" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DECEL_TYPE" PARM_VALUE="Per Feature Delay"/>
+#! <XFORM_PARM PARM_NAME="DELAY" PARM_VALUE="0.1"/>
+#! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
 #! <FEAT_LINK
@@ -871,10 +918,19 @@
 #! EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#! IDENTIFIER="33"
+#! IDENTIFIER="26"
 #! SOURCE_NODE="71"
-#! TARGET_NODE="109"
+#! TARGET_NODE="25"
 #! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="27"
+#! SOURCE_NODE="25"
+#! TARGET_NODE="109"
+#! SOURCE_PORT_DESC="fo 0"
 #! TARGET_PORT_DESC="fi 0"
 #! ENABLED="true"
 #! EXTRA_POINTS=""
@@ -895,6 +951,8 @@ DEFAULT_MACRO prev_path
 GUI OPTIONAL TEXT prev_path Previous file path for deletion:
 DEFAULT_MACRO SourceDataset_AIS $(FME_MF_DIR)data\2012-07-02_SanFran_AIS_recording.txt
 GUI MULTIFILE SourceDataset_AIS Text/Log(*.txt;*.log)|*.txt;*.log|Text_Files(*.txt)|*.txt|Log_Files(*.log)|*.log|All_Files(*.*)|*.* Source AIS File:
+DEFAULT_MACRO sqlite_file C:\Users\dvanniekerk\Documents\My FME Server Workspaces\ships.db
+GUI OPTIONAL MULTIFILE sqlite_file SQLite Database Files(*.sl3;*.db;*.sqlite)|*.sl3;*.db;*.sqlite|SQLite Database Files(*.sl3)|*.sl3|SQLite Database Files(*.db)|*.db|SQLite Database Files(*.sqlite)|*.sqlite|Zip Files(*.zip)|*.zip|All Files|*.* SQLite DB:
 DEFAULT_MACRO token e21c4f31773c1a7e170d85daa5d4ad14f35ca485
 GUI IGNORE TEXT token FME Server REST token:
 INCLUDE [ if {{$(SourceDataset_AIS)} == {}} { puts_real {Parameter 'SourceDataset_AIS' must be given a value.}; exit 1; }; ]
@@ -1016,18 +1074,35 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME "Source -> Generic"    INPUT FEATURE_TY
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor    INPUT  FEATURE_TYPE ais_position_report    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_OUTPUT         "_x" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_y" @Coordinate(y,0,FLATTEN_AGGREGATE)         @SupplyAttributes("_z",-9999)    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_OUTPUT         "_x" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_y" @Coordinate(y,0,FLATTEN_AGGREGATE)         "_z" @Coordinate(z,0,FLATTEN_AGGREGATE)
+# This is just a simple delay, which is given a # of seconds to stall
+
+Tcl2 proc Decelerator_delay {seconds unused} {     after [expr round($seconds * 1000)]; }
+Tcl2 set Decelerator_clockMillisecondsWhenLastFeatureWentBy [clock clicks -milliseconds];
+
+# This proc ensures that no more than some maximum number of features get through each second
+
+Tcl2 proc Decelerator_maxpersecond {unused maxFeaturesPerSecond} {     global Decelerator_clockMillisecondsWhenLastFeatureWentBy;     set minimumDelayInMilliseconds [expr 1000.0 / $maxFeaturesPerSecond];     set clockMillisecondsNow [clock clicks -milliseconds];     set milliSecondsSinceLastFeature [expr $clockMillisecondsNow -                    [set Decelerator_clockMillisecondsWhenLastFeatureWentBy]];     if {$milliSecondsSinceLastFeature < $minimumDelayInMilliseconds} {         after [expr round($minimumDelayInMilliseconds - $milliSecondsSinceLastFeature)];     };     set Decelerator_clockMillisecondsWhenLastFeatureWentBy [clock clicks -milliseconds]; }
+# Now set up which of the above two delay procedures we'll actually
+# use by renaming the one we want to "Decelerator_Waiter"
+# Then that is what we'll actually call when a feature goes by.
+
+Tcl2 if { {Per Feature Delay} == {Per Feature Delay} } {         rename Decelerator_delay Decelerator_Waiter;      } else {         rename Decelerator_maxpersecond Decelerator_Waiter;      };
+FACTORY_DEF * TeeFactory    FACTORY_NAME Decelerator    INPUT  FEATURE_TYPE ais_position_report    OUTPUT FEATURE_TYPE Decelerator_OUTPUT         @Tcl2("Decelerator_Waiter {0.1} {<Unused>}")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor    INPUT  FEATURE_TYPE Decelerator_OUTPUT    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_OUTPUT         "_x" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_y" @Coordinate(y,0,FLATTEN_AGGREGATE)         @SupplyAttributes("_z",-9999)    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_OUTPUT         "_x" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_y" @Coordinate(y,0,FLATTEN_AGGREGATE)         "_z" @Coordinate(z,0,FLATTEN_AGGREGATE)
 
 # -------------------------------------------------------------------------
 MACRO SQLExecutor_DIRECTIVES 
 
-FACTORY_DEF * QueryFactory    FACTORY_NAME SQLExecutor    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    QUERY_SQL            @EvaluateExpression(STRING_ENCODED,SELECT<space>*<space>FROM<space>ship_details<space>WHERE<space><space>mmsi_number<space>=<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><space>,SQLExecutor)    READER_TYPE          SQLITE3    READER_DATASET       "C:<backslash>Users<backslash>dvanniekerk<backslash>Documents<backslash>My<space>FME<space>Server<space>Workspaces<backslash>ships.db"    COMBINE_ATTRIBUTES   PREFER_RESULT    COMBINE_GEOMETRY     QUERY_ONLY    READER_PARAMS        $(SQLExecutor_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE SQLExecutor_RESULT    OUTPUT QUERY FEATURE_TYPE SQLExecutor_INITIATOR
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLExecutor    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    QUERY_SQL            @EvaluateExpression(STRING_ENCODED,SELECT<space>*<space>FROM<space>ship_details<space>WHERE<space><space>mmsi_number<space>=<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><space>,SQLExecutor)    READER_TYPE          SQLITE3    READER_DATASET       "@EvaluateExpression(STRING_ENCODED,$(sqlite_file$encode),SQLExecutor)"    COMBINE_ATTRIBUTES   PREFER_RESULT    COMBINE_GEOMETRY     QUERY_ONLY    READER_PARAMS        $(SQLExecutor_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE SQLExecutor_RESULT    OUTPUT QUERY FEATURE_TYPE SQLExecutor_INITIATOR
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor INITIATOR Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_INITIATOR
 # -------------------------------------------------------------------------
 
-Tcl2 proc StringConcatenator_3_ade93e34_adf9_4978_a1d2_9d079bb5b8582_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_ade93e34_adf9_4978_a1d2_9d079bb5b8582_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
+Tcl2 proc StringConcatenator_3_ade93e34_adf9_4978_a1d2_9d079bb5b8589_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_ade93e34_adf9_4978_a1d2_9d079bb5b8589_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
 
 # -------------------------------------------------------------------------
 
@@ -1064,8 +1139,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever    INPUT  FEATURE_TYP
 # to:
 #     20080221163216
 
-Tcl2 proc FMEServerJobSubmitter_4661bf69_ff18_4e65_9f33_fc02885703ef2_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
-FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    BLOCKING No    SERVER_NAME http://localhost    SERVER_PORT 0    USERNAME "fmepediademos"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszlK0JO59BA+M0ktUZ7HxLKZtzjAaWiH02sLnccWonHyldDjaci64GmzKqgL6GzmpewdGJ4NaXt+pCagsH6YK8chXLYWoKYpNMRx9AyHT1qXybVdBv1Qfa0ra5sbM4x59UCW52VUsgRjwM25LnlVVBLQfCk3dGs49/+wHSg59rFtFlTkQGMjaVSVJRq+zuih/ALKL9OspnL9bi4WiDTcExTW1FuEoFDmEI+wrYvQAkBq0ZKe4Kt3KjVD2GytYrGWV2OOgM1WdpVlmNGWo82q06Vz3lZQiDFsWCXKjlJeSZPaKfTPUBullNJqG0JyI73BgwlnQCt9bn4xJ81aZG2LjycON0+s56EIpA)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "recorded_ais_reader.fmw"    WORKSPACE_PARAMETERS "prev_path,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename_del<closeparen>,FMEServerJobSubmitter)"    PRIORITY "1"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_4661bf69_ff18_4e65_9f33_fc02885703ef2_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_4661bf69_ff18_4e65_9f33_fc02885703ef2_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_4661bf69_ff18_4e65_9f33_fc02885703ef2_reformatter _timeStarted")
+Tcl2 proc FMEServerJobSubmitter_4661bf69_ff18_4e65_9f33_fc02885703ef9_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
+FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    BLOCKING No    SERVER_NAME http://localhost    SERVER_PORT 0    USERNAME "fmepediademos"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszlK0JO59BA+M0ktUZ7HxLKZtzjAaWiH02sLnccWonHyldDjaci64GmzKqgL6GzmpewdGJ4NaXt+pCagsH6YK8chXLYWoKYpNMRx9AyHT1qXybVdBv1Qfa0ra5sbM4x59UCW52VUsgRjwM25LnlVVBLQfCk3dGs49/+wHSg59rFtFlTkQGMjaVSVJRq+zuih/ALKL9OspnL9bi4WiDTcExTW1FuEoFDmEI+wrYvQAkBq0ZKe4Kt3KjVD2GytYrGWV2OOgM1WdpVlmNGWo82q06Vz3lZQiDFsWCXKjlJeSZPaKfTPUBullNJqG0JyI73BgwlnQCt9bn4xJ81aZG2LjycON0+s56EIpA)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "recorded_ais_reader.fmw"    WORKSPACE_PARAMETERS "prev_path,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>filename_del<closeparen>,FMEServerJobSubmitter)"    PRIORITY "1"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_4661bf69_ff18_4e65_9f33_fc02885703ef9_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_4661bf69_ff18_4e65_9f33_fc02885703ef9_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_4661bf69_ff18_4e65_9f33_fc02885703ef9_reformatter _timeStarted")
 
 # -------------------------------------------------------------------------
 
