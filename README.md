@@ -3,7 +3,7 @@ FME Server Demo - spatialdashboard
 
 A web application that shows some live feeds on Google Maps using FME Server.
 
-Example demo on FME Cloud will be listed here.
+http://fmepedia.safe.com/articles/Samples_and_Demos/Live-Spatial-Dashboard
 
 Installation Instructions
 -------------------------
