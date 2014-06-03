@@ -1,6 +1,6 @@
 function initialize() {
 	fmeserver = new FMEServer({
-		server: "http://fmepedia2014-safe-software.fmecloud.com",
+		server: "https://fmepedia2014-safe-software.fmecloud.com",
 		token : "b442e0b8ea9f85c1860ee85d8c6709d36ab40bb4"
 	});
 
