@@ -1,5 +1,5 @@
 function initialize() {
-	fmeserver = new FMEServer({
+	FMEServer.init({
 		server: "https://fmepedia2014-safe-software.fmecloud.com",
 		token : "b442e0b8ea9f85c1860ee85d8c6709d36ab40bb4"
 	});
@@ -38,7 +38,7 @@ function initialize() {
 
 	
 		// ============= AIS ====================
-		ws = fmeserver.getWebSocketConnection("ship_out");
+		ws = FMEServer.getWebSocketConnection("ship_out");
 
 		// receive
 		ws.onmessage = function (evt) {
@@ -111,7 +111,7 @@ function initialize() {
 		};
 
 		//============= BUS ====================
-		wsBus = fmeserver.getWebSocketConnection("bus_out");
+		wsBus = FMEServer.getWebSocketConnection("bus_out");
 
 		// receive
 		wsBus.onmessage = function (evt) {
@@ -156,7 +156,7 @@ function initialize() {
 		};
 
 		//================= PLANE =======================
-		wsPlane = fmeserver.getWebSocketConnection("plane_out");
+		wsPlane = FMEServer.getWebSocketConnection("plane_out");
 
 		// receive
 		wsPlane.onmessage = function (evt) {
