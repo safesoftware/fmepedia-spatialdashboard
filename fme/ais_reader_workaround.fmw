@@ -5,7 +5,7 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME_14224\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\ais_reader_workaround.fmw
+#    C:\Apps\FME_14287\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\ais_reader_workaround.fmw
 #          --prev_path ""
 #          --SourceDataset_AIS $(FME_SHAREDRESOURCE_DATA)/Demos/2012-07-02_SanFran_AIS_recording.txt
 #          --sqlite_file $(FME_SHAREDRESOURCE_DATA)/Demos/ships.db
@@ -13,7 +13,7 @@
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="1540 13"
+#! VIEW_POSITION="1540 10"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
@@ -22,7 +22,7 @@
 #! TITLE=""
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14224"
+#! FME_BUILD_NUM="14287"
 #! ZOOM_SCALE="90"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
@@ -31,24 +31,24 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID="27f08b1f-f4c6-4b20-8d44-3a381e5e9cb1,6dc9acd0-5abd-457b-b912-7826fc6b2c28,d24c94c2-a0f9-45b0-a17f-fbe5c3b4badc,cf0df9cb-f16b-4bbb-bd49-bf9ce7b6efa8,cc187225-e0de-4222-ad6b-edef8595fa38,2d7533ae-f63e-4c76-bc54-00a56222d68c,5bca4630-e4a0-47b0-a46b-103441b1a8c1"
+#! FME_DOCUMENT_PRIORGUID="27f08b1f-f4c6-4b20-8d44-3a381e5e9cb1,6dc9acd0-5abd-457b-b912-7826fc6b2c28,d24c94c2-a0f9-45b0-a17f-fbe5c3b4badc,cf0df9cb-f16b-4bbb-bd49-bf9ce7b6efa8,cc187225-e0de-4222-ad6b-edef8595fa38,2d7533ae-f63e-4c76-bc54-00a56222d68c,5bca4630-e4a0-47b0-a46b-103441b1a8c1,618d5f73-91a9-4682-bbcb-3b9b90417ba4"
 #! DOC_TOP_LEFT="1514 -875"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2014-01-15T16:35:42"
+#! LAST_SAVE_DATE="2014-08-19T15:17:45"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20140102 - Build 14224 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP1 (20140325 - Build 14287 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="4109 583"
-#! FME_DOCUMENT_GUID="618d5f73-91a9-4682-bbcb-3b9b90417ba4"
+#! FME_DOCUMENT_GUID="a713f73e-3f39-453f-b84f-115912eb3d74"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -393,7 +393,7 @@
 #! BOTTOM_RIGHT="3701 -763"
 #! STICKY="true"
 #! COLOUR="0.356863,0.364706,0.34902"
-#! CONTENTS="152 125 110 154 116 109 "
+#! CONTENTS="154 116 152 125 109 110 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="146"
@@ -403,7 +403,7 @@
 #! BOTTOM_RIGHT="5623 -1136"
 #! STICKY="true"
 #! COLOUR="0.411765,0.819608,0.854902"
-#! CONTENTS="140 142 143 137 139 160 161 131 144 64 145 "
+#! CONTENTS="64 131 137 139 145 160 143 161 140 142 144 "
 #! />
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
@@ -721,7 +721,7 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://localhost:7078/websocket"/>
+#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="wss://localhost:7078/websocket"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="152"
@@ -1101,12 +1101,12 @@ FACTORY_DEF * QueryFactory    FACTORY_NAME SQLExecutor    INPUT  FEATURE_TYPE Co
 FACTORY_DEF * TeeFactory   FACTORY_NAME "SQLExecutor INITIATOR Output Nuker"   INPUT FEATURE_TYPE SQLExecutor_INITIATOR
 # -------------------------------------------------------------------------
 
-Tcl2 proc StringConcatenator_3_510763fc_b2fc_43a2_8f8c_5a57107b643e3_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_510763fc_b2fc_43a2_8f8c_5a57107b643e3_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
+Tcl2 proc StringConcatenator_3_d86b92e5_25cc_4145_a16f_a0b103d0fca10_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLExecutor_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_d86b92e5_25cc_4145_a16f_a0b103d0fca10_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><apos><opencurly><quote>mmsi_number<quote>:<space><quote><at>Value<openparen>ais_data_mmsi<closeparen><quote><comma><tab><quote>heading<quote>:<space><quote><at>Value<openparen>ais_data_true_heading<closeparen><quote><comma><quote>latitude<quote>:<space><quote><at>Value<openparen>_y<closeparen><quote><comma><quote>longitude<quote>:<space><quote><at>Value<openparen>_x<closeparen><quote><comma><quote>call_sign<quote>:<space><quote><at>Value<openparen>call_sign<closeparen><quote><comma><quote>class_general<quote>:<space><quote><at>Value<openparen>class_general<closeparen><quote><comma><quote>class_special<quote>:<space><quote><at>Value<openparen>class_special<closeparen><quote><comma><quote>ship_length<quote>:<space><quote><at>Value<openparen>ship_length<closeparen><quote><comma><quote>tonnage<quote>:<space><quote><at>Value<openparen>tonnage<closeparen><quote><comma><quote>vessel_name<quote>:<space><quote><at>Value<openparen>vessel_name<closeparen><quote><comma><tab><quote>class_general_desc<quote>:<space><quote><at>Value<openparen>class_general_desc<closeparen><quote><comma><tab><quote>class_special_desc<quote>:<space><quote><at>Value<openparen>class_individual_desc<closeparen><quote><closecurly><apos><lf><closecurly>,StringConcatenator_3)} ")
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE StringConcatenator_3_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,ws://localhost:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space><quote>ws_op<quote><space>:<space><quote>open<quote><comma><lf><space><space><space><space><quote>ws_stream_id<quote><space>:<space><quote>ship_in<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender),WebSocketSender)"    OUTPUT OUTPUT FEATURE_TYPE WebSocketSender_OUTPUT
+FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE StringConcatenator_3_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,wss://localhost:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space><quote>ws_op<quote><space>:<space><quote>open<quote><comma><lf><space><space><space><space><quote>ws_stream_id<quote><space>:<space><quote>ship_in<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender),WebSocketSender)"    OUTPUT OUTPUT FEATURE_TYPE WebSocketSender_OUTPUT
 
 # -------------------------------------------------------------------------
 
@@ -1139,8 +1139,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME VariableRetriever    INPUT  FEATURE_TYP
 # to:
 #     20080221163216
 
-Tcl2 proc FMEServerJobSubmitter_b5daeee6_286b_4ab5_8923_b14d9cd6e9163_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
-FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    BLOCKING No    SERVER_NAME http://fmepedia2014-safe-software.fmecloud.com    SERVER_PORT 0    USERNAME "fmepediademos"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszlK0JO59BA+M0ktUZ7HxLKZtzjAaWiH02sLnccWonHyldDjaci64GmzKqgL6GzmpewdGJ4NaXt+pCagsH6YK8chXLYWoKYpNMRx9AyHT1qXybVdBv1Qfa0ra5sbM4x59UCW52VUsgRjwM25LnlVVBLQfCk3dGs49/+wHSg59rFtFlTkQGMjaVSVJRq+zuih/ALKL9OspnL9bi4WiDTcExTW1FuEoFDmEI+wrYvQAkBq0ZKe4Kt3KjVD2GytYrGWV2OOgM1WdpVlmNGWo82q06Vz3lZQiDFsWCXKjlJeSZPaKfTPUBullNJqG0JyI73BgwlnQCt9bn4xJ81aZG2LjycON0+s56EIpA)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "ais_reader_workaround.fmw"    WORKSPACE_PARAMETERS "prev_path,,SourceDataset_AIS,@EvaluateExpression(STRING_ENCODED,$(SourceDataset_AIS$encode),FMEServerJobSubmitter),sqlite_file,@EvaluateExpression(STRING_ENCODED,$(sqlite_file$encode),FMEServerJobSubmitter)"    PRIORITY "1"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_b5daeee6_286b_4ab5_8923_b14d9cd6e9163_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_b5daeee6_286b_4ab5_8923_b14d9cd6e9163_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_b5daeee6_286b_4ab5_8923_b14d9cd6e9163_reformatter _timeStarted")
+Tcl2 proc FMEServerJobSubmitter_25ad3c96_4ee3_41b6_b4dd_303648fd6c780_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
+FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE VariableRetriever_OUTPUT    BLOCKING No    SERVER_NAME http://fmepedia2014-safe-software.fmecloud.com    SERVER_PORT 0    USERNAME "fmepediademos"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszlK0JO59BA+M0ktUZ7HxLKZtzjAaWiH02sLnccWonHyldDjaci64GmzKqgL6GzmpewdGJ4NaXt+pCagsH6YK8chXLYWoKYpNMRx9AyHT1qXybVdBv1Qfa0ra5sbM4x59UCW52VUsgRjwM25LnlVVBLQfCk3dGs49/+wHSg59rFtFlTkQGMjaVSVJRq+zuih/ALKL9OspnL9bi4WiDTcExTW1FuEoFDmEI+wrYvQAkBq0ZKe4Kt3KjVD2GytYrGWV2OOgM1WdpVlmNGWo82q06Vz3lZQiDFsWCXKjlJeSZPaKfTPUBullNJqG0JyI73BgwlnQCt9bn4xJ81aZG2LjycON0+s56EIpA)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "ais_reader_workaround.fmw"    WORKSPACE_PARAMETERS "prev_path,,SourceDataset_AIS,@EvaluateExpression(STRING_ENCODED,$(SourceDataset_AIS$encode),FMEServerJobSubmitter),sqlite_file,@EvaluateExpression(STRING_ENCODED,$(sqlite_file$encode),FMEServerJobSubmitter)"    PRIORITY "1"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id    OUTPUT SUCCEEDED FEATURE_TYPE FMEServerJobSubmitter_SUCCEEDED        @Tcl2("FMEServerJobSubmitter_25ad3c96_4ee3_41b6_b4dd_303648fd6c780_reformatter _timeFinished")        @Tcl2("FMEServerJobSubmitter_25ad3c96_4ee3_41b6_b4dd_303648fd6c780_reformatter _timeRequested")        @Tcl2("FMEServerJobSubmitter_25ad3c96_4ee3_41b6_b4dd_303648fd6c780_reformatter _timeStarted")
 
 # -------------------------------------------------------------------------
 

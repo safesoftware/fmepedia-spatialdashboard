@@ -5,14 +5,14 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME_14224\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\displace_planes.fmw
+#    C:\Apps\FME_14287\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\displace_planes.fmw
 #          --SourceDataset_FFS $(FME_SHAREDRESOURCE_TEMP)/planez.ffs
 #          --DestDataset_FFS $(FME_SHAREDRESOURCE_TEMP)/planez_temp.ffs
 #    
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="-1770 798"
+#! VIEW_POSITION="-2073 795"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
@@ -21,7 +21,7 @@
 #! TITLE=""
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14224"
+#! FME_BUILD_NUM="14287"
 #! ZOOM_SCALE="100"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
@@ -30,24 +30,24 @@
 #! USAGE=""
 #! END_PYTHON="import&lt;space&gt;os&lt;comma&gt;&lt;space&gt;shutil&lt;comma&gt;&lt;space&gt;fmeobjects&lt;lf&gt;&lt;lf&gt;source&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;SourceDataset_FFS&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;dest&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;DestDataset_FFS&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;&lt;lf&gt;source&lt;space&gt;=&lt;space&gt;source.replace&lt;openparen&gt;&lt;quote&gt;&lt;backslash&gt;&lt;backslash&gt;&lt;quote&gt;&lt;comma&gt;&lt;quote&gt;&lt;solidus&gt;&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;dest&lt;space&gt;=&lt;space&gt;dest.replace&lt;openparen&gt;&lt;quote&gt;&lt;backslash&gt;&lt;backslash&gt;&lt;quote&gt;&lt;comma&gt;&lt;quote&gt;&lt;solidus&gt;&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;if&lt;space&gt;os.path.isfile&lt;openparen&gt;dest&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;os.remove&lt;openparen&gt;source&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;shutil.move&lt;openparen&gt;dest&lt;comma&gt;&lt;space&gt;source&lt;closeparen&gt;"
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID="e7cfc832-9acf-4828-8e35-7566f1d341ff,d6b207db-72c7-4e27-a7a8-1f15d54d4a97,83eb32f6-4437-476e-b790-22015e4ef752,dbc4a4f3-dd4f-4d7d-ad97-de156ae59d40,5ba064f5-75f3-466c-8b85-23bcf6d61351,89ea6630-ed93-4f48-8f9c-bb1a62bfae73,0436e909-8d98-4224-a7a5-f98aca44c572,6e9349ed-a6fd-4193-9861-b7c754fa1a0d,f23ae054-dfae-4cd2-a80a-cdc9e381b68b,197f4123-5000-43f0-ae3f-77b179c448af"
+#! FME_DOCUMENT_PRIORGUID="e7cfc832-9acf-4828-8e35-7566f1d341ff,d6b207db-72c7-4e27-a7a8-1f15d54d4a97,83eb32f6-4437-476e-b790-22015e4ef752,dbc4a4f3-dd4f-4d7d-ad97-de156ae59d40,5ba064f5-75f3-466c-8b85-23bcf6d61351,89ea6630-ed93-4f48-8f9c-bb1a62bfae73,0436e909-8d98-4224-a7a5-f98aca44c572,6e9349ed-a6fd-4193-9861-b7c754fa1a0d,f23ae054-dfae-4cd2-a80a-cdc9e381b68b,197f4123-5000-43f0-ae3f-77b179c448af,92269ec3-29e4-453e-b35d-d29cc28184af"
 #! DOC_TOP_LEFT="-1849 -387"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2014-01-10T09:57:21"
+#! LAST_SAVE_DATE="2014-08-19T12:43:12"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20140102 - Build 14224 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP1 (20140325 - Build 14287 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="3615 927"
-#! FME_DOCUMENT_GUID="92269ec3-29e4-453e-b35d-d29cc28184af"
+#! FME_DOCUMENT_GUID="7e465e98-2ce0-454f-aaeb-ca8ff7ba42d5"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -667,7 +667,7 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://localhost:7078/websocket"/>
+#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="wss://localhost:7078/websocket"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="2"
@@ -1293,6 +1293,7 @@ FME_REPROJECTION_ENGINE FME
 FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
 FME_GEOMETRY_HANDLING Enhanced
 FME_STROKE_MAX_DEVIATION 0
+FME_DEBUG MAPPING_FILE BADNEWS FME_STACK_TRACE UNGROUPED UNCORRELATED DUMP_SCHEMA XSD_VERBOSE
 LOG_FILTER_MASK -1
 DEFAULT_MACRO DATASET_KEYWORD_FFS_1 FFS_1
 DEFAULT_MACRO DATASET_KEYWORD_FFS_2 FFS_2
@@ -1364,8 +1365,8 @@ FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor    INPUT  FEATURE_
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc JSONConcatenator_a3a0a8d4_9408_458b_984a_b35580cc93041_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME JSONConcatenator    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    OUTPUT FEATURE_TYPE JSONConcatenator_OUTPUT        @Tcl2("JSONConcatenator_a3a0a8d4_9408_458b_984a_b35580cc93041_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>flight_id<apos><space>:<space><apos><at>Value<openparen>flight_id<closeparen><apos><comma><space><apos>latitude<apos><space>:<space><apos><at>Value<openparen>y_coord<closeparen><apos><comma><space><apos>longitude<apos><space>:<space><apos><at>Value<openparen>x_coord<closeparen><apos><comma><space><apos>heading<apos><space>:<space><apos><at>Value<openparen>heading<closeparen><apos><comma><apos>speed<apos>:<apos><at>Value<openparen>speed<closeparen><apos><comma><apos>altitude<apos>:<apos><at>Value<openparen>altitude<closeparen><apos><comma><space><apos>aircraft_model<apos><space>:<space><apos><at>Value<openparen>aircraft_model<closeparen><apos><space><closecurly><quote><lf><closecurly>,JSONConcatenator)} ")
+Tcl2 proc JSONConcatenator_896b32e6_0391_4f54_828d_87468bf5d5441_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME JSONConcatenator    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    OUTPUT FEATURE_TYPE JSONConcatenator_OUTPUT        @Tcl2("JSONConcatenator_896b32e6_0391_4f54_828d_87468bf5d5441_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>send<quote><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>flight_id<apos><space>:<space><apos><at>Value<openparen>flight_id<closeparen><apos><comma><space><apos>latitude<apos><space>:<space><apos><at>Value<openparen>y_coord<closeparen><apos><comma><space><apos>longitude<apos><space>:<space><apos><at>Value<openparen>x_coord<closeparen><apos><comma><space><apos>heading<apos><space>:<space><apos><at>Value<openparen>heading<closeparen><apos><comma><apos>speed<apos>:<apos><at>Value<openparen>speed<closeparen><apos><comma><apos>altitude<apos>:<apos><at>Value<openparen>altitude<closeparen><apos><comma><space><apos>aircraft_model<apos><space>:<space><apos><at>Value<openparen>aircraft_model<closeparen><apos><space><closecurly><quote><lf><closecurly>,JSONConcatenator)} ")
 
 # -------------------------------------------------------------------------
 
@@ -1386,7 +1387,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME Decelerator    INPUT  FEATURE_TYPE JSON
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE Decelerator_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,ws://localhost:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>open<quote><comma><lf><space><space><space><space>ws_stream_id<space>:<space><quote>plane_in<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender),WebSocketSender)"
+FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE Decelerator_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,wss://localhost:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>open<quote><comma><lf><space><space><space><space>ws_stream_id<space>:<space><quote>plane_in<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender),WebSocketSender)"
 
 # -------------------------------------------------------------------------
 
@@ -1407,7 +1408,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME Sampler_Sampled    INPUT FEATURE_TYPE _
 # to:
 #     20080221163216
 
-Tcl2 proc FMEServerJobSubmitter_42dcbdb2_6569_412f_8997_d1e9c8418f341_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
+Tcl2 proc FMEServerJobSubmitter_8e757e1f_a0b6_4227_ab2b_6f5595e582271_reformatter {attrName} {     catch {       set date [FME_GetAttribute $attrName];       if {[string length $date] > 4} {           set seconds [clock scan [string range $date 4 end ]];           FME_SetAttribute $attrName [clock format $seconds -format {%Y%m%d%H%M%S}];       }     } }
 FACTORY_DEF * ServerJobSubmissionFactory    FACTORY_NAME FMEServerJobSubmitter    INPUT  FEATURE_TYPE Sampler_SAMPLED    BLOCKING No    SERVER_NAME http://fmepedia2014-safe-software.fmecloud.com    SERVER_PORT 0    USERNAME "fmepediademos"    PASSWORD "fme_decrypt(MDowfCN8I3xcG3GQ/TeRRUJUZ5LDPtdvpscbh7Nj9gG/INBkAGA+fkaDrNbhZtfa3rmkUUrCxKWaAFwiYsKgWJNl/0mRpxUuP+IT2c+Qhh26JEZtUWAmpuoaQCdQ3ykKWm2zaoAM5MBCGaGEuYe+6AS07/nLNRJwqp1jdwP1FgVCbXRvZtWfKjEZlNJYQ+EicVc6cv2DxCYJyTljvXwF8mKxenML6FKJiHARQCO8OMJidKKZQJP1SeYIhqB0YrtGw4cGV2ZquQKifvRjB2Tl6wBAWDmeCg+R1jvft1tR17SISyTDv77K+mV80w2aaUSgybbF7coM0BrQPcpehfjlW+YxV73+9mPMFXKQeznZ22T8MJor57O44p8U2NQCw35HiFBs0oVP9VkkY0D/WzGRevseyX1pIEWJSQSFwkJVhiyXavMDz5E5SEYgTZHfVeGBXCDuIEEbfRRkPU5yD2nw2ZAVimDRD7UQhEEY6PosGqU17He4y35WEfAggQ40+EKuupOQSZRsKotTTqlYGHJtX49ymuKqfyZzOAUSUzDMcj8gfDgzOCcuhw2sK3fJaMszVu2NCgK2AiZuUrbmsNnLrPq9ZoGDE7nJhJTJKoF4+uVY64NfhDs9k5QB9jz+rSSmXWKAdmKcd+H/HTcDEtFR0guIqAWPxnxh7T6hqGfRUjUguO74DGwGZ5kXU7DFKiNiMqSNOcYJCWa2wX2BpIAfOg68/OgXgU3PKkogUP5X3m5PN7i918XeVJPE2ITwypUy7/GRE4JcHeByzD6K88Jfo9Ju9w45BAFP3ku2yjktrS8+TwpYdOXgRfvL0n3G63gQ0VsyPc0ky+Fi13EOevNQ0rQsPWbpCP74+bLTzWlYzFOV1r4tbJSuI/CvJLSnIsLtqwqT1D6XN26XztVZOh8m5HT7ooWL8zp4)"    REPOSITORY "spatialdashboard"    WORKSPACE_NAME "plane_generator.fmw"    WORKSPACE_PARAMETERS "min_y,615000,max_y,660000,min_x,1790000,max_x,1900000,num_planes,30,DestDataset_FFS,@EvaluateExpression(STRING_ENCODED,$(SourceDataset_FFS$encode),FMEServerJobSubmitter)"    PRIORITY "100"    ATTR_PREFIX _    SUBSECTION SERVER_JOB_SUBMITTER    JOB_ID _job_id
 
 # -------------------------------------------------------------------------

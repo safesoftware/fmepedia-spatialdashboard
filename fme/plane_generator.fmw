@@ -5,7 +5,7 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME_14224\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\plane_generator.fmw
+#    C:\Apps\FME_14287\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\plane_generator.fmw
 #          --min_y 615000
 #          --max_y 660000
 #          --min_x 1790000
@@ -16,7 +16,7 @@
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="-183 21"
+#! VIEW_POSITION="-180 18"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
@@ -25,7 +25,7 @@
 #! TITLE=""
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14224"
+#! FME_BUILD_NUM="14287"
 #! ZOOM_SCALE="100"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
@@ -34,24 +34,24 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID="1b12d1a3-3c52-4677-95f5-be820eac0a95,431550cb-6ba3-440f-bf18-10b60f02ca95,447c660d-a102-438f-a9b0-28407c489657,6989c476-7382-4a0b-bd86-3408dd6880a0,83e2ba8c-9357-4c85-9ede-528d6d85a946,b0cd839f-15db-4bdf-bcd9-210b1c770e92"
+#! FME_DOCUMENT_PRIORGUID="1b12d1a3-3c52-4677-95f5-be820eac0a95,431550cb-6ba3-440f-bf18-10b60f02ca95,447c660d-a102-438f-a9b0-28407c489657,6989c476-7382-4a0b-bd86-3408dd6880a0,83e2ba8c-9357-4c85-9ede-528d6d85a946,b0cd839f-15db-4bdf-bcd9-210b1c770e92,4229999b-641a-4b26-bc0a-18d783cdb361"
 #! DOC_TOP_LEFT="-122 -1155"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2014-01-08T13:47:25"
+#! LAST_SAVE_DATE="2014-08-19T13:11:13"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20140102 - Build 14224 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP1 (20140325 - Build 14287 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="1986 1152"
-#! FME_DOCUMENT_GUID="4229999b-641a-4b26-bc0a-18d783cdb361"
+#! FME_DOCUMENT_GUID="9daea36c-21fe-4dbd-b025-6d616ac9483a"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -936,8 +936,8 @@ FACTORY_DEF * PythonFactory    FACTORY_NAME FlightAndAircraftGenerator    INPUT 
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc DuplicatePlaneRemover_41dd3f76_dce3_466a_b4fe_6fb063cb792e0_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___DuplicatePlaneRemover_41dd3f76_dce3_466a_b4fe_6fb063cb792e0___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__DuplicatePlaneRemover_41dd3f76_dce3_466a_b4fe_6fb063cb792e0__KeySeenCount($attrVal)] - 1]; };
-FACTORY_DEF * TestFactory    FACTORY_NAME DuplicatePlaneRemover    INPUT  FEATURE_TYPE FlightAndAircraftGenerator_OUTPUT    TEST @Tcl2("DuplicatePlaneRemover_41dd3f76_dce3_466a_b4fe_6fb063cb792e0_dupKeyCount {(flight_id)}") > 0    OUTPUT FAILED FEATURE_TYPE DuplicatePlaneRemover_UNIQUE
+Tcl2 proc DuplicatePlaneRemover_0b557771_c47a_4a36_873f_510d581ac9220_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___DuplicatePlaneRemover_0b557771_c47a_4a36_873f_510d581ac9220___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__DuplicatePlaneRemover_0b557771_c47a_4a36_873f_510d581ac9220__KeySeenCount($attrVal)] - 1]; };
+FACTORY_DEF * TestFactory    FACTORY_NAME DuplicatePlaneRemover    INPUT  FEATURE_TYPE FlightAndAircraftGenerator_OUTPUT    TEST @Tcl2("DuplicatePlaneRemover_0b557771_c47a_4a36_873f_510d581ac9220_dupKeyCount {(flight_id)}") > 0    OUTPUT FAILED FEATURE_TYPE DuplicatePlaneRemover_UNIQUE
 
 # -------------------------------------------------------------------------
 
