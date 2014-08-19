@@ -5,22 +5,21 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME_14165\fme.exe C:\safegit\spatialdashboard\fme\sf_bus_reader.fmw
+#    C:\Apps\FME_14287\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\sf_bus_reader.fmw
 #    
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="0 0"
+#! VIEW_POSITION="-1648 490"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
 #! FME_GEOMETRY_HANDLING="Enhanced"
 #! DESCRIPTION=""
 #! TITLE=""
-#! SHOW_BOOKMARKS="true"
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14165"
+#! FME_BUILD_NUM="14287"
 #! ZOOM_SCALE="85"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
@@ -29,23 +28,24 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID="283fca0b-d08a-4b34-98dd-29eeb563cb44"
 #! DOC_TOP_LEFT="-1607 370"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2013-10-02T11:40:00"
+#! LAST_SAVE_DATE="2014-08-19T12:44:02"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20130929 - Build 14165 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP1 (20140325 - Build 14287 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="1497 74"
-#! FME_DOCUMENT_GUID="283fca0b-d08a-4b34-98dd-29eeb563cb44"
+#! FME_DOCUMENT_GUID="c30b77e6-3a03-4c22-b81b-29bc3515785b"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -408,7 +408,7 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender_2"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="ws://jabba:7078/websocket"/>
+#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="wss://localhost:7078/websocket"/>
 #! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
@@ -555,6 +555,7 @@ FME_REPROJECTION_ENGINE FME
 FME_IMPLICIT_CSMAP_REPROJECTION_MODE Datum
 FME_GEOMETRY_HANDLING Enhanced
 FME_STROKE_MAX_DEVIATION 0
+FME_DEBUG MAPPING_FILE BADNEWS FME_STACK_TRACE UNGROUPED UNCORRELATED DUMP_SCHEMA XSD_VERBOSE
 LOG_FILTER_MASK -1
 DEFAULT_MACRO DATASET_KEYWORD_XML_1 XML_1
 # -------------------------------------------------------------------------
@@ -590,12 +591,12 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME "Source -> Generic"    INPUT FEATURE_TY
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
 
-Tcl2 proc StringConcatenator_2_d4f2cdda_bda9_4562_932c_1c0141c525b920_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
-FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_2    INPUT  FEATURE_TYPE vehicle    OUTPUT FEATURE_TYPE StringConcatenator_2_OUTPUT        @Tcl2("StringConcatenator_2_d4f2cdda_bda9_4562_932c_1c0141c525b920_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><apos>send<apos><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>bus_id<apos>:<space><apos><at>Value<openparen>vehicle.id<closeparen><apos><comma><space><apos>latitude<apos>:<space><apos><at>Value<openparen>vehicle.lat<closeparen><apos><comma><space><apos>longitude<apos>:<space><apos><at>Value<openparen>vehicle.lon<closeparen><apos><comma><space><apos>speed<apos>:<space><apos><at>Value<openparen>vehicle.speedKmHr<closeparen><apos><closecurly><quote><lf><closecurly>,StringConcatenator_2)} ")
+Tcl2 proc StringConcatenator_2_74b439a2_4ce4_4262_a818_c3bc72f3bb8a0_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {notify_content}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_2    INPUT  FEATURE_TYPE vehicle    OUTPUT FEATURE_TYPE StringConcatenator_2_OUTPUT        @Tcl2("StringConcatenator_2_74b439a2_4ce4_4262_a818_c3bc72f3bb8a0_doSetAttr {@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op<space>:<space><apos>send<apos><comma><lf><space><space><space><space>ws_msg<space>:<space><quote><opencurly><space><apos>bus_id<apos>:<space><apos><at>Value<openparen>vehicle.id<closeparen><apos><comma><space><apos>latitude<apos>:<space><apos><at>Value<openparen>vehicle.lat<closeparen><apos><comma><space><apos>longitude<apos>:<space><apos><at>Value<openparen>vehicle.lon<closeparen><apos><comma><space><apos>speed<apos>:<space><apos><at>Value<openparen>vehicle.speedKmHr<closeparen><apos><closecurly><quote><lf><closecurly>,StringConcatenator_2)} ")
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender_2       INPUT  FEATURE_TYPE StringConcatenator_2_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,ws://jabba:7078/websocket,WebSocketSender_2)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space>ws_op<space>:<space><apos>open<apos><comma><lf><space><space><space><space>ws_stream_id<space>:<space><apos>bus_in<apos><lf><closecurly>,WebSocketSender_2)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender_2),WebSocketSender_2)"
+FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender_2       INPUT  FEATURE_TYPE StringConcatenator_2_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,wss://localhost:7078/websocket,WebSocketSender_2)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space>ws_op<space>:<space><apos>open<apos><comma><lf><space><space><space><space>ws_stream_id<space>:<space><apos>bus_in<apos><lf><closecurly>,WebSocketSender_2)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>notify_content<closeparen>,WebSocketSender_2),WebSocketSender_2)"
 
 # -------------------------------------------------------------------------
 
