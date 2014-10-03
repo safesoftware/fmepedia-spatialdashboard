@@ -4,6 +4,10 @@ function initialize() {
 		token : "b442e0b8ea9f85c1860ee85d8c6709d36ab40bb4"
 	});
 
+  var shipcount = document.getElementById('shipcount');
+  var buscount = document.getElementById('buscount');
+  var planecount = document.getElementById('planecount');
+  
 	var myLatlng = new google.maps.LatLng(37.7850,-122.4183);
 
 	var myOptions = {
@@ -59,6 +63,9 @@ function initialize() {
 			}
 			*/
 
+      
+      shipcount.textContent = parseInt(shipcount.textContent) + 1;
+      
 			var data = evt.data;
 			dataObj = eval('(' + eval('(' + data + ')').ws_publisher_content + ')');
 			// document.getElementById('container').innerHTML = dataObj['latitude'];
@@ -123,7 +130,9 @@ function initialize() {
 			"speed": "0.0"
 			}
 			*/
-
+      
+      buscount.textContent = parseInt(buscount.textContent) + 1;
+      
 			var data = evt.data;
 			dataObj = eval('(' + eval('(' + data + ')').ws_publisher_content + ')');
 
@@ -172,6 +181,8 @@ function initialize() {
 			}
 			*/
 
+      planecount.textContent = parseInt(planecount.textContent) + 1;
+      
 			var data = evt.data;
 			dataObj = eval('(' + eval('(' + data + ')').ws_publisher_content + ')');
 
