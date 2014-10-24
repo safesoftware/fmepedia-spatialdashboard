@@ -1,7 +1,7 @@
 function initialize() {
 	FMEServer.init({
-		server: "https://fmepedia2014-safe-software.fmecloud.com",
-		token : "b442e0b8ea9f85c1860ee85d8c6709d36ab40bb4"
+		server: "https://demo2015-safe-software.fmecloud.com",
+		token : "5b50ad16bd6bb173e70cad5bad76daf2b99fa6b0"
 	});
 
   var shipcount = document.getElementById('shipcount');
@@ -42,7 +42,7 @@ function initialize() {
 
 	
 		// ============= AIS ====================
-		ws = FMEServer.getWebSocketConnection("ship_out");
+		ws = FMEServer.getWebSocketConnection("sd_ship");
 
 		// receive
 		ws.onmessage = function (evt) {
@@ -67,9 +67,9 @@ function initialize() {
       shipcount.textContent = parseInt(shipcount.textContent) + 1;
       
 			var data = evt.data;
-			dataObj = eval('(' + eval('(' + data + ')').ws_publisher_content + ')');
+			dataObj = JSON.parse(data);
 			// document.getElementById('container').innerHTML = dataObj['latitude'];
-			mmsi = dataObj['mmsi_number'];
+			mmsi = dataObj.mmsi_number;
 			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
 			// alert(markers[mmsi]);
 
@@ -91,8 +91,7 @@ function initialize() {
 			// var imgScaledSize = new google.maps.Size(20,20);
 			var markerImg = new google.maps.MarkerImage(image, null, null, null, imgScaledSize);
 			// var markerImg = new google.maps.MarkerImage(image, imgScaledSize , imgScaledOrigin, imgScaledAnchor, imgSize);
-
-			// var markerImg = new google.maps.MarkerImage("http://maps.google.com/mapfiles/kml/shapes/ferry.png",new google.maps.Size(50, 50))
+      
 			if(markers[mmsi] == undefined) {
 
 				var title = "Vessel: " + dataObj['vessel_name'] + "\n Class: " + dataObj['class_special_desc'] + "\n Tonnage: " + dataObj['tonnage'];
@@ -118,7 +117,7 @@ function initialize() {
 		};
 
 		//============= BUS ====================
-		wsBus = FMEServer.getWebSocketConnection("bus_out");
+		wsBus = FMEServer.getWebSocketConnection("sd_bus");
 
 		// receive
 		wsBus.onmessage = function (evt) {
@@ -134,7 +133,7 @@ function initialize() {
       buscount.textContent = parseInt(buscount.textContent) + 1;
       
 			var data = evt.data;
-			dataObj = eval('(' + eval('(' + data + ')').ws_publisher_content + ')');
+			dataObj = JSON.parse(data);
 
 			bus_id = dataObj['bus_id'];
 			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
@@ -165,12 +164,13 @@ function initialize() {
 		};
 
 		//================= PLANE =======================
-		wsPlane = FMEServer.getWebSocketConnection("plane_out");
+		wsPlane = FMEServer.getWebSocketConnection("sd_plane");
 
 		// receive
 		wsPlane.onmessage = function (evt) {
 			/*
 			{
+      "id": "27b48c",
 			"flight_id": "VRD740",
 			"latitude": "39.5647",
 			"longitude": "-122.235",
@@ -184,9 +184,9 @@ function initialize() {
       planecount.textContent = parseInt(planecount.textContent) + 1;
       
 			var data = evt.data;
-			dataObj = eval('(' + eval('(' + data + ')').ws_publisher_content + ')');
+			dataObj = JSON.parse(data);
 
-			the_id = dataObj['flight_id'];
+			the_id = dataObj['id'];
 			var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
 
 			var image = iconroot + "plane.png";
@@ -195,17 +195,15 @@ function initialize() {
 			var markerImg = new google.maps.MarkerImage(image, null, null, null, imgScaledSize);
 
 			if(markersPlane[the_id] == undefined) {
-				//alert('a');
 				var marker = new google.maps.Marker({
 					position: point,
 					map: map,
-					title: "Flight: " + the_id + "\n Aircraft: " + dataObj['aircraft_model'] + "\n Altitude: " + dataObj['altitude'] + " m\n Speed: " + dataObj['speed'] + " km/h",
+					title: "Flight: " + dataObj['flight_id'] + "\n Aircraft: " + dataObj['aircraft_model'] + "\n Altitude: " + dataObj['altitude'] + " m\n Speed: " + dataObj['speed'] + " km/h",
 					icon: markerImg
 				});
 				markersPlane[the_id] = marker;
 			}
 			else {
-				//alert('b');
 				markersPlane[the_id].setPosition(point);
 			}
 
@@ -216,59 +214,8 @@ function initialize() {
 		wsPlane.onclose = function() {
 		};
 
-		// //================= CUSTOM =======================
-		// wsCustom = new WebSocket("ws://fmeserver.com:9998/custom", "None");
-
-		// // open
-		// wsCustom.onopen = function() {
-			// wsCustom.send("consumer");
-		// };
-
-		// // receive
-		// wsCustom.onmessage = function (evt) {
-			// /*
-			// {
-			// "id": "10000001",
-			// "latitude": "37.50125",
-			// "longitude": "-121.005",
-			// "title": "FMEROX",
-			// "icon_url": "https://dl.dropbox.com/u/3725882/ufo/ufo_8.gif",
-			// "icon_size": "50"
-			// }
-			// */
-
-			// var data = evt.data;
-			// dataObj = eval('(' + data + ')')
-
-			// the_id = dataObj['id'];
-
-			// var point = new google.maps.LatLng(dataObj['latitude'],dataObj['longitude']);
-			// var image = dataObj['icon_url'];
-			// //var imgScaledSize = new google.maps.Size(dataObj['icon_size'],dataObj['icon_size']);
-			// var markerImg = new google.maps.MarkerImage(image);//, null, null, null, imgScaledSize);
-
-			// if(markersCustom[the_id] == undefined) {
-				// var marker = new google.maps.Marker({
-					// position: point,
-					// map: map,
-					// title:"FMEROX",
-					// icon: markerImg
-				// });
-				// markersCustom[the_id] = marker;
-			// }
-			// else {
-				// markersCustom[the_id].setPosition(point);
-				// markersCustom[the_id].setIcon(markerImg);
-			// }
-
-		// };
-
-		// // close
-		// wsCustom.onclose = function() {
-		// };
-
 	} else {
-		alert("You have no web sockets. Try using the latest Firefox, Chrome or Safari browser.");
+		alert("Your broswer does not support WebSockets. Try using the latest Firefox, Chrome or Safari browser.");
 
 	};
 

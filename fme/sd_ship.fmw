@@ -1,0 +1,1422 @@
+#! <?xml version="1.0" encoding="utf-8" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    C:\Apps\FME_15194_64\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\sd_ship.fmw
+#          --SourceDataset_TEXTLINE C:\safegit\fmepedia-spatialdashboard\fme\data\2012-07-02_SanFran_AIS_recording.txt
+#    
+#    
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! DESCRIPTION=""
+#! FME_STROKE_MAX_DEVIATION="0"
+#! IGNORE_READER_FAILURE="No"
+#! END_TCL=""
+#! USAGE=""
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! REDIRECT_TERMINATORS="NONE"
+#! VIEW_POSITION="-57.0006 -558.006"
+#! END_PYTHON=""
+#! LAST_SAVE_DATE="2014-10-24T10:52:47"
+#! BEGIN_PYTHON=""
+#! LOG_MAX_PRECISION="Yes"
+#! FME_REPROJECTION_ENGINE="FME"
+#! WORKSPACE_VERSION="1"
+#! FME_DOCUMENT_PRIORGUID="9338db52-32ab-4a8d-8cec-ad482f491e5d"
+#! DESTINATION_ROUTING_FILE=""
+#! SHOW_ANNOTATIONS="true"
+#! HISTORY=""
+#! LOG_FILE=""
+#! CATEGORY=""
+#! DOC_TOP_LEFT="5 -1967.52"
+#! DOC_EXTENTS="4561.04 1737.52"
+#! REQUIREMENTS=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! TITLE=""
+#! LAST_SAVE_BUILD="FME(R) 2015 (20141008 - Build 15194 - WIN64)"
+#! LEGAL_TERMS_CONDITIONS=""
+#! MAX_LOG_FEATURES="200"
+#! FME_SERVER_SERVICES=""
+#! SHOW_INFO_NODES="true"
+#! FME_DOCUMENT_GUID="b03db966-00f1-45cb-95ef-261d0e908bd2"
+#! ZOOM_SCALE="100"
+#! SOURCE_ROUTING_FILE=""
+#! SOURCE="NONE"
+#! BEGIN_TCL=""
+#! PASSWORD=""
+#! DESTINATION="NONE"
+#! REQUIREMENTS_KEYWORD=""
+#! FME_BUILD_NUM="15194"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="TEXTLINE"
+#! DATASET="$(SourceDataset_TEXTLINE)"
+#! KEYWORD="TEXTLINE_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="false"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="false"
+#! EXPOSABLE_ATTRS="fme_rotation number(31,15) fme_start_angle number(31,15) fme_color char(50) fme_secondary_axis number(31,15) text_line_length number(6,0) multi_reader_type char(50) multi_reader_full_id number(11,0) fme_sweep_angle number(31,15) fme_basename char(50) fme_fill_color char(50) fme_geometry fme_char(50) fme_type char(50) text_line_eol char(10) fme_text_string char(50) fme_feature_type char(50) fme_text_size number(31,15) multi_reader_keyword char(50) multi_reader_id number(11,0) fme_dataset char(50) text_line_number number(11,0) text_line_type char(64) fme_primary_axis number(31,15)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! DATASET_TYPE="FILE"
+#! GENERATE_FME_BUILD_NUM="15191"
+#! MAX_FEATURES_PER_FEATURE_TYPE=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="DATASET_NAME"
+#! VALUE="txt file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_DEFAULT_NAME"
+#! VALUE="text_line"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_DATASET_HINT"
+#! VALUE="Specify a name for the Text file"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="FEATURE_TYPE_NAME"
+#! VALUE="Text"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE=""
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_DATASET_HINT"
+#! VALUE="Select the Text file(s)"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="buffer"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_date"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(31,15)"
+#! FME_TYPE="fme_real64"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(15,7)"
+#! FME_TYPE="fme_real32"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_int32"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_int16"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(4,0)"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="TEXTLINE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="TEXTLINE"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="TEXTLINE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="text_line_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="TEXTLINE"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="text_line"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="1"
+#! FEAT_GEOMTYPE="text_line_none"
+#! POSITION="121 -230"
+#! BOUNDING_RECT="121 -230 -1 -1"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="TEXTLINE_1"
+#! PARMS_EDITED="true"
+#! SCHEMA_ATTRIBUTE_SOURCE="1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="text_line_data" ATTR_TYPE="buffer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#! NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="ADVANCED"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="FAILURE_TOPICS"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="HTTP_DATASET"
+#! VALUE="TEXTLINE_1"
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="NOTIFICATION_WRITER"
+#! VALUE=""
+#! />
+#! <PROPERTY
+#! CATEGORY="FMEUSERPROPDATA"
+#! NAME="SUCCESS_TOPICS"
+#! VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#! NAME="demos"
+#! />
+#! <ITEM
+#! NAME="sd_ship.fmw"
+#! />
+#! <MODIFICATIONS>
+#! <MODIFICATION
+#! UID=":GlobalParameterMgr:SourceDataset_TEXTLINE"
+#! VALUE="$(FME_MF_DIR)data\2012-07-02_SanFran_AIS_recording.txt"
+#! />
+#! <MODIFICATION
+#! UID=":WBParameterNode_19:DATASET"
+#! VALUE="$(FME_MF_DIR_ENCODED)data&lt;backslash&gt;ships.db"
+#! />
+#! </MODIFICATIONS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*)|* gui_Source Text File(s):_4929"
+#! DEFAULT_VALUE="$(FME_MF_DIR)data\2012-07-02_SanFran_AIS_recording.txt"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI IGNORE TEXT_OR_ATTR FME_SHAREDRESOURCE_TEMP Temp location:"
+#! DEFAULT_VALUE="C:/Temp"
+#! IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#! IDENTIFIER="29"
+#! COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;sd_ship.fmw&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This job simulates reading from a live AIS feed. It will clean up the temporary files it writes to disk.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="999.01 -903.009"
+#! TOP_LEFT="999.01 -903.009"
+#! BOTTOM_RIGHT="1749.01 -953.009"
+#! BOUNDING_RECT="999.01 -903.009 750 50"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="10"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="0"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#! IDENTIFIER="30"
+#! NAME="Write file to disk"
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
+#! TOP_LEFT="5 -1038.01"
+#! BOTTOM_RIGHT="601 -1967.52"
+#! BOUNDING_RECT="5 -1038.01 596 929.507"
+#! STICKY="true"
+#! COLOUR="0.631373,0.984314,0.486275"
+#! CONTENTS="13 11 10 15 14 8 12 "
+#! />
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="2"
+#! TYPE="Tester"
+#! VERSION="2"
+#! POSITION="100 -400.502"
+#! BOUNDING_RECT="100 -400.502 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="PASSED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="FAILED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="text_line_data" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST text_line_data NOT_ATTRIBUTE_IS_MISSING &quot;&quot;"/>
+#! <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
+#! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
+#! <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
+#! <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="4"
+#! TYPE="AttributeRenamer"
+#! VERSION="3"
+#! POSITION="100 -648.006"
+#! BOUNDING_RECT="100 -648.006 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="text_line_data,message,"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeRenamer"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="6"
+#! TYPE="Decelerator"
+#! VERSION="0"
+#! POSITION="100 -852.009"
+#! BOUNDING_RECT="100 -852.009 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="FEATURES_PER_SECOND" PARM_VALUE="10"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Decelerator"/>
+#! <XFORM_PARM PARM_NAME="DECEL_TYPE" PARM_VALUE="Limit Features Per Second"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DELAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="8"
+#! TYPE="UUIDGenerator"
+#! VERSION="0"
+#! POSITION="100 -1128.01"
+#! BOUNDING_RECT="100 -1128.01 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="UUID_ATTR" PARM_VALUE="_uuid"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="UUIDGenerator"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="10"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="100 -1347.01"
+#! BOUNDING_RECT="100 -1347.01 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="templocation" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="templocation,$(FME_SHAREDRESOURCE_TEMP)&lt;solidus&gt;spatialdashboard"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="12"
+#! TYPE="AttributeCreator"
+#! VERSION="6"
+#! POSITION="100 -1608.02"
+#! BOUNDING_RECT="100 -1608.02 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="templocation" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="file_path,&lt;at&gt;Value&lt;openparen&gt;templocation&lt;closeparen&gt;&lt;solidus&gt;tempship.txt"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="14"
+#! TYPE="AttributeFileWriter"
+#! VERSION="3"
+#! POSITION="79 -1821.52"
+#! BOUNDING_RECT="79 -1821.52 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="templocation" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="OVERWRITE_FILE" PARM_VALUE="Overwrite file"/>
+#! <XFORM_PARM PARM_NAME="SOURCE_ATTR" PARM_VALUE="message"/>
+#! <XFORM_PARM PARM_NAME="FILE_NAME" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;file_path&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CHAR_ENCODING" PARM_VALUE="fme-system"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeFileWriter"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="16"
+#! TYPE="FeatureReader"
+#! VERSION="6"
+#! POSITION="936.009 -360.004"
+#! BOUNDING_RECT="936.009 -360.004 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="ais_position_report"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="ais_header_prefix" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_channel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_destination_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_source_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_comment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_counter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_group_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_repeat_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_mmsi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_navigation_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_rate_of_turn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_speed_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_position_accuracy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_course_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_true_heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_maneuver_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_raim_flag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_radio_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{0}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{1}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;OTHER&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <OUTPUT_FEAT NAME="INITIATOR"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="templocation" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="message" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="_uuid" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="templocation" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="file_path" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="_reader_error" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;file_path&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader"/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES_RADIO" PARM_VALUE="FEATURETYPES"/>
+#! <XFORM_PARM PARM_NAME="ATTR_ACCUM_MODE" PARM_VALUE="Only Use Result"/>
+#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="_FEATUREREADER_OPTIONAL_FTTR_%ais_addressed_safety_related_message%ais_aid_to_navigation_report%ais_area_notice%ais_assignment_mode_command%ais_base_station_report%ais_berthing_data%ais_binary_acknowledge%ais_binary_message_unknown%ais_channel_management%ais_clearance_time_to_enter_port%ais_dangerous_cargo_indication%ais_data_link_management_message%ais_dgnss_broadcast_binary_message%ais_environmental_report%ais_extended_class_b_cs_position_report%ais_extended_ship_static_voyage_imo236%ais_extended_ship_static_voyage_imo289%ais_fairway_closed%ais_group_channel_command%ais_interrogation%ais_long_range_Broadcast_message%ais_marine_traffic_signal%ais_meteorological_hydrological_data%ais_multiple_slot_binary_message%ais_number_persons_on_board%ais_position_report%ais_route_information%ais_safety_related_broadcast_message%ais_sar_aircraft_position_report%ais_ship_static_and_voyage_related_data%ais_single_slot_binary_message%ais_standard_class_b_cs_position_report%ais_static_data_report%ais_synthetic_target%ais_text_description%ais_tidal_window%ais_utc_date_inquiry%ais_weather_observation_from_ship_non_wmo%ais_weather_observation_from_ship_wmo"/>
+#! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Use Result"/>
+#! <XFORM_PARM PARM_NAME="ATTRS_TO_EXPOSE" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FTTR_SEPARATOR" PARM_VALUE="SPACE"/>
+#! <XFORM_PARM PARM_NAME="CONSTRAINTS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MERGE_HANDLING_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="AIS_CLIP_TO_ENVELOPE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="ais_position_report"/>
+#! <XFORM_PARM PARM_NAME="ATTR_PREFIX" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="CACHE_TIMEOUT_HRS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE="META_MACROS,SourceUSE_SEARCH_ENVELOPE&lt;comma&gt;NO&lt;comma&gt;SourceSEARCH_ENVELOPE_MINX&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_MINY&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_MAXX&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_MAXY&lt;comma&gt;0&lt;comma&gt;SourceCLIP_TO_ENVELOPE&lt;comma&gt;NO,METAFILE,AIS,IDLIST,"/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="AIS"/>
+#! <XFORM_PARM PARM_NAME="OUTPUTPORTS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="PORTS_FROM_FTTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="ais_addressed_safety_related_message,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_sequence_number,ais_data_destination_mmsi,ais_data_retransmit_flag,ais_data_text,fme_geometry{0}&quot;,ais_aid_to_navigation_report,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_aid_type,ais_data_name,ais_data_position_accuracy,ais_data_ship_dimension_to_bow,ais_data_ship_dimension_to_stern,ais_data_ship_dimension_to_port,ais_data_ship_dimension_to_starboard,ais_data_epfd_type,ais_data_date_second,ais_data_off_position_indicator,ais_data_raim_flag,ais_data_virtual_aid_flag,ais_data_assigned,ais_data_name_extension,ais_data_name_full,fme_geometry{0},fme_geometry{1}&quot;,ais_area_notice,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_sequence_number,ais_data_destination_mmsi,ais_data_retransmit_flag,ais_data_dac,ais_data_fid,ais_data_message_linkage_id,ais_data_notice_description,ais_data_date_month,ais_data_date_day,ais_data_date_hour,ais_data_date_minute,ais_data_duration,ais_data_associated_text,fme_geometry{0},fme_geometry{1}&quot;,ais_assignment_mode_command,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_destination_a_mmsi,ais_data_destination_a_offset,ais_data_destination_a_increment,ais_data_destination_b_mmsi,ais_data_destination_b_offset,ais_data_destination_b_increment,fme_geometry{0}&quot;,ais_base_station_report,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_date_year,ais_data_date_month,ais_data_date_day,ais_data_date_hour,ais_data_date_minute,ais_data_date_second,ais_data_position_accuracy,ais_data_epfd_type,ais_data_raim_flag,ais_data_radio_status,fme_geometry{0},fme_geometry{1}&quot;,ais_berthing_data,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_sequence_number,ais_data_destination_mmsi,ais_data_retransmit_flag,ais_data_dac,ais_data_fid,ais_data_message_linkage_id,ais_data_berth_length,ais_data_berth_water_depth,ais_data_mooring_position,ais_data_date_month,ais_data_date_day,ais_data_date_hour,ais_data_date_minute,ais_data_services_availability,ais_data_service_agent,ais_data_service_bunker_fuel,ais_data_service_chandler,ais_data_service_stevedore,ais_data_service_electrical,ais_data_service_potable_water,ais_data_service_customs_house,ais_data_service_cartage,ais_data_service_cranes,ais_data_service_lifts,ais_data_service_medical_facilities,ais_data_service_navigation_repair,ais_data_service_provisions,ais_data_service_ship_repair,ais_data_service_surveyor,ais_data_service_steam,ais_data_service_tugs,ais_data_service_waste_disposal_solid,ais_data_service_waste_disposal_liquid,ais_data_service_waste_disposal_hazardous,ais_data_service_reserved_ballast_exchange,ais_data_service_additional_services,ais_data_name_of_berth,fme_geometry{0},fme_geometry{1}&quot;,ais_binary_acknowledge,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_mmsi_number_1,ais_data_mmsi_number_2,ais_data_mmsi_number_3,ais_data_mmsi_number_4,fme_geometry{0}&quot;,ais_binary_message_unknown,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_sequence_number,ais_data_destination_mmsi,ais_data_retransmit_flag,ais_data_dac,ais_data_fid,ais_data_raw_binary,fme_geometry{0}&quot;,ais_channel_management,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_channel_a,ais_data_channel_b,ais_data_tx_rx_mode,ais_data_power,ais_data_mmsi_number_1,ais_data_mmsi_number_2,ais_data_addressed,ais_channel_a_band,ais_data_zone_size,fme_geometry{0},fme_geometry{1}&quot;,ais_clearance_time_to_enter_port,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_sequence_number,ais_data_destination_mmsi,ais_data_retransmit_flag,ais_data_dac,ais_data_fid,ais_data_message_linkage_id,ais_data_date_month,ais_data_date_day,ais_data_date_hour,ais_data_date_minute,ais_data_name_of_port_and_berth,ais_data_destination,fme_geometry{0},fme_geometry{1}&quot;,ais_dangerous_cargo_indication,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_sequence_number,ais_data_destination_mmsi,ais_data_retransmit_flag,ais_data_dac,ais_data_fid,ais_data_last_port_of_call,ais_data_eta_month_last,ais_data_eta_day_last,ais_data_eta_hour_last,ais_data_eta_minute_last,ais_data_next_port_of_call,ais_data_eta_month_next,ais_data_eta_day_next,ais_data_eta_hour_next,ais_data_eta_minute_next,ais_data_main_dangerous_good,ais_data_imd_category,ais_data_un_number,ais_data_amount_of_cargo,ais_data_unit_of_quantity,ais_data_cargo_code{},ais_data_chargo_subtype{},fme_geometry{0}&quot;,ais_data_link_management_message,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_offset_1,ais_data_reserved_slots_1,ais_data_timeout_1,ais_data_increment_1,ais_data_offset_2,ais_data_reserved_slots_2,ais_data_timeout_2,ais_data_increment_2,ais_data_offset_3,ais_data_reserved_slots_3,ais_data_timeout_3,ais_data_increment_3,ais_data_offset_4,ais_data_reserved_slots_4,ais_data_timeout_4,ais_data_increment_4,fme_geometry{0}&quot;,ais_dgnss_broadcast_binary_message,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_dgnss_correction_data,fme_geometry{0},fme_geometry{1}&quot;,ais_environmental_report,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_dac,ais_data_fid,fme_geometry{0},fme_geometry{1}&quot;,ais_extended_class_b_cs_position_report,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_speed_over_ground,ais_data_position_accuracy,ais_data_course_over_ground,ais_data_true_heading,ais_data_time_stamp,ais_data_vessel_name,ais_data_ship_type,ais_data_ship_dimension_to_bow,ais_data_ship_dimension_to_stern,ais_data_ship_dimension_to_port,ais_data_ship_dimension_to_starboard,ais_data_epfd_type,ais_data_raim_flag,ais_data_dte,ais_data_assigned,fme_geometry{0}&quot;,ais_extended_ship_static_voyage_imo236,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_dac,ais_data_fid,ais_data_air_draught,fme_geometry{0}&quot;,ais_extended_ship_static_voyage_imo289,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_dac,ais_data_fid,ais_data_message_linkage_id,ais_data_air_draught,ais_data_last_port_of_call,ais_data_next_port_of_call,ais_data_second_port_of_call,ais_data_class_a,ais_data_automatic_tracking_aid,ais_data_bnwas,ais_data_ecdis_back_up,ais_data_paper_nautical_chart,ais_data_echo_sounder,ais_data_electronic_plotting_aid,ais_data_emergency_steering_gear,ais_data_gnss,ais_data_gyro_compass,ais_data_lrit,ais_data_magnetic_compass,ais_data_navtex,ais_data_radar_arpa,ais_data_radar_s_band,ais_data_radar_x_band,ais_data_radio_hf,ais_data_radio_inmarsat,ais_data_radio_mf,ais_data_radio_vhf,ais_data_speed_log_over_ground,ais_data_speed_log_over_water,ais_data_thd,ais_data_track_control_system,ais_data_vdr_svdr,ais_data_ice_class,ais_data_shaft_horsepower,ais_data_vhf_working_channel,ais_data_lloyds_ship_type,ais_data_gross_tonnage,ais_data_laden_or_ballast,ais_data_heavy_fuel_oil_bunkered,ais_data_light_fuel_oil_bunkered,ais_data_diesel_oil_bunkered,ais_data_total_bunker_oil,ais_data_number_persons,fme_geometry{0}&quot;,ais_fairway_closed,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_dac,ais_data_fid,ais_data_reason_for_closing,ais_data_location_closing_from,ais_data_location_closing_to,ais_data_radius_extension,ais_data_unit_extension,ais_data_from_day,ais_data_from_month,ais_data_from_hour,ais_data_from_minute,ais_data_to_day,ais_data_to_month,ais_data_to_hour,ais_data_to_minute,fme_geometry{0}&quot;,ais_group_channel_command,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_station_type,ais_data_ship_type,ais_data_tx_rx_mode,ais_data_report_interval,ais_data_quiet_time,fme_geometry{0},fme_geometry{1}&quot;,ais_interrogation,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_mmsi_1_interrogated,ais_data_mmsi_1_first_message_type,ais_data_mmsi_1_first_slot_offset,ais_data_mmsi_1_second_message_type,ais_data_mmsi_1_second_slot_offset,ais_data_mmsi_2_interrogated,ais_data_mmsi_2_first_message_type,ais_data_mmsi_2_first_slot_offset,fme_geometry{0}&quot;,ais_long_range_Broadcast_message,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_position_accuracy,ais_data_raim_flag,ais_data_navigation_status,ais_data_speed_over_ground,ais_data_course_over_ground,ais_data_gnss_position_status,fme_geometry{0},fme_geometry{1}&quot;,ais_marine_traffic_signal,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_dac,ais_data_fid,ais_data_message_linkage_id,ais_data_signal_station_name,ais_data_status_of_signal,ais_data_signal_in_service,ais_data_date_hour,ais_data_date_minute,ais_data_expected_next_signal,fme_geometry{0},fme_geometry{1}&quot;,ais_meteorological_hydrological_data,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_dac,ais_data_fid,ais_data_position_accuracy,ais_data_date_day,ais_data_date_hour,ais_data_date_minute,ais_data_average_wind_speed,ais_data_gust_speed,ais_data_wind_direction,ais_data_wind_gust_direction,ais_data_air_temperature,ais_data_relative_humidity,ais_data_dew_point,ais_data_air_pressure,ais_data_pressure_tendency,ais_data_maximum_visibility,ais_data_horizontal_visibility,ais_data_water_level,ais_data_water_level_trend,ais_data_surface_current_speed,ais_data_surface_current_direction,ais_data_current_speed_2,ais_data_current_direction_2,ais_data_measurement_depth_2,ais_data_current_speed_3,ais_data_current_direction_3,ais_data_measurement_depth_3,ais_data_wave_height,ais_data_wave_period,ais_data_wave_direction,ais_data_swell_height,ais_data_swell_period,ais_data_swell_direction,ais_data_sea_state,ais_data_water_temperature,ais_data_precipitation,ais_data_salinity,ais_data_ice,fme_geometry{0},fme_geometry{1}&quot;,ais_multiple_slot_binary_message,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_destination_idicator,ais_data_binary_data_flag,ais_data_destination_mmsi,ais_data_application_id,ais_data_dac,ais_data_fid,ais_data_binary_data,ais_data_radio_status,fme_geometry{0}&quot;,ais_number_persons_on_board,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_sequence_number,ais_data_destination_mmsi,ais_data_retransmit_flag,ais_data_dac,ais_data_fid,ais_data_number_persons_on_board,fme_geometry{0}&quot;,ais_position_report,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_navigation_status,ais_data_rate_of_turn,ais_data_speed_over_ground,ais_data_position_accuracy,ais_data_course_over_ground,ais_data_true_heading,ais_data_time_stamp,ais_data_maneuver_indicator,ais_data_raim_flag,ais_data_radio_status,fme_geometry{0},fme_geometry{1}&quot;,ais_route_information,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_sequence_number,ais_data_destination_mmsi,ais_data_retransmit_flag,ais_data_dac,ais_data_fid,ais_data_message_linkage_id,ais_data_sender_class,ais_data_route_type,ais_data_start_month,ais_data_start_day,ais_data_start_hour,ais_data_start_minute,ais_data_duration,ais_data_waypoint_count,fme_geometry{0},fme_geometry{1},fme_geometry{2}&quot;,ais_safety_related_broadcast_message,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_header_channel,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_text,fme_geometry{0}&quot;,ais_sar_aircraft_position_report,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_altitude,ais_data_speed_over_ground,ais_data_position_accuracy,ais_data_course_over_ground,ais_data_time_stamp,ais_data_dte,ais_data_assigned,ais_data_raim_flag,ais_data_radio_status,fme_geometry{0},fme_geometry{1}&quot;,ais_ship_static_and_voyage_related_data,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_ais_version,ais_data_imo_number,ais_data_call_sign,ais_data_vessel_name,ais_data_ship_type,ais_data_ship_dimension_to_bow,ais_data_ship_dimension_to_stern,ais_data_ship_dimension_to_port,ais_data_ship_dimension_to_starboard,ais_data_epfd_type,ais_data_eta_month,ais_data_eta_day,ais_data_eta_hour,ais_data_eta_minute,ais_data_draught,ais_data_destination,ais_data_dte,fme_geometry{0}&quot;,ais_single_slot_binary_message,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_destination_idicator,ais_data_binary_data_flag,ais_data_destination_mmsi,ais_data_application_id,ais_data_dac,ais_data_fid,ais_data_binary_data,fme_geometry{0}&quot;,ais_standard_class_b_cs_position_report,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_speed_over_ground,ais_data_position_accuracy,ais_data_course_over_ground,ais_data_true_heading,ais_data_time_stamp,ais_data_cs_unit,ais_data_display_flag,ais_data_dsc_flag,ais_data_band_flag,ais_data_message22_flag,ais_data_assigned_flag,ais_data_raim_flag,ais_data_radio_status,fme_geometry{0},fme_geometry{1}&quot;,ais_static_data_report,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_mmsi,ais_data_part_number,ais_data_vessel_name,ais_data_ship_type,ais_data_vendor_id,ais_data_call_sign,ais_data_ship_dimension_to_bow,ais_data_ship_dimension_to_stern,ais_data_ship_dimension_to_port,ais_data_ship_dimension_to_starboard,ais_data_mothership_mmsi,fme_geometry{0}&quot;,ais_synthetic_target,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_dac,ais_data_fid,fme_geometry{0},fme_geometry{1}&quot;,ais_text_description,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_sequence_number,ais_data_destination_mmsi,ais_data_retransmit_flag,ais_data_dac,ais_data_fid,ais_data_message_linkage_id,ais_data_text_description,fme_geometry{0}&quot;,ais_tidal_window,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_sequence_number,ais_data_destination_mmsi,ais_data_retransmit_flag,ais_data_dac,ais_data_fid,ais_data_month,ais_data_day,ais_data_from_hour,ais_data_from_minute,fme_geometry{0},fme_geometry{1}&quot;,ais_utc_date_inquiry,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_destination_mmsi,fme_geometry{0}&quot;,ais_weather_observation_from_ship_non_wmo,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_dac,ais_data_fid,ais_data_wmo_variant,ais_data_location,ais_data_date_day,ais_data_date_hour,ais_data_date_minute,ais_data_present_weather,ais_data_visibility_limit,ais_data_horizontal_visibility,ais_data_relative_humidity,ais_data_average_wind_speed,ais_data_wind_direction,ais_data_air_pressure,ais_data_pressure_tendency,ais_data_air_temperature,ais_data_water_temperature,ais_data_wave_period,ais_data_wave_height,ais_data_wave_direction,ais_data_swell_height,ais_data_swell_direction,ais_data_swell_period,fme_geometry{0},fme_geometry{1}&quot;,ais_weather_observation_from_ship_wmo,&quot;ais_header_prefix,ais_header_message_type,ais_header_message_id,ais_header_channel,ais_header_time_stamp,ais_header_destination_id,ais_header_source_id,ais_header_comment,ais_header_counter,ais_header_group_code,ais_data_message_type,ais_data_repeat_indicator,ais_data_source_mmsi,ais_data_dac,ais_data_fid,ais_data_wmo_variant,ais_data_date_month,ais_data_date_day,ais_data_date_hour,ais_data_date_minute,ais_data_course_over_ground,ais_data_speed_over_ground,ais_data_heading_of_ship,ais_data_pressure_at_sea_level,ais_data_pressure_change,ais_data_true_wind_direction,ais_data_true_wind_speed,ais_data_relative_wind_direction,ais_data_relative_wind_speed,ais_data_maximum_gust_speed,ais_data_maximum_gust_direction,ais_data_air_temperature,ais_data_relative_humidity,ais_data_sea_surface_temperature,ais_data_horizontal_visibility,ais_data_present_weather,ais_data_past_weather_1,ais_data_past_weather_2,ais_data_total_cloud_cover,ais_data_cloud_amount_low,ais_data_cloud_type_low,ais_data_cloud_type_middle,ais_data_cloud_type_high,ais_data_cloud_base_height,ais_data_wind_wave_period,ais_data_wind_wave_height,ais_data_first_swell_direction,ais_data_first_swell_period,ais_data_first_swell_height,ais_data_second_swell_direction,ais_data_second_swell_period,ais_data_second_swell_height,ais_data_ice_deposit,ais_data_ice_accretion,ais_data_ice_accretion_cause,ais_data_sea_ice_concentration,ais_data_amount_type_ice,ais_data_ice_situation,ais_data_ice_development,ais_data_ice_edge_bearings,fme_geometry{0},fme_geometry{1}&quot;"/>
+#! <XFORM_PARM PARM_NAME="OUTPUT_PORTS_MODE" PARM_VALUE="PORTS_FROM_FTTR"/>
+#! <XFORM_PARM PARM_NAME="INTERACT" PARM_VALUE="&lt;No Spatial Filter&gt;"/>
+#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SINGLE_PORT" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SELECTED_PORTS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="AIS_CLIP_TO_ENVELOPE,&quot;OPTIONAL CHECKBOX YES%NO&quot;,AIS&lt;space&gt;gui_Clip&lt;space&gt;to&lt;space&gt;Search&lt;space&gt;Envelope_1477,AIS_USE_SEARCH_ENVELOPE,&quot;OPTIONAL ACTIVEDISCLOSUREGROUP SEARCH_ENVELOPE_MINX%SEARCH_ENVELOPE_MINY%SEARCH_ENVELOPE_MAXX%SEARCH_ENVELOPE_MAXY%CLIP_TO_ENVELOPE&quot;,AIS&lt;space&gt;gui_Use&lt;space&gt;Search&lt;space&gt;Envelope_4522"/>
+#! <XFORM_PARM PARM_NAME="AIS_USE_SEARCH_ENVELOPE" PARM_VALUE="NO"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="18"
+#! TYPE="CoordinateExtractor"
+#! VERSION="1"
+#! POSITION="1653.02 -348.504"
+#! BOUNDING_RECT="1653.02 -348.504 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="ais_header_prefix" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_channel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_destination_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_source_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_comment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_counter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_group_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_repeat_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_mmsi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_navigation_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_rate_of_turn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_speed_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_position_accuracy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_course_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_true_heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_maneuver_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_raim_flag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_radio_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{0}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{1}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="Y_ATTR" PARM_VALUE="_y"/>
+#! <XFORM_PARM PARM_NAME="IND" PARM_VALUE="0"/>
+#! <XFORM_PARM PARM_NAME="X_ATTR" PARM_VALUE="_x"/>
+#! <XFORM_PARM PARM_NAME="Z_DEFAULT" PARM_VALUE="-9999"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CoordinateExtractor"/>
+#! <XFORM_PARM PARM_NAME="Z_ATTR" PARM_VALUE="_z"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="19"
+#! TYPE="Joiner"
+#! VERSION="3"
+#! POSITION="2249.02 -357.754"
+#! BOUNDING_RECT="2249.02 -357.754 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="JOINED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="ais_header_prefix" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_channel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_destination_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_source_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_comment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_counter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_group_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_repeat_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_mmsi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_navigation_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_rate_of_turn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_speed_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_position_accuracy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_course_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_true_heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_maneuver_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_raim_flag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_radio_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{0}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{1}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="call_sign" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_individual_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_special" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="mmsi_number" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="tonnage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="vessel_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="OPTIMIZE_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#! <XFORM_PARM PARM_NAME="ADDED_FIELDS" PARM_VALUE="call_sign&lt;space&gt;class_general&lt;space&gt;class_general_desc&lt;space&gt;class_individual_desc&lt;space&gt;class_special&lt;space&gt;mmsi_number&lt;space&gt;tonnage&lt;space&gt;vessel_name"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(FME_MF_DIR_ENCODED)data&lt;backslash&gt;ships.db"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Joiner"/>
+#! <XFORM_PARM PARM_NAME="MATCH_RULE_DISPLAY" PARM_VALUE="Match All (1:M)"/>
+#! <XFORM_PARM PARM_NAME="PREFETCH_QUERY" PARM_VALUE="SELECT&lt;space&gt;*&lt;space&gt;&lt;lf&gt;FROM&lt;space&gt;ship_details"/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="ais_data_mmsi&lt;space&gt;mmsi_number"/>
+#! <XFORM_PARM PARM_NAME="TRIM_KEY_FIELDS_DISPLAY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="JOIN_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CACHE_SIZE" PARM_VALUE="5000"/>
+#! <XFORM_PARM PARM_NAME="JOINED_LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MATCH_MULTIPLE_DISPLAY" PARM_VALUE="Create a feature for each match"/>
+#! <XFORM_PARM PARM_NAME="PREFETCH_EXHAUSTIVE" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="SQLITE3"/>
+#! <XFORM_PARM PARM_NAME="MATCHED_ATTR_NAME" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="JOINED_ATTRIBUTE_PREFIX" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TABLE" PARM_VALUE="ship_details"/>
+#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="25"
+#! TYPE="JSONTemplater"
+#! VERSION="0"
+#! POSITION="2781.03 -318.504"
+#! BOUNDING_RECT="2781.03 -318.504 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="ais_header_prefix" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_channel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_destination_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_source_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_comment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_counter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_group_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_repeat_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_mmsi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_navigation_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_rate_of_turn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_speed_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_position_accuracy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_course_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_true_heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_maneuver_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_raim_flag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_radio_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{0}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{1}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="call_sign" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_individual_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_special" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="mmsi_number" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="tonnage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="vessel_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ws_msg" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="VISIBLE_QUERY_VALIDATE" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="CONSECUTIVE_GROUPS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ROOT_QUERY_EXPR" PARM_VALUE="&lt;opencurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;mmsi_number&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;mmsi_number&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;heading&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;ais_data_true_heading&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;latitude&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;_y&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;longitude&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;_x&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;call_sign&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;call_sign&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;class_general&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;class_general&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;class_special&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;class_special&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;tonnage&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;tonnage&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;vessel_name&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;vessel_name&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;class_general_desc&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;class_general_desc&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;quote&gt;class_special_desc&lt;quote&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;class_individual_desc&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ROOT_QUERY_FILE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="RESULT_ATTRIBUTE" PARM_VALUE="ws_msg"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUB_TEMPLATE_PARAMS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONTemplater"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="27"
+#! TYPE="WebSocketSender"
+#! VERSION="1"
+#! POSITION="3357.03 -357.754"
+#! BOUNDING_RECT="3357.03 -357.754 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="ais_header_prefix" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_channel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_destination_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_source_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_comment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_counter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_group_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_repeat_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_mmsi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_navigation_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_rate_of_turn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_speed_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_position_accuracy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_course_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_true_heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_maneuver_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_raim_flag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_radio_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{0}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{1}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="call_sign" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_individual_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_special" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="mmsi_number" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="tonnage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="vessel_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ws_msg" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="DATA" PARM_VALUE="&lt;opencurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_op:&lt;space&gt;&lt;apos&gt;send&lt;apos&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_msg:&lt;space&gt;&lt;apos&gt;&lt;at&gt;Value&lt;openparen&gt;ws_msg&lt;closeparen&gt;&lt;apos&gt;&lt;lf&gt;&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="VERIFY_SSL_CERTIFICATES" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="PREAMBLE" PARM_VALUE="&lt;opencurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_op:&lt;space&gt;&lt;quote&gt;open&lt;quote&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_stream_id:&lt;space&gt;&lt;quote&gt;sd_ship&lt;quote&gt;&lt;lf&gt;&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="wss://demo2015-safe-software.fmecloud.com:7078/websocket"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="31"
+#! TYPE="Aggregator"
+#! VERSION="11"
+#! POSITION="4566.04 -357.754"
+#! BOUNDING_RECT="4566.04 -357.754 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="false"
+#! >
+#! <OUTPUT_FEAT NAME="AGGREGATE"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="ais_header_prefix" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_channel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_destination_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_source_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_comment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_counter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_group_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_repeat_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_mmsi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_navigation_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_rate_of_turn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_speed_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_position_accuracy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_course_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_true_heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_maneuver_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_raim_flag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_radio_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{0}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{1}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="call_sign" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_individual_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_special" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="mmsi_number" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="tonnage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="vessel_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ws_msg" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_dataset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="AV" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="AGGREGATE_TYPE" PARM_VALUE="Homogeneous Collection (If Possible)"/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="fme_dataset"/>
+#! <XFORM_PARM PARM_NAME="SEP" PARM_VALUE="&lt;comma&gt;"/>
+#! <XFORM_PARM PARM_NAME="ID_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Aggregator"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="WEIGHT" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ASSEMBLE_HIERARCHY_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CONCAT_ATTRS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="CHILD_ID_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUM" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARENT_ID_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ASSEMBLE_ONE_LEVEL_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ORDERED" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="ATTR_TO_TRAIT" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="PRESERVE_ID" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ID_SELECTION" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="Geometry - Assemble One Level"/>
+#! <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GEOM_NAME_FIELD" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="33"
+#! TYPE="AttributeExposer"
+#! VERSION="0"
+#! POSITION="3963.04 -357.754"
+#! BOUNDING_RECT="3963.04 -357.754 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="false"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="ais_header_prefix" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_channel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_destination_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_source_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_comment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_counter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_group_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_repeat_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_mmsi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_navigation_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_rate_of_turn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_speed_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_position_accuracy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_course_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_true_heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_maneuver_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_raim_flag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_radio_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{0}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{1}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="call_sign" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_individual_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_special" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="mmsi_number" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="tonnage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="vessel_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ws_msg" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_dataset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="fme_dataset"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeExposer"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="23"
+#! TYPE="PythonCaller"
+#! VERSION="4"
+#! POSITION="4566.04 -606.006"
+#! BOUNDING_RECT="4566.04 -606.006 -1 -1"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="false"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="ais_header_prefix" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_message_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_channel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_destination_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_source_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_comment" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_counter" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_header_group_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_message_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_repeat_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_mmsi" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_navigation_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_rate_of_turn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_speed_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_position_accuracy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_course_over_ground" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_true_heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_time_stamp" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_maneuver_indicator" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_raim_flag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ais_data_radio_status" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{0}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_geometry{1}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="call_sign" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_general_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_individual_desc" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="class_special" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="mmsi_number" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="tonnage" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="vessel_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ws_msg" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_dataset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;import&lt;space&gt;os&lt;lf&gt;#&lt;space&gt;Template&lt;space&gt;Function&lt;space&gt;interface:&lt;lf&gt;def&lt;space&gt;processFeature&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;try:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;os.remove&lt;openparen&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;fme_dataset&lt;apos&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;space&gt;&lt;quote&gt;PYTHON&lt;space&gt;DELETE:&lt;space&gt;&lt;quote&gt;&lt;space&gt;+&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;apos&gt;fme_dataset&lt;apos&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;except&lt;space&gt;OSError&lt;space&gt;as&lt;space&gt;e:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;print&lt;space&gt;e.strerror"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FileDeleter"/>
+#! <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="processFeature"/>
+#! <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="3"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="5"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="7"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="9"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="11"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="13"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="15"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="14"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="20"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="19"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="22"
+#! SOURCE_NODE="16"
+#! TARGET_NODE="18"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="26"
+#! SOURCE_NODE="19"
+#! TARGET_NODE="25"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="28"
+#! SOURCE_NODE="25"
+#! TARGET_NODE="27"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="34"
+#! SOURCE_NODE="27"
+#! TARGET_NODE="33"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="35"
+#! SOURCE_NODE="33"
+#! TARGET_NODE="31"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="false"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="36"
+#! SOURCE_NODE="31"
+#! TARGET_NODE="23"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="false"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="21"
+#! SOURCE_NODE="14"
+#! TARGET_NODE="16"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_TEXTLINE_1,TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1,TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1,TEXTLINE_IN_SKIP_LINES_TEXTLINE_1,TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1,TEXTLINE_IN_ENCODING_TEXTLINE_1,TEXTLINE_IN_NETWORK_AUTHENTICATION_TEXTLINE_1,TEXTLINE_IN_NETWORK_PROXY_TEXTLINE_1
+DEFAULT_MACRO SourceDataset_TEXTLINE $(FME_MF_DIR)data\2012-07-02_SanFran_AIS_recording.txt
+GUI MULTIFILE SourceDataset_TEXTLINE Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*)|* gui_Source Text File(s):_4929
+DEFAULT_MACRO FME_SHAREDRESOURCE_TEMP C:/Temp
+GUI IGNORE TEXT FME_SHAREDRESOURCE_TEMP Temp location:
+INCLUDE [ if {{$(SourceDataset_TEXTLINE)} == {}} { puts_real {Parameter 'SourceDataset_TEXTLINE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(FME_SHAREDRESOURCE_TEMP)} == {}} { puts_real {Parameter 'FME_SHAREDRESOURCE_TEMP' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE TEXTLINE
+READER_KEYWORD TEXTLINE_1
+READER_GEN_DIRECTIVES READ_WHOLE_FILE_AT_ONCE,NO,READ_BOTTOM_UP,No,SKIP_LINES,0,_MERGE_SCHEMAS,YES,SKIP_FOOTER,0,ENCODING,
+WRITER_TYPE NULL
+WRITER_KEYWORD NULL_DEST
+NULL_DEST_DATASET null
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "TEXTLINE_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER TEXTLINE TEXTLINE_1
+# =====================================================================
+# The following GUI line prompts for a file to be used as the source
+# TextLine file. The user input is stored in a macro, which is then
+# used to define the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_TEXTLINE_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER TEXTLINE TEXTLINE_1
+DEFAULT_MACRO SourceDataset_TEXTLINE_1 $(SourceDataset_TEXTLINE)
+GUI MULTIFILE SourceDataset_TEXTLINE_1 Text/Compressed_Text_Files(*.txt;*.txt.gz)|*.txt;*.txt.gz|Text_Files(*.txt)|*.txt|Compressed_Text_Files(*.txt.gz)|*.txt.gz|All_files(*)|* Source Text File(s):
+DEFAULT_MACRO TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1 NO
+TEXTLINE_1_READ_WHOLE_FILE_AT_ONCE "$(TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1)"
+GUI ACTIVECHOICE TEXTLINE_IN_READ_WHOLE_FILE_AT_ONCE_TEXTLINE_1 YES,TEXTLINE_IN_READ_BOTTOM_UP,TEXTLINE_IN_SKIP_LINES,TEXTLINE_IN_SKIP_FOOTER%NO Read Whole File at Once:
+DEFAULT_MACRO TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1 No
+TEXTLINE_1_READ_BOTTOM_UP "$(TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1)"
+GUI CHOICE TEXTLINE_IN_READ_BOTTOM_UP_TEXTLINE_1 Yes%No Read Bottom Up:
+DEFAULT_MACRO TEXTLINE_IN_SKIP_LINES_TEXTLINE_1 0
+TEXTLINE_1_SKIP_LINES "$(TEXTLINE_IN_SKIP_LINES_TEXTLINE_1)"
+GUI OPTIONAL INTEGER TEXTLINE_IN_SKIP_LINES_TEXTLINE_1 Number of Lines to Skip:
+DEFAULT_MACRO TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1 0
+TEXTLINE_1_SKIP_FOOTER "$(TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1)"
+GUI OPTIONAL INTEGER TEXTLINE_IN_SKIP_FOOTER_TEXTLINE_1 Number of Footer Lines to Skip:
+# =====================================================================
+# Allows to force the encoding of source text file
+DEFAULT_MACRO TEXTLINE_IN_ENCODING_TEXTLINE_1 
+TEXTLINE_1_ENCODING "$(TEXTLINE_IN_ENCODING_TEXTLINE_1)"
+GUI OPTIONAL STRING_OR_ENCODING TEXTLINE_IN_ENCODING_TEXTLINE_1 SYSTEM%* Character Encoding:
+# ===========================================================================
+DEFAULT_MACRO TEXTLINE_IN_NETWORK_AUTHENTICATION_TEXTLINE_1 
+TEXTLINE_1_NETWORK_AUTHENTICATION "$(TEXTLINE_IN_NETWORK_AUTHENTICATION_TEXTLINE_1)"
+GUI OPTIONAL AUTHENTICATOR TEXTLINE_IN_NETWORK_AUTHENTICATION_TEXTLINE_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ===========================================================================
+DEFAULT_MACRO TEXTLINE_IN_NETWORK_PROXY_TEXTLINE_1 
+TEXTLINE_1_NETWORK_PROXY "$(TEXTLINE_IN_NETWORK_PROXY_TEXTLINE_1)"
+GUI OPTIONAL AUTHENTICATOR TEXTLINE_IN_NETWORK_PROXY_TEXTLINE_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Proxy"%PROMPT_TYPE%PROXY Network Proxy
+TEXTLINE_1_DATASET "$(SourceDataset_TEXTLINE_1)"
+#! END_SOURCE_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)sd_ship.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+LOG_MAX_PRECISION Yes
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -17
+DEFAULT_MACRO DATASET_KEYWORD_TEXTLINE_1 TEXTLINE_1
+# -------------------------------------------------------------------------
+
+TEXTLINE_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME sd_ship
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *    ROUTE TEXTLINE TEXTLINE_1::text_line TO FME_GENERIC ::text_line ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+TEXTLINE_1_MERGE_DEF TEXTLINE_1::text_line EXACT text_line
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE text_line    TEST text_line_data NOT_ATTRIBUTE_IS_MISSING "" ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_PASSED
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeRenamer    INPUT  FEATURE_TYPE Tester_PASSED    OUTPUT FEATURE_TYPE AttributeRenamer_OUTPUT         @RenameAttributes(ATTR_LIST_DEF_VAL_ENCODED, text_line_data,message,)
+
+
+# -------------------------------------------------------------------------
+
+# This is just a simple delay, which is given a # of seconds to stall
+
+Tcl2 proc Decelerator_delay {seconds unused} {     after [expr round($seconds * 1000)]; }
+Tcl2 set Decelerator_clockMillisecondsWhenLastFeatureWentBy [clock clicks -milliseconds];
+
+# This proc ensures that no more than some maximum number of features get through each second
+
+Tcl2 proc Decelerator_maxpersecond {unused maxFeaturesPerSecond} {     global Decelerator_clockMillisecondsWhenLastFeatureWentBy;     set minimumDelayInMilliseconds [expr 1000.0 / $maxFeaturesPerSecond];     set clockMillisecondsNow [clock clicks -milliseconds];     set milliSecondsSinceLastFeature [expr $clockMillisecondsNow -                    [set Decelerator_clockMillisecondsWhenLastFeatureWentBy]];     if {$milliSecondsSinceLastFeature < $minimumDelayInMilliseconds} {         after [expr round($minimumDelayInMilliseconds - $milliSecondsSinceLastFeature)];     };     set Decelerator_clockMillisecondsWhenLastFeatureWentBy [clock clicks -milliseconds]; }
+# Now set up which of the above two delay procedures we'll actually
+# use by renaming the one we want to "Decelerator_Waiter"
+# Then that is what we'll actually call when a feature goes by.
+
+Tcl2 if { {Limit Features Per Second} == {Per Feature Delay} } {         rename Decelerator_delay Decelerator_Waiter;      } else {         rename Decelerator_maxpersecond Decelerator_Waiter;      };
+FACTORY_DEF * TeeFactory    FACTORY_NAME Decelerator    INPUT  FEATURE_TYPE AttributeRenamer_OUTPUT    OUTPUT FEATURE_TYPE Decelerator_OUTPUT         @Tcl2("Decelerator_Waiter {<Unused>} {10}")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME UUIDGenerator    INPUT  FEATURE_TYPE Decelerator_OUTPUT    OUTPUT FEATURE_TYPE UUIDGenerator_OUTPUT         "_uuid" @UUID()
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator ATTRSET_PROPAGATE_MISSING YES INPUT  FEATURE_TYPE UUIDGenerator_OUTPUT ATTR templocation $(FME_SHAREDRESOURCE_TEMP$encode)<solidus>spatialdashboard    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT 
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_2 ATTRSET_PROPAGATE_MISSING YES INPUT  FEATURE_TYPE AttributeCreator_OUTPUT ATTR file_path <at>Value<openparen>templocation<closeparen><solidus>tempship.txt    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_2_OUTPUT 
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeFileWriter    INPUT  FEATURE_TYPE AttributeCreator_2_OUTPUT    OUTPUT FEATURE_TYPE AttributeFileWriter_OUTPUT         @File(ENCODED_PARAMS,DestWriteSrcRead,message,"@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>file_path<closeparen>,AttributeFileWriter)",fme-system)
+
+# -------------------------------------------------------------------------
+MACRO FeatureReader_OUTPUT_PORTS_ENCODED ais_position_report
+MACRO FeatureReader_DIRECTIVES CLIP_TO_ENVELOPE NO USE_SEARCH_ENVELOPE NO
+
+# Values come in encoded and come out decoded.
+Tcl2 proc FeatureReader_findInListElseDefault { valueEncoded defaultValue } {    if { [lsearch [split {$(FeatureReader_OUTPUT_PORTS_ENCODED)}] $valueEncoded] >= 0} {       return FeatureReader_[FME_DecodeText $valueEncoded]    } else {       return FeatureReader_$defaultValue    } }
+INCLUDE [if {{NONE} == {<Unused>} } {             puts {MACRO QUERY_INTERACTION_LINE QUERY_INTERACTION NONE};          } else {             if { {NONE} == {ENVELOPE_INTERSECT} } {                puts {MACRO QUERY_INTERACTION_LINE QUERY_INTERACTION};             } else {                puts {MACRO QUERY_INTERACTION_LINE QUERY_INTERACTION NONE};             }          }         ]
+# Consolidate the attribute merge options to what the factory expects
+DEFAULT_MACRO FeatureReader_COMBINE_ATTRS
+INCLUDE [       if { {RESULT_ONLY} == {MERGE} } {          puts "MACRO FeatureReader_COMBINE_ATTRS <Unused>";       } else {          puts "MACRO FeatureReader_COMBINE_ATTRS RESULT_ONLY";       };    ]
+FACTORY_DEF * QueryFactory    FACTORY_NAME FeatureReader    INPUT  FEATURE_TYPE AttributeFileWriter_OUTPUT    $(QUERY_INTERACTION_LINE)    QUERYFCT_TABLE_SEPARATOR SPACE    COMBINE_ATTRIBUTES  $(FeatureReader_COMBINE_ATTRS)    QUERYFCT_ATTRIBUTE_PREFIX <Unused>    COMBINE_GEOMETRY    RESULT_ONLY    ENABLE_CACHE        NO    READER_TYPE         AIS    READER_DATASET      "@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>file_path<closeparen>,FeatureReader)"    READER_IDS          ais_position_report    READER_DIRECTIVES   META_MACROS,SourceUSE_SEARCH_ENVELOPE<comma>NO<comma>SourceSEARCH_ENVELOPE_MINX<comma>0<comma>SourceSEARCH_ENVELOPE_MINY<comma>0<comma>SourceSEARCH_ENVELOPE_MAXX<comma>0<comma>SourceSEARCH_ENVELOPE_MAXY<comma>0<comma>SourceCLIP_TO_ENVELOPE<comma>NO,METAFILE,AIS,IDLIST,    CONTINUE_ON_READER_ERROR YES    READER_PARAMS     $(FeatureReader_DIRECTIVES)    OUTPUT RESULT FEATURE_TYPE *      @SupplyAttributes(fme_feature_type,@FeatureType())      @Tcl2("set FME_FeatureType [FeatureReader_findInListElseDefault [FME_EncodeText $FME_FeatureType] {<OTHER>}]")      @Transform(AIS,FME_GENERIC)    OUTPUT QUERY FEATURE_TYPE FeatureReader_INITIATOR    OUTPUT READER_ERROR FEATURE_TYPE FeatureReader_<REJECTED>
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureReader <OTHER> Output Nuker"   INPUT FEATURE_TYPE FeatureReader_<OTHER>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureReader INITIATOR Output Nuker"   INPUT FEATURE_TYPE FeatureReader_INITIATOR
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FeatureReader <REJECTED> Output Nuker"   INPUT FEATURE_TYPE FeatureReader_<REJECTED>
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor    INPUT  FEATURE_TYPE FeatureReader_ais_position_report    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_OUTPUT         "_x" @Coordinate(x,"0",FLATTEN_AGGREGATE)         "_y" @Coordinate(y,"0",FLATTEN_AGGREGATE)         @SupplyAttributes("_z",-9999)    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_OUTPUT         "_x" @Coordinate(x,"0",FLATTEN_AGGREGATE)         "_y" @Coordinate(y,"0",FLATTEN_AGGREGATE)         "_z" @Coordinate(z,"0",FLATTEN_AGGREGATE)
+
+# -------------------------------------------------------------------------
+MACRO Joiner_DIRECTIVES 
+
+INCLUDE [    if { {MATCH_ALL} == {MATCH_ALL} } {       puts {MACRO Joiner_ONE_FEATURE_PER_JOIN NO};    } else {       puts {MACRO Joiner_ONE_FEATURE_PER_JOIN YES};    } ]
+FACTORY_DEF * JoinFactory    FACTORY_NAME Joiner    INPUT  FEATURE_TYPE CoordinateExtractor_OUTPUT    READER_TYPE             SQLITE3    READER_DATASET          "$(FME_MF_DIR_ENCODED)data<backslash>ships.db"    TABLE_ID                "ship_details"    READER_PARAMS           $(Joiner_DIRECTIVES)    JOIN_KEYS               ais_data_mmsi<space>mmsi_number    ADDED_FIELDS            call_sign<space>class_general<space>class_general_desc<space>class_individual_desc<space>class_special<space>mmsi_number<space>tonnage<space>vessel_name    COMBINE_ATTRIBUTES      PREFIX_JOINED    MATCH_RULE              MATCH_ALL    CACHE_SIZE              5000    PREFETCH_QUERY          SELECT<space>*<space><lf>FROM<space>ship_details    PREFETCH_EXHAUSTIVE     Yes    ONE_FEATURE_PER_JOIN    $(Joiner_ONE_FEATURE_PER_JOIN)    JOIN_ID                 "Joiner"    OUTPUT JOINED FEATURE_TYPE Joiner_JOINED
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * XMLTemplaterFactory FACTORY_NAME JSONTemplater INPUT CONTROL_FEATURE FEATURE_TYPE Joiner_JOINED INPUT DATA_FEATURE FEATURE_TYPE JSONTemplater_DataFeatures RESULT_ATTR ws_msg OUTPUT_XML_HEADER NO BUCKET_ATTR_NAME __xml_templater_bucket__ CONTROL_TEMPLATE_EXPR <opencurly><lf><space><space><space><space><quote>mmsi_number<quote>:<space>fme:get-attribute<openparen><quote>mmsi_number<quote><closeparen><comma><lf><space><space><space><space><quote>heading<quote>:<space>fme:get-attribute<openparen><quote>ais_data_true_heading<quote><closeparen><comma><lf><space><space><space><space><quote>latitude<quote>:<space>fme:get-attribute<openparen><quote>_y<quote><closeparen><comma><lf><space><space><space><space><quote>longitude<quote>:<space>fme:get-attribute<openparen><quote>_x<quote><closeparen><comma><lf><space><space><space><space><quote>call_sign<quote>:<space>fme:get-attribute<openparen><quote>call_sign<quote><closeparen><comma><lf><space><space><space><space><quote>class_general<quote>:<space>fme:get-attribute<openparen><quote>class_general<quote><closeparen><comma><lf><space><space><space><space><quote>class_special<quote>:<space>fme:get-attribute<openparen><quote>class_special<quote><closeparen><comma><lf><space><space><space><space><quote>tonnage<quote>:<space>fme:get-attribute<openparen><quote>tonnage<quote><closeparen><comma><lf><space><space><space><space><quote>vessel_name<quote>:<space>fme:get-attribute<openparen><quote>vessel_name<quote><closeparen><comma><lf><space><space><space><space><quote>class_general_desc<quote>:<space>fme:get-attribute<openparen><quote>class_general_desc<quote><closeparen><comma><lf><space><space><space><space><quote>class_special_desc<quote>:<space>fme:get-attribute<openparen><quote>class_individual_desc<quote><closeparen><lf><closecurly> OUTPUT XML_DOCUMENT FEATURE_TYPE JSONTemplater_OUTPUT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE JSONTemplater_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,wss://demo2015-safe-software.fmecloud.com:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space>ws_op:<space><quote>open<quote><comma><lf><space><space><space><space>ws_stream_id:<space><quote>sd_ship<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op:<space><apos>send<apos><comma><lf><space><space><space><space>ws_msg:<space><apos><at>Value<openparen>ws_msg<closeparen><apos><lf><closecurly>,WebSocketSender),WebSocketSender)"    VERIFY_SSL_CERTIFICATES_BOOL true    OUTPUT OUTPUT FEATURE_TYPE WebSocketSender_OUTPUT
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeExposer (Disabled) Nuker"   INPUT FEATURE_TYPE WebSocketSender_OUTPUT
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeExposer_OUTPUT Disabled Nuker -1 35"   INPUT FEATURE_TYPE AttributeExposer_OUTPUT
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Aggregator (Disabled) Nuker"   INPUT FEATURE_TYPE AttributeExposer_OUTPUT
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Aggregator_AGGREGATE Disabled Nuker -1 36"   INPUT FEATURE_TYPE Aggregator_AGGREGATE
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "FileDeleter (Disabled) Nuker"   INPUT FEATURE_TYPE Aggregator_AGGREGATE
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   INPUT FEATURE_TYPE *   OUTPUT ROUTED FEATURE_TYPE * @FeatureType(ENCODED,@Value(__wb_out_feat_type__)) @RemoveAttributes(__wb_out_feat_type__)   OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+

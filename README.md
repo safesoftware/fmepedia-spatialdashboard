@@ -8,44 +8,18 @@ http://fmepedia.safe.com/articles/Samples_and_Demos/Live-Spatial-Dashboard
 Installation Instructions
 -------------------------
 
-- Configure recorded_ais_reader.fmw (ais_reader_workaround.fmw to avoid using FeatureReader) with token for REST API. (http://fmeserver/fmetoken) - it needs this
-to clean up temporary files
+- Confiure the workspaces with the correct URL and port for your server in the WebSocketSender's - you may wish to use localhost.
 
-- Publish all workspaces (*.fmw files) to FME Server. Default repository is *spatialdashboard*, and you
-will need to modify some settings, such as those in the FMEServerJobSubmitter, if you change this.
+- Publish all workspaces (*.fmw files) to FME Server.
 
-- Set up topics: sd_plane, sd_bus, sd_ship
+- To test, run sd_ship.fmw and sd_plane.fmw. If they work, cancel them, and sunmit with the RTC (run 'til cancelled) option set to true. This will ensure that the jobs get resubmitted when they finish.
 
-- Set up WebSocket publishers as follows:
-
-   - https://fmeserver:7078/websocket, stream id: **plane_in**, publish to **sd_plane**
-
-   - https://fmeserver:7078/websocket, stream id: **bus_in**, publish to **sd_bus**
-
-   - https://fmeserver:7078/websocket, stream id: **ship_in**, publish to **sd_ship**
-
-- Set up WebSocket subscribers as follows:
-
-   - https://fmeserver:7078/websocket, stream id: **plane_out**, subscribe to **sd_plane**
-
-   - https://fmeserver:7078/websocket, stream id: **bus_out**, subscribe to **sd_bus**
-
-   - https://fmeserver:7078/websocket, stream id: **ship_out**, subscribe to **sd_ship**
-
-- Run recorded_ais_reader (ais_reader_workaround.fmw). Note that it is quite resource intensive, and will relaunch itself on completion.
-
-- Run plane_generator, making sure to specify the output location as $(FME_SHAREDRESOURCE_TEMP)/planez.ffs
-   
-- Schedule workspaces as follows:
-
-   - plane_displacer: 10 seconds
-
-   - sf_bus_reader: 10 seconds (is a live feed, so do not abuse)
+- Schedule the sd_bus.fmw workspace to run every 10 seconds. This is a third-party feed, so please do not abuse it.
 
 - Configure spatialdashboard.js to connect to your server. You will need a token here.
 
-- Host contents of /www on a publicly accessible web host (S3 is fine)
+- Host contents of /www on a publicly accessible web host (S3 is fine).
 
-- Remember to [enable CORS](http://docs.safe.com/fme/html/FME_Server_Documentation/Default.htm#Configuring_CORS_Filtering.htm) on FME Server
+- Remember to enable CORS (Cross-Origin Resource Sharing) on FME Server. This is available under the administration dropdown menu.
 
-- Visit http://fmeserver/spatialdashboard to view
+- Visit the web site to view.
