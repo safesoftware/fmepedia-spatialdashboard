@@ -1,7 +1,7 @@
 function initialize() {
 	FMEServer.init({
-		server: "https://demo2015-safe-software.fmecloud.com",
-		token : "5b50ad16bd6bb173e70cad5bad76daf2b99fa6b0"
+		server: "https://demos-safe-software.fmecloud.com",
+		token : "35bd9bbd4c15116518070ce4fe4a38e1d2a26292"
 	});
 
   var shipcount = document.getElementById('shipcount');

@@ -2,55 +2,56 @@
 #! <WORKSPACE
 #    
 #    
-#    qtr_Command-line to run this workspace:_qtr
+#    Command-line to run this workspace:
 #    
 #    
-#    C:\Apps\FME_15191_32\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\sd_plane.fmw
+#    C:\Apps\FME_15208_64\fme.exe C:\safegit\fmepedia-spatialdashboard\fme\sd_plane.fmw
 #          --PLANE_RECORDING data/planes.ffs
 #    
 #    
-#! TITLE=""
-#! FME_DOCUMENT_PRIORGUID=""
-#! LAST_SAVE_DATE="2014-10-17T13:39:50"
-#! VIEW_POSITION="-1809.02 348.003"
-#! END_PYTHON=""
-#! PASSWORD=""
-#! LOG_MAX_RECORDED_FEATURES="200"
-#! CATEGORY=""
-#! ZOOM_SCALE="100"
-#! REQUIREMENTS_KEYWORD=""
-#! ATTR_TYPE_ENCODING="SDF"
-#! REQUIREMENTS=""
-#! REDIRECT_TERMINATORS="NONE"
-#! FME_STROKE_MAX_DEVIATION="0"
-#! DESTINATION="NONE"
-#! LEGAL_TERMS_CONDITIONS=""
-#! SOURCE="NONE"
-#! FME_DOCUMENT_GUID="3790d9bf-7cd1-4e81-87b3-743dc4c239f0"
-#! USAGE=""
 #! FME_GEOMETRY_HANDLING="Enhanced"
-#! DESCRIPTION=""
-#! FME_REPROJECTION_ENGINE="FME"
-#! MAX_LOG_FEATURES="200"
-#! LOG_FILE=""
-#! BEGIN_PYTHON=""
-#! DESTINATION_ROUTING_FILE=""
-#! SHOW_ANNOTATIONS="true"
-#! LAST_SAVE_BUILD="FME(R) 2015 (20141005 - Build 15191 - WIN32)"
-#! HISTORY=""
-#! FME_SERVER_SERVICES=""
-#! DOC_TOP_LEFT="-1628.02 -951.01"
-#! SHOW_INFO_NODES="true"
-#! FME_BUILD_NUM="15191"
-#! LOG_MAX_PRECISION="Yes"
-#! END_TCL=""
+#! END_PYTHON=""
+#! FME_STROKE_MAX_DEVIATION="0"
+#! ATTR_TYPE_ENCODING="SDF"
+#! REQUIREMENTS_KEYWORD=""
 #! DOC_EXTENTS="2026.52 1230.01"
-#! BEGIN_TCL=""
-#! WORKSPACE_VERSION="1"
-#! SOURCE_ROUTING_FILE=""
-#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! MULTI_WRITER_DATASET_ORDER="BY_ID"
+#! USAGE=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! ZOOM_SCALE="100"
 #! WARN_INVALID_XFORM_PARAM="Yes"
+#! VIEW_POSITION="-1806.02 345.003"
+#! LOG_FILE=""
+#! CATEGORY=""
+#! SHOW_INFO_NODES="true"
+#! LOG_MAX_PRECISION="Yes"
+#! REDIRECT_TERMINATORS="NONE"
+#! END_TCL=""
+#! FME_DOCUMENT_PRIORGUID="3790d9bf-7cd1-4e81-87b3-743dc4c239f0"
+#! WORKSPACE_VERSION="1"
+#! BEGIN_PYTHON=""
+#! LAST_SAVE_DATE="2014-11-07T11:06:09"
+#! DESTINATION_ROUTING_FILE=""
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! SHOW_ANNOTATIONS="true"
+#! DOC_TOP_LEFT="-1628.02 -951.01"
+#! HISTORY=""
+#! LAST_SAVE_BUILD="FME(R) 2015 (20141104 - Build 15208 - WIN64)"
+#! REQUIREMENTS=""
 #! IGNORE_READER_FAILURE="No"
+#! FME_SERVER_SERVICES=""
+#! DESTINATION="NONE"
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! SOURCE="NONE"
+#! PASSWORD=""
+#! LEGAL_TERMS_CONDITIONS=""
+#! TITLE=""
+#! DESCRIPTION=""
+#! BEGIN_TCL=""
+#! SOURCE_ROUTING_FILE=""
+#! MAX_LOG_FEATURES="200"
+#! FME_DOCUMENT_GUID="a5bac182-2da3-4159-9f55-e89298eae6fb"
+#! FME_BUILD_NUM="15208"
 #! >
 #! <DATASETS>
 #! </DATASETS>
@@ -125,14 +126,14 @@
 #! ORDER="5e+014"
 #! FOLLOW_ANCHOR="true"
 #! INFO_NODE="false"
-#! COLOUR="1,1,0.784314,0.196078"
+#! COLOUR="1,1,0.784314,0.192157"
 #! SIZE_POLICY="10"
 #! COMMENT_TYPE="REGULAR"
 #! ANCHORED_NODE="0"
 #! />
 #! <COMMENT
 #! IDENTIFIER="24"
-#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;JSONTemplater [JSONTemplater]&lt;br&gt;trl_Group By_9547: &amp;lt;not set&amp;gt;&lt;br&gt;trl_Results Attribute_9548: &amp;quot;ws_msg&amp;quot;&lt;/body&gt;&lt;/html&gt;"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;JSONTemplater [JSONTemplater]&lt;br&gt;Group By: &amp;lt;not set&amp;gt;&lt;br&gt;Results Attribute: &amp;quot;ws_msg&amp;quot;&lt;/body&gt;&lt;/html&gt;"
 #! POSITION="-861.009 -576.507"
 #! TOP_LEFT="-861.009 -576.507"
 #! BOTTOM_RIGHT="-862.009 -575.507"
@@ -151,13 +152,13 @@
 #! <BOOKMARK
 #! IDENTIFIER="4"
 #! NAME="Simulates streaming data"
-#! DESCRIPTION=""
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
 #! TOP_LEFT="-1628.02 279.002"
 #! BOTTOM_RIGHT="-1056.02 -390.004"
 #! BOUNDING_RECT="-1628.02 279.002 572 669.006"
 #! STICKY="true"
-#! COLOUR="0.788235,0.54902,0.0235294"
-#! CONTENTS="1 10 2 12 "
+#! COLOUR="0.784314,0.54902,0.0196078"
+#! CONTENTS="23 2 10 12 1 "
 #! />
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
@@ -170,16 +171,17 @@
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
+#! LAST_PARM_EDIT="0"
 #! >
 #! <OUTPUT_FEAT NAME="PLAYED_BACK"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Player"/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="RECFILE" PARM_VALUE="$(PLANE_RECORDING)"/>
-#! <XFORM_PARM PARM_NAME="FEAT_TYPE_ATTR" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="PLAYBACK"/>
 #! <XFORM_PARM PARM_NAME="PASS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FEAT_TYPE_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Player"/>
+#! <XFORM_PARM PARM_NAME="RECFILE" PARM_VALUE="$(PLANE_RECORDING)"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="2"
@@ -190,16 +192,17 @@
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
+#! LAST_PARM_EDIT="0"
 #! >
 #! <OUTPUT_FEAT NAME="OUTPUT"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="_url_contents" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Decelerator"/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="DECEL_TYPE" PARM_VALUE="Per Feature Delay"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="FEATURES_PER_SECOND" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="DECEL_TYPE" PARM_VALUE="Per Feature Delay"/>
 #! <XFORM_PARM PARM_NAME="DELAY" PARM_VALUE="5"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Decelerator"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="10"
@@ -210,12 +213,13 @@
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
+#! LAST_PARM_EDIT="0"
 #! >
 #! <OUTPUT_FEAT NAME="OUTPUT"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="_url_contents" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeExposer"/>
 #! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="_url_contents"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeExposer"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="13"
@@ -226,22 +230,23 @@
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
+#! LAST_PARM_EDIT="0"
 #! >
 #! <OUTPUT_FEAT NAME="EXPLODED"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="_url_contents" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="json_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="json_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="RECURSIVE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONFragmenter"/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="JSON_QUERY" PARM_VALUE="json[*]"/>
-#! <XFORM_PARM PARM_NAME="JSON_ATTR" PARM_VALUE="_url_contents"/>
+#! <XFORM_PARM PARM_NAME="RECURSIVE" PARM_VALUE="&lt;Unused&gt;"/>
 #! <XFORM_PARM PARM_NAME="EXPLODE_FORMAT" PARM_VALUE="JSON"/>
-#! <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="PREF_STRING" PARM_VALUE="&lt;Unused&gt;"/>
 #! <XFORM_PARM PARM_NAME="EXTRACT_ATTR" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="JSON_QUERY" PARM_VALUE="json[*]"/>
+#! <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONFragmenter"/>
+#! <XFORM_PARM PARM_NAME="JSON_ATTR" PARM_VALUE="_url_contents"/>
+#! <XFORM_PARM PARM_NAME="PREF_STRING" PARM_VALUE="&lt;Unused&gt;"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="5"
@@ -252,6 +257,7 @@
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
+#! LAST_PARM_EDIT="0"
 #! >
 #! <OUTPUT_FEAT NAME="OUTPUT"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
@@ -266,26 +272,27 @@
 #! <XFORM_ATTR ATTR_NAME="speed" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="altitude" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ws_msg" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONTemplater"/>
-#! <XFORM_PARM PARM_NAME="RESULT_ATTRIBUTE" PARM_VALUE="ws_msg"/>
 #! <XFORM_PARM PARM_NAME="ROOT_QUERY_EXPR" PARM_VALUE="&lt;opencurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;id&lt;apos&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;json_index&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;flight_id&lt;apos&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;flight_id&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;latitude&lt;apos&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;y_coord&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;longitude&lt;apos&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;x_coord&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;heading&lt;apos&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;heading&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;speed&lt;apos&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;speed&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;altitude&lt;apos&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;altitude&lt;quote&gt;&lt;closeparen&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;apos&gt;aircraft_model&lt;apos&gt;:&lt;space&gt;fme:get-attribute&lt;openparen&gt;&lt;quote&gt;aircraft_model&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="RESULT_ATTRIBUTE" PARM_VALUE="ws_msg"/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="CONSECUTIVE_GROUPS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="ROOT_QUERY_FILE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="VISIBLE_QUERY_VALIDATE" PARM_VALUE="Yes"/>
 #! <XFORM_PARM PARM_NAME="SUB_TEMPLATE_PARAMS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONTemplater"/>
+#! <XFORM_PARM PARM_NAME="CONSECUTIVE_GROUPS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="VISIBLE_QUERY_VALIDATE" PARM_VALUE="Yes"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="27"
 #! TYPE="WebSocketSender"
 #! VERSION="1"
-#! POSITION="-180.002 -864.509"
-#! BOUNDING_RECT="-180.002 -864.509 -1 -1"
+#! POSITION="-183.002 -864.509"
+#! BOUNDING_RECT="-183.002 -864.509 -1 -1"
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
+#! LAST_PARM_EDIT="15208"
 #! >
 #! <OUTPUT_FEAT NAME="OUTPUT"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
@@ -300,13 +307,13 @@
 #! <XFORM_ATTR ATTR_NAME="speed" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="altitude" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ws_msg" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender"/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="DATA" PARM_VALUE="&lt;opencurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_op:&lt;space&gt;&lt;apos&gt;send&lt;apos&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_msg:&lt;space&gt;&lt;apos&gt;&lt;at&gt;Value&lt;openparen&gt;ws_msg&lt;closeparen&gt;&lt;apos&gt;&lt;lf&gt;&lt;closecurly&gt;"/>
-#! <XFORM_PARM PARM_NAME="VERIFY_SSL_CERTIFICATES" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="wss://demo2015-safe-software.fmecloud.com:7078/websocket"/>
 #! <XFORM_PARM PARM_NAME="PREAMBLE" PARM_VALUE="&lt;opencurly&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_op&lt;space&gt;:&lt;space&gt;&lt;quote&gt;open&lt;quote&gt;&lt;comma&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;ws_stream_id&lt;space&gt;:&lt;space&gt;&lt;quote&gt;sd_plane&lt;quote&gt;&lt;lf&gt;&lt;closecurly&gt;"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="HOST" PARM_VALUE="wss://localhost:7078/websocket"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="WebSocketSender"/>
+#! <XFORM_PARM PARM_NAME="VERIFY_SSL_CERTIFICATES" PARM_VALUE="No"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="28"
@@ -317,6 +324,7 @@
 #! ORDER="5e+014"
 #! PARMS_EDITED="false"
 #! ENABLED="true"
+#! LAST_PARM_EDIT="0"
 #! >
 #! <OUTPUT_FEAT NAME="LOGGED"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
@@ -331,13 +339,13 @@
 #! <XFORM_ATTR ATTR_NAME="speed" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="altitude" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ws_msg" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="FEATURE_TYPE" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="MAXFEATS" PARM_VALUE="20"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="MAXCOORDS" PARM_VALUE="20"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Logger"/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="MESSAGE" PARM_VALUE="Feature is:"/>
-#! <XFORM_PARM PARM_NAME="FEATURE_TYPE" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Logger"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="19"
@@ -348,6 +356,7 @@
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
+#! LAST_PARM_EDIT="0"
 #! >
 #! <OUTPUT_FEAT NAME="PASSED"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
@@ -359,11 +368,11 @@
 #! <XFORM_ATTR ATTR_NAME="_url_contents" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="json_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="json_index" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
 #! <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="AND"/>
 #! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Tester"/>
-#! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
+#! <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
 #! <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
 #! <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &lt;at&gt;Value&lt;openparen&gt;json_type&lt;closeparen&gt; = array"/>
 #! </TRANSFORMER>
@@ -376,6 +385,7 @@
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
+#! LAST_PARM_EDIT="0"
 #! >
 #! <OUTPUT_FEAT NAME="EVALUATED"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
@@ -389,11 +399,11 @@
 #! <XFORM_ATTR ATTR_NAME="heading" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="speed" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="altitude" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONExtractor"/>
-#! <XFORM_PARM PARM_NAME="QUERY_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="EXTRACT_QUERY_TABLE" PARM_VALUE="y_coord json&lt;openbracket&gt;1&lt;closebracket&gt; x_coord json&lt;openbracket&gt;2&lt;closebracket&gt; flight_id json&lt;openbracket&gt;13&lt;closebracket&gt; aircraft_model json&lt;openbracket&gt;8&lt;closebracket&gt; heading json&lt;openbracket&gt;3&lt;closebracket&gt; speed json&lt;openbracket&gt;5&lt;closebracket&gt; altitude json&lt;openbracket&gt;4&lt;closebracket&gt;"/>
 #! <XFORM_PARM PARM_NAME="SOURCE_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="EXTRACT_QUERY_TABLE" PARM_VALUE="y_coord json&lt;openbracket&gt;1&lt;closebracket&gt; x_coord json&lt;openbracket&gt;2&lt;closebracket&gt; flight_id json&lt;openbracket&gt;13&lt;closebracket&gt; aircraft_model json&lt;openbracket&gt;8&lt;closebracket&gt; heading json&lt;openbracket&gt;3&lt;closebracket&gt; speed json&lt;openbracket&gt;5&lt;closebracket&gt; altitude json&lt;openbracket&gt;4&lt;closebracket&gt;"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="QUERY_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONExtractor"/>
 #! <XFORM_PARM PARM_NAME="JSON_ATTR" PARM_VALUE="_url_contents"/>
 #! </TRANSFORMER>
 #! </TRANSFORMERS>
@@ -504,7 +514,8 @@ FME_REPROJECTION_ENGINE FME
 FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
 FME_GEOMETRY_HANDLING Enhanced
 FME_STROKE_MAX_DEVIATION 0
-LOG_FILTER_MASK -17
+FME_DEBUG MAPPING_FILE BADNEWS FME_STACK_TRACE UNGROUPED UNCORRELATED DUMP_SCHEMA XSD_VERBOSE
+LOG_FILTER_MASK -1
 # -------------------------------------------------------------------------
 
 MULTI_READER_CONTINUE_ON_READER_FAILURE No
@@ -563,11 +574,11 @@ FACTORY_DEF * JSONQueryFactory    FACTORY_NAME JSONExtractor    INPUT  FEATURE_T
 FACTORY_DEF * XMLTemplaterFactory FACTORY_NAME JSONTemplater INPUT CONTROL_FEATURE FEATURE_TYPE JSONExtractor_EVALUATED INPUT DATA_FEATURE FEATURE_TYPE JSONTemplater_DataFeatures RESULT_ATTR ws_msg OUTPUT_XML_HEADER NO BUCKET_ATTR_NAME __xml_templater_bucket__ CONTROL_TEMPLATE_EXPR <opencurly><lf><space><space><space><space><apos>id<apos>:<space>fme:get-attribute<openparen><quote>json_index<quote><closeparen><comma><lf><space><space><space><space><apos>flight_id<apos>:<space>fme:get-attribute<openparen><quote>flight_id<quote><closeparen><comma><lf><space><space><space><space><apos>latitude<apos>:<space>fme:get-attribute<openparen><quote>y_coord<quote><closeparen><comma><lf><space><space><space><space><apos>longitude<apos>:<space>fme:get-attribute<openparen><quote>x_coord<quote><closeparen><comma><lf><space><space><space><space><apos>heading<apos>:<space>fme:get-attribute<openparen><quote>heading<quote><closeparen><comma><lf><space><space><space><space><apos>speed<apos>:<space>fme:get-attribute<openparen><quote>speed<quote><closeparen><comma><lf><space><space><space><space><apos>altitude<apos>:<space>fme:get-attribute<openparen><quote>altitude<quote><closeparen><comma><lf><space><space><space><space><apos>aircraft_model<apos>:<space>fme:get-attribute<openparen><quote>aircraft_model<quote><closeparen><lf><closecurly> OUTPUT XML_DOCUMENT FEATURE_TYPE JSONTemplater_OUTPUT
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE JSONTemplater_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,wss://demo2015-safe-software.fmecloud.com:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>open<quote><comma><lf><space><space><space><space>ws_stream_id<space>:<space><quote>sd_plane<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op:<space><apos>send<apos><comma><lf><space><space><space><space>ws_msg:<space><apos><at>Value<openparen>ws_msg<closeparen><apos><lf><closecurly>,WebSocketSender),WebSocketSender)"    VERIFY_SSL_CERTIFICATES_BOOL false    OUTPUT OUTPUT FEATURE_TYPE WebSocketSender_OUTPUT
+FACTORY_DEF * COM.safe.fme.factory.WebSocketFactory    FACTORY_NAME WebSocketSender       INPUT  FEATURE_TYPE JSONTemplater_OUTPUT    DIRECTION SEND    INITIATION_SEQUENCE CONNECT    HOST "@EvaluateExpression(STRING,wss://localhost:7078/websocket,WebSocketSender)"    PREAMBLE "@EvaluateExpression(STRING,<opencurly><lf><space><space><space><space>ws_op<space>:<space><quote>open<quote><comma><lf><space><space><space><space>ws_stream_id<space>:<space><quote>sd_plane<quote><lf><closecurly>,WebSocketSender)"    DATA "@EvaluateExpression(STRING,@EvaluateExpression(FDIV,STRING_ENCODED,<opencurly><lf><space><space><space><space>ws_op:<space><apos>send<apos><comma><lf><space><space><space><space>ws_msg:<space><apos><at>Value<openparen>ws_msg<closeparen><apos><lf><closecurly>,WebSocketSender),WebSocketSender)"    VERIFY_SSL_CERTIFICATES_BOOL false    OUTPUT OUTPUT FEATURE_TYPE WebSocketSender_OUTPUT
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME Logger_Logger    INPUT  FEATURE_TYPE WebSocketSender_OUTPUT    OUTPUT FEATURE_TYPE Logger_LOGGED                        @FeatureType("")                  @Log("Logger: Feature is:",20,20)
+FACTORY_DEF * TeeFactory    FACTORY_NAME Logger_Logger    INPUT  FEATURE_TYPE WebSocketSender_OUTPUT    OUTPUT FEATURE_TYPE Logger_LOGGED                  @Log("Logger: Feature is:",20,20)                  @FeatureType(Logger_LOGGED)
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Logger LOGGED Output Nuker"   INPUT FEATURE_TYPE Logger_LOGGED
 # -------------------------------------------------------------------------

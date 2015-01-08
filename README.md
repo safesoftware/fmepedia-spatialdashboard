@@ -12,7 +12,7 @@ Installation Instructions
 
 - Publish all workspaces (*.fmw files) to FME Server.
 
-- To test, run sd_ship.fmw and sd_plane.fmw. If they work, cancel them, and sunmit with the RTC (run 'til cancelled) option set to true. This will ensure that the jobs get resubmitted when they finish.
+- To test, run sd_ship.fmw and sd_plane.fmw. If they work, cancel them, and submit with the RTC (run 'til cancelled) option set to true. This will ensure that the jobs get resubmitted when they finish.
 
 - Schedule the sd_bus.fmw workspace to run every 10 seconds. This is a third-party feed, so please do not abuse it.
 
