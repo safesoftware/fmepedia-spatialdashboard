@@ -111,10 +111,6 @@ body {
 	height: 100%;
 }
 
-#map_canvas{
-  height:100%;
-}
-
 #count-badges {
   font-size: 75%;
   position: absolute;
@@ -127,3 +123,9 @@ body {
 #count-badges .badge {
   font-size: 75%;
 }
+
+html, body, #map {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }

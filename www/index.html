@@ -17,9 +17,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="libs/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
-	<!-- Google Maps -->
-	<link href="https://google-developers.appspot.com/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<!--  Mapbox -->
+	<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 
 	<!-- Generic -->
 	<link rel="stylesheet" href="css/index.css">
@@ -64,7 +64,7 @@
 	</div>
 
 	<div class="container">
-    <div id="map_canvas"></div>
+    <div id="map"></div>
     <div id="count-badges">
       <p><b>Messages received</b></p>
       <p><span id="shipcount" class="badge">0</span> Ships</p>
