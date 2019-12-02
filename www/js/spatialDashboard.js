@@ -63,6 +63,14 @@ function initialize() {
 					title: dataObj['vessel_name'],
 					description: dataObj['class_general_desc']
 				});
+
+				//create html for popup
+				var info = '<table><tr><td><strong>Vessel Name<strong></td><td>'+dataObj['vessel_name']+'</td><tr><td><strong>Call Sign</strong></td><td>'+dataObj['call_sign']+' </td></tr><tr><td><strong>Class</strong></td><td>'+dataObj['class_general_desc']+' </td></tr><tr><td><strong>Type</strong></td><td>'+dataObj['class_special_desc']+' </td></tr></table>'
+				var popup = L.popup()
+					.setContent(info)
+				//add popup
+				marker.bindPopup(popup);
+
 				marker.addTo(map);
 				markersShip[mmsi] = marker;
 			}
@@ -99,9 +107,16 @@ function initialize() {
 						'marker-color': '#23a046',
 						'marker-symbol': 'bus'
 					}),
-					title: dataObj['vessel_name'],
-					description: dataObj['class_general_desc']
+					title: dataObj['bus_id']
 				});
+
+				//create html for popup
+				var info = '<table><tr><td><strong>Bus ID<strong></td><td>'+dataObj['bus_id']+'</td><tr><td><strong>Speed</strong></td><td>'+dataObj['speed']+' MPH</td></tr></table>'
+			  var popup = L.popup()
+					.setContent(info)
+				//add popup
+				marker.bindPopup(popup);
+
 				marker.addTo(map);
 				markersBus[bus_id] = marker;
 			}
@@ -142,10 +157,19 @@ function initialize() {
 						'marker-color': '#a03723',
 						'marker-symbol': 'airport'
 					}),
-					title: dataObj['vessel_name'],
-					description: dataObj['class_general_desc']
+					title: dataObj['flight_id'],
+					description: dataObj['aircraft_model']
 				});
-				marker.setPopupContent("title:" + dataObj['flight_id']);
+
+				//create html for popup
+				var info = '<table><tr><td><strong>Flight ID<strong></td><td>'+dataObj['flight_id']+'</td><tr><td><strong>Aircraft Model</strong></td><td>'+dataObj['aircraft_model']+' </td></tr><tr><td><strong>Altitude</strong></td><td>'+dataObj['altitude']+' </td></tr></table>'
+				var popup = L.popup()
+					.setContent(info)
+				//add popup
+				marker.bindPopup(popup);
+
+
+				//marker.setPopupContent("title:" + dataObj['flight_id']);
 				marker.addTo(map);
 				markersShip[ship_id] = marker;
 			}
