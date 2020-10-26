@@ -9,7 +9,9 @@ function initialize() {
 	var planecount = document.getElementById('planecount');
 
 	L.mapbox.accessToken = 'pk.eyJ1IjoibmF0aGFuYXRzYWZlIiwiYSI6ImNqazRqN2VuazA0dHczcXAyYjkyeTczcnUifQ.ZcD7wuTSCbsLRb_Y-drHjg'
-	var map = new L.mapbox.map(document.getElementById("map"),'mapbox.streets').setView([37.78,-122.41],10);
+	var map = L.mapbox.map('map')
+    	.setView([37.78, -122.41], 10)
+    	.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
 
 	// Storage for Markers
 	var markersShip = new Array();
